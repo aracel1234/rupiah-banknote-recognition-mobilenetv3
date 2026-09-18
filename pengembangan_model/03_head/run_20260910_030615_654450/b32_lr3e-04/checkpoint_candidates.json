@@ -1,0 +1,20 @@
+[
+  {
+    "trial": "b32_lr3e-04",
+    "batch_size": 32,
+    "learning_rate": 0.0003,
+    "fraction": 0.0,
+    "epochs": 30,
+    "top_layers": 0,
+    "backbone_layers": 157,
+    "trainable_backbone_layers": 0,
+    "trainable_parameters": 4616,
+    "source_sha256": "93fd28e138d969425ff324afeb17105592946ecd011c15e821bf3f9b886dc923",
+    "seed": 42,
+    "epoch": 7,
+    "val_loss": 0.5773826837539673,
+    "val_macro_f1": 0.7985415678435355,
+    "val_accuracy": 0.8095020651817322,
+    "weights_path": "/home/aracel/Downloads/Skripsi/pengembangan_model/03_head/run_20260910_030615_654450/b32_lr3e-04/epoch_07.weights.h5"
+  }
+]

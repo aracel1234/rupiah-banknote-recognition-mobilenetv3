@@ -1,0 +1,42 @@
+{
+  "runtime": {
+    "device": "POCO X5 Pro 5G",
+    "execution": "CPU_XNNPACK",
+    "threads": 4,
+    "gpu": false,
+    "nnapi": false,
+    "npu": false,
+    "build": "release",
+    "android_version": "",
+    "tflite_version": ""
+  },
+  "android_bundle_sha256": "bd2c52459b667e0727886012d4245f07f6dc88f889b1069a9c36d919aec432b1",
+  "model_sha256": {
+    "fp32": "bbcdee096fe23d19026b530643c17e512ff9eacbb75404ec82683315768795bd",
+    "fp16": "b3e37e8d3278cbcc60537a6ad1fec3a00d4b2de3506a379d8264febdd927e790",
+    "dynamic_range": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676",
+    "full_int8": "fe8db97ca3a464f35deeba83f5f77d92dcae55c78c71cccfc1a847716e6e37e7"
+  },
+  "latency_csv_sha256": "",
+  "memory_csv_sha256": "",
+  "evidence_directory": "",
+  "checks": {
+    "five_independent_process_sessions": false,
+    "paired_session_order": false,
+    "warmup_30": false,
+    "stable_500": false,
+    "timer_interpreter_run_only": false,
+    "inputs_preprocessed": false,
+    "battery_50_80_no_charging": false,
+    "airplane_mode": false,
+    "brightness_50": false,
+    "power_saver_off": false,
+    "idle_5_minutes": false,
+    "pss_separate_sessions": false,
+    "pss_baseline_wait_10s": false,
+    "pss_baseline_5_every_2s": false,
+    "pss_warmup_20": false,
+    "pss_active_15_every_2s": false,
+    "android_smoke_passed": false
+  }
+}

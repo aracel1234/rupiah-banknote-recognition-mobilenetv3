@@ -1,0 +1,43 @@
+{
+  "scope": "initial_keras_fp32",
+  "input_shape": [
+    null,
+    224,
+    224,
+    3
+  ],
+  "android_input_shape_target": [
+    1,
+    224,
+    224,
+    3
+  ],
+  "layout": "NHWC",
+  "color": "RGB",
+  "input_dtype": "float32",
+  "external_range": [
+    0,
+    255
+  ],
+  "resize": "bilinear",
+  "antialias": false,
+  "preserve_aspect_ratio": false,
+  "internal_preprocessing": "x / 127.5 - 1",
+  "output_shape": [
+    null,
+    8
+  ],
+  "output_dtype": "float32",
+  "output_semantics": "softmax_probabilities",
+  "apply_softmax_again": false,
+  "class_names": [
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "20000",
+    "50000",
+    "100000",
+    "nonuang"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "seed": 42,
+  "money_samples": 38582,
+  "nonmoney_available": 8000,
+  "nonmoney_selected": 5184,
+  "nonmoney_not_selected": 2816,
+  "dataset_total": 43766,
+  "class_counts": {
+    "1000": 6327,
+    "2000": 5184,
+    "5000": 4698,
+    "10000": 5395,
+    "20000": 7781,
+    "50000": 4412,
+    "100000": 4785,
+    "nonuang": 5184
+  },
+  "imbalance_ratio": 1.7636,
+  "ready_for_split": true
+}

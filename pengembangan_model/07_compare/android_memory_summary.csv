@@ -1,0 +1,5 @@
+candidate,baseline_median_kb,active_median_kb,additional_total_pss_kb,additional_total_pss_mb,active_max_kb
+fp32,81421.0,94098.0,13405.0,13.0908203125,138663.0
+fp16,81416.0,97203.0,15786.0,15.416015625,97958.0
+dynamic_range,81442.0,90298.0,8836.0,8.62890625,91074.0
+full_int8,45780.0,53230.0,7456.0,7.28125,91137.0

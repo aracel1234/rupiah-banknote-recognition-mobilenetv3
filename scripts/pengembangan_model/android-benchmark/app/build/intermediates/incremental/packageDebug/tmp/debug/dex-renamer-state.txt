@@ -1,0 +1,10 @@
+#Mon Sep 14 03:26:19 WIB 2026
+base.0=/home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.2=/home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/build/intermediates/dex/debug/mergeProjectDexDebug/8/classes.dex
+path.0=classes.dex
+path.1=0/classes.dex
+path.2=8/classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex

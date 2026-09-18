@@ -1,0 +1,254 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml:2:1-18:12
+INJECTED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml:2:1-18:12
+INJECTED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml:2:1-18:12
+INJECTED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml:2:1-18:12
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /home/aracel/.gradle/caches/9.3.0/transforms/0c364e9459f59d3b9af0bad7e0a35196/transformed/appcompat-resources-1.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat:1.7.0] /home/aracel/.gradle/caches/9.3.0/transforms/be24e783b0f3e4e1e8145faa308e0478/transformed/appcompat-1.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.fragment:fragment:1.5.4] /home/aracel/.gradle/caches/9.3.0/transforms/110ee580cc769d8024bc6de583657e69/transformed/fragment-1.5.4/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.7.0] /home/aracel/.gradle/caches/9.3.0/transforms/b8de4efc1d53aa786939579566456a54/transformed/activity-1.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/aracel/.gradle/caches/9.3.0/transforms/805402c3bde102e58ec6884d77bfa469/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /home/aracel/.gradle/caches/9.3.0/transforms/f72943b3d61224b797c93f6eb7ae5ef3/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/aracel/.gradle/caches/9.3.0/transforms/9ab602fe468f6cebcb94a7c308e6d49d/transformed/emoji2-1.3.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.loader:loader:1.0.0] /home/aracel/.gradle/caches/9.3.0/transforms/08409ab6cf442b9c99a2866e8057fb79/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/c18403961444c3a70453f45732c80e14/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/91958058d0bb716084551241a8cf1d28/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/07417afbc91b8cd4656d22cd79b918ef/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/d11984c1e839c7824e4e8dbd2d4dd8d8/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/a58d6326653bd51bc0a509a540dbebfe/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/f657be6721955e1e439824d7cb2b66c2/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.13.0] /home/aracel/.gradle/caches/9.3.0/transforms/05a0865bc14db7e133517e1d50c83695/transformed/core-ktx-1.13.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/aracel/.gradle/caches/9.3.0/transforms/b7c038fa880395858ef7362203f5c319/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/aracel/.gradle/caches/9.3.0/transforms/c5c90f3f709e9c6b392416084a5c6a5c/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/aracel/.gradle/caches/9.3.0/transforms/e9de42e21334daec016873e42cc02210/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/aracel/.gradle/caches/9.3.0/transforms/4a0754efff8b8b72c6ce69e5513efa72/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /home/aracel/.gradle/caches/9.3.0/transforms/71f9fbb7dbd21d2331d3473c4904dbd3/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.13.0] /home/aracel/.gradle/caches/9.3.0/transforms/410096480d9d465ae29ea7aa5d23b915/transformed/core-1.13.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /home/aracel/.gradle/caches/9.3.0/transforms/f1c75d33b1c75d48beb1b6ef3a87f9ee/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/aracel/.gradle/caches/9.3.0/transforms/87e0f348b5b3b7395d5ede3d8a85def5/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/aracel/.gradle/caches/9.3.0/transforms/4087a288b07c5a373a79560aafad7da3/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /home/aracel/.gradle/caches/9.3.0/transforms/819592b4f6f8312bcd52536b27d5c399/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/aracel/.gradle/caches/9.3.0/transforms/4c89f43123867e3d79fdf977e4565c2b/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/aracel/.gradle/caches/9.3.0/transforms/abc1c1da1ee48f9a08ca1d979346a4e3/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/aracel/.gradle/caches/9.3.0/transforms/d87ab6300e216ef0aec2d8c20292a72c/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.ai.edge.litert:litert:1.0.1] /home/aracel/.gradle/caches/9.3.0/transforms/a253523309f39a72a534e235399ffe5b/transformed/litert-1.0.1/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.ai.edge.litert:litert-api:1.0.1] /home/aracel/.gradle/caches/9.3.0/transforms/65859872b9c6f81f780de6fc8e481512/transformed/litert-api-1.0.1/AndroidManifest.xml:2:1-11:12
+	package
+		INJECTED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml:3:5-17:19
+INJECTED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml:3:5-17:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/aracel/.gradle/caches/9.3.0/transforms/9ab602fe468f6cebcb94a7c308e6d49d/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/aracel/.gradle/caches/9.3.0/transforms/9ab602fe468f6cebcb94a7c308e6d49d/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/07417afbc91b8cd4656d22cd79b918ef/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/07417afbc91b8cd4656d22cd79b918ef/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.13.0] /home/aracel/.gradle/caches/9.3.0/transforms/410096480d9d465ae29ea7aa5d23b915/transformed/core-1.13.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.13.0] /home/aracel/.gradle/caches/9.3.0/transforms/410096480d9d465ae29ea7aa5d23b915/transformed/core-1.13.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/aracel/.gradle/caches/9.3.0/transforms/4087a288b07c5a373a79560aafad7da3/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/aracel/.gradle/caches/9.3.0/transforms/4087a288b07c5a373a79560aafad7da3/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/aracel/.gradle/caches/9.3.0/transforms/abc1c1da1ee48f9a08ca1d979346a4e3/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/aracel/.gradle/caches/9.3.0/transforms/abc1c1da1ee48f9a08ca1d979346a4e3/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.ai.edge.litert:litert:1.0.1] /home/aracel/.gradle/caches/9.3.0/transforms/a253523309f39a72a534e235399ffe5b/transformed/litert-1.0.1/AndroidManifest.xml:9:5-20
+MERGED from [com.google.ai.edge.litert:litert:1.0.1] /home/aracel/.gradle/caches/9.3.0/transforms/a253523309f39a72a534e235399ffe5b/transformed/litert-1.0.1/AndroidManifest.xml:9:5-20
+MERGED from [com.google.ai.edge.litert:litert-api:1.0.1] /home/aracel/.gradle/caches/9.3.0/transforms/65859872b9c6f81f780de6fc8e481512/transformed/litert-api-1.0.1/AndroidManifest.xml:9:5-20
+MERGED from [com.google.ai.edge.litert:litert-api:1.0.1] /home/aracel/.gradle/caches/9.3.0/transforms/65859872b9c6f81f780de6fc8e481512/transformed/litert-api-1.0.1/AndroidManifest.xml:9:5-20
+	android:extractNativeLibs
+		INJECTED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.13.0] /home/aracel/.gradle/caches/9.3.0/transforms/410096480d9d465ae29ea7aa5d23b915/transformed/core-1.13.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml:6:9-35
+	android:label
+		ADDED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml:5:9-41
+	android:allowBackup
+		ADDED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml:4:9-36
+	android:theme
+		ADDED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml:7:9-40
+activity#id.ac.ub.rupiahbenchmark.BenchmarkActivity
+ADDED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml:8:9-16:20
+	android:launchMode
+		ADDED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml:11:13-44
+	android:exported
+		ADDED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml:10:13-36
+	android:name
+		ADDED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml:9:13-46
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml:12:13-15:29
+action#android.intent.action.MAIN
+ADDED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml:13:17-69
+	android:name
+		ADDED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml:13:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml:14:17-77
+	android:name
+		ADDED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml:14:27-74
+uses-sdk
+INJECTED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml
+INJECTED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /home/aracel/.gradle/caches/9.3.0/transforms/0c364e9459f59d3b9af0bad7e0a35196/transformed/appcompat-resources-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /home/aracel/.gradle/caches/9.3.0/transforms/0c364e9459f59d3b9af0bad7e0a35196/transformed/appcompat-resources-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] /home/aracel/.gradle/caches/9.3.0/transforms/be24e783b0f3e4e1e8145faa308e0478/transformed/appcompat-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] /home/aracel/.gradle/caches/9.3.0/transforms/be24e783b0f3e4e1e8145faa308e0478/transformed/appcompat-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.5.4] /home/aracel/.gradle/caches/9.3.0/transforms/110ee580cc769d8024bc6de583657e69/transformed/fragment-1.5.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.4] /home/aracel/.gradle/caches/9.3.0/transforms/110ee580cc769d8024bc6de583657e69/transformed/fragment-1.5.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.7.0] /home/aracel/.gradle/caches/9.3.0/transforms/b8de4efc1d53aa786939579566456a54/transformed/activity-1.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.7.0] /home/aracel/.gradle/caches/9.3.0/transforms/b8de4efc1d53aa786939579566456a54/transformed/activity-1.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/aracel/.gradle/caches/9.3.0/transforms/805402c3bde102e58ec6884d77bfa469/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/aracel/.gradle/caches/9.3.0/transforms/805402c3bde102e58ec6884d77bfa469/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /home/aracel/.gradle/caches/9.3.0/transforms/f72943b3d61224b797c93f6eb7ae5ef3/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /home/aracel/.gradle/caches/9.3.0/transforms/f72943b3d61224b797c93f6eb7ae5ef3/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/aracel/.gradle/caches/9.3.0/transforms/9ab602fe468f6cebcb94a7c308e6d49d/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/aracel/.gradle/caches/9.3.0/transforms/9ab602fe468f6cebcb94a7c308e6d49d/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/aracel/.gradle/caches/9.3.0/transforms/08409ab6cf442b9c99a2866e8057fb79/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/aracel/.gradle/caches/9.3.0/transforms/08409ab6cf442b9c99a2866e8057fb79/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/c18403961444c3a70453f45732c80e14/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/c18403961444c3a70453f45732c80e14/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/91958058d0bb716084551241a8cf1d28/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/91958058d0bb716084551241a8cf1d28/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/07417afbc91b8cd4656d22cd79b918ef/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/07417afbc91b8cd4656d22cd79b918ef/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/d11984c1e839c7824e4e8dbd2d4dd8d8/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/d11984c1e839c7824e4e8dbd2d4dd8d8/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/a58d6326653bd51bc0a509a540dbebfe/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/a58d6326653bd51bc0a509a540dbebfe/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/f657be6721955e1e439824d7cb2b66c2/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/f657be6721955e1e439824d7cb2b66c2/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.13.0] /home/aracel/.gradle/caches/9.3.0/transforms/05a0865bc14db7e133517e1d50c83695/transformed/core-ktx-1.13.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.13.0] /home/aracel/.gradle/caches/9.3.0/transforms/05a0865bc14db7e133517e1d50c83695/transformed/core-ktx-1.13.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/aracel/.gradle/caches/9.3.0/transforms/b7c038fa880395858ef7362203f5c319/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/aracel/.gradle/caches/9.3.0/transforms/b7c038fa880395858ef7362203f5c319/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/aracel/.gradle/caches/9.3.0/transforms/c5c90f3f709e9c6b392416084a5c6a5c/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/aracel/.gradle/caches/9.3.0/transforms/c5c90f3f709e9c6b392416084a5c6a5c/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/aracel/.gradle/caches/9.3.0/transforms/e9de42e21334daec016873e42cc02210/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/aracel/.gradle/caches/9.3.0/transforms/e9de42e21334daec016873e42cc02210/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/aracel/.gradle/caches/9.3.0/transforms/4a0754efff8b8b72c6ce69e5513efa72/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/aracel/.gradle/caches/9.3.0/transforms/4a0754efff8b8b72c6ce69e5513efa72/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/aracel/.gradle/caches/9.3.0/transforms/71f9fbb7dbd21d2331d3473c4904dbd3/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/aracel/.gradle/caches/9.3.0/transforms/71f9fbb7dbd21d2331d3473c4904dbd3/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.0] /home/aracel/.gradle/caches/9.3.0/transforms/410096480d9d465ae29ea7aa5d23b915/transformed/core-1.13.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.0] /home/aracel/.gradle/caches/9.3.0/transforms/410096480d9d465ae29ea7aa5d23b915/transformed/core-1.13.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /home/aracel/.gradle/caches/9.3.0/transforms/f1c75d33b1c75d48beb1b6ef3a87f9ee/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /home/aracel/.gradle/caches/9.3.0/transforms/f1c75d33b1c75d48beb1b6ef3a87f9ee/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/aracel/.gradle/caches/9.3.0/transforms/87e0f348b5b3b7395d5ede3d8a85def5/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/aracel/.gradle/caches/9.3.0/transforms/87e0f348b5b3b7395d5ede3d8a85def5/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/aracel/.gradle/caches/9.3.0/transforms/4087a288b07c5a373a79560aafad7da3/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/aracel/.gradle/caches/9.3.0/transforms/4087a288b07c5a373a79560aafad7da3/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/aracel/.gradle/caches/9.3.0/transforms/819592b4f6f8312bcd52536b27d5c399/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/aracel/.gradle/caches/9.3.0/transforms/819592b4f6f8312bcd52536b27d5c399/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/aracel/.gradle/caches/9.3.0/transforms/4c89f43123867e3d79fdf977e4565c2b/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/aracel/.gradle/caches/9.3.0/transforms/4c89f43123867e3d79fdf977e4565c2b/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/aracel/.gradle/caches/9.3.0/transforms/abc1c1da1ee48f9a08ca1d979346a4e3/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/aracel/.gradle/caches/9.3.0/transforms/abc1c1da1ee48f9a08ca1d979346a4e3/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/aracel/.gradle/caches/9.3.0/transforms/d87ab6300e216ef0aec2d8c20292a72c/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/aracel/.gradle/caches/9.3.0/transforms/d87ab6300e216ef0aec2d8c20292a72c/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.ai.edge.litert:litert:1.0.1] /home/aracel/.gradle/caches/9.3.0/transforms/a253523309f39a72a534e235399ffe5b/transformed/litert-1.0.1/AndroidManifest.xml:6:5-7:38
+MERGED from [com.google.ai.edge.litert:litert:1.0.1] /home/aracel/.gradle/caches/9.3.0/transforms/a253523309f39a72a534e235399ffe5b/transformed/litert-1.0.1/AndroidManifest.xml:6:5-7:38
+MERGED from [com.google.ai.edge.litert:litert-api:1.0.1] /home/aracel/.gradle/caches/9.3.0/transforms/65859872b9c6f81f780de6fc8e481512/transformed/litert-api-1.0.1/AndroidManifest.xml:6:5-7:38
+MERGED from [com.google.ai.edge.litert:litert-api:1.0.1] /home/aracel/.gradle/caches/9.3.0/transforms/65859872b9c6f81f780de6fc8e481512/transformed/litert-api-1.0.1/AndroidManifest.xml:6:5-7:38
+	android:targetSdkVersion
+		INJECTED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/src/main/AndroidManifest.xml
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] /home/aracel/.gradle/caches/9.3.0/transforms/9ab602fe468f6cebcb94a7c308e6d49d/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/07417afbc91b8cd4656d22cd79b918ef/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/07417afbc91b8cd4656d22cd79b918ef/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/aracel/.gradle/caches/9.3.0/transforms/4087a288b07c5a373a79560aafad7da3/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/aracel/.gradle/caches/9.3.0/transforms/4087a288b07c5a373a79560aafad7da3/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/aracel/.gradle/caches/9.3.0/transforms/9ab602fe468f6cebcb94a7c308e6d49d/transformed/emoji2-1.3.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/aracel/.gradle/caches/9.3.0/transforms/9ab602fe468f6cebcb94a7c308e6d49d/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/aracel/.gradle/caches/9.3.0/transforms/9ab602fe468f6cebcb94a7c308e6d49d/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/aracel/.gradle/caches/9.3.0/transforms/9ab602fe468f6cebcb94a7c308e6d49d/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] /home/aracel/.gradle/caches/9.3.0/transforms/9ab602fe468f6cebcb94a7c308e6d49d/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/aracel/.gradle/caches/9.3.0/transforms/9ab602fe468f6cebcb94a7c308e6d49d/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/aracel/.gradle/caches/9.3.0/transforms/9ab602fe468f6cebcb94a7c308e6d49d/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/07417afbc91b8cd4656d22cd79b918ef/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/07417afbc91b8cd4656d22cd79b918ef/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/aracel/.gradle/caches/9.3.0/transforms/07417afbc91b8cd4656d22cd79b918ef/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] /home/aracel/.gradle/caches/9.3.0/transforms/410096480d9d465ae29ea7aa5d23b915/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.0] /home/aracel/.gradle/caches/9.3.0/transforms/410096480d9d465ae29ea7aa5d23b915/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.0] /home/aracel/.gradle/caches/9.3.0/transforms/410096480d9d465ae29ea7aa5d23b915/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
+permission#id.ac.ub.rupiahbenchmark.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] /home/aracel/.gradle/caches/9.3.0/transforms/410096480d9d465ae29ea7aa5d23b915/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.0] /home/aracel/.gradle/caches/9.3.0/transforms/410096480d9d465ae29ea7aa5d23b915/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.0] /home/aracel/.gradle/caches/9.3.0/transforms/410096480d9d465ae29ea7aa5d23b915/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] /home/aracel/.gradle/caches/9.3.0/transforms/410096480d9d465ae29ea7aa5d23b915/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.0] /home/aracel/.gradle/caches/9.3.0/transforms/410096480d9d465ae29ea7aa5d23b915/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
+uses-permission#id.ac.ub.rupiahbenchmark.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] /home/aracel/.gradle/caches/9.3.0/transforms/410096480d9d465ae29ea7aa5d23b915/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.0] /home/aracel/.gradle/caches/9.3.0/transforms/410096480d9d465ae29ea7aa5d23b915/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/aracel/.gradle/caches/9.3.0/transforms/426ab12ffd5d764a626ce73cbe143827/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92

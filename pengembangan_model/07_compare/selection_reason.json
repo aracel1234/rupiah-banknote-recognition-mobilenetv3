@@ -1,0 +1,17 @@
+{
+  "iterations": 2000,
+  "seed": 42,
+  "resampling_unit": "paired_session_block",
+  "pairs": [],
+  "steps": [
+    {
+      "metric": "median_ms",
+      "before": [
+        "dynamic_range"
+      ],
+      "after": [
+        "dynamic_range"
+      ]
+    }
+  ]
+}

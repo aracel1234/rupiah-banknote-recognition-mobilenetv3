@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app"
+    name=":app"
+    type="APP"
+    maven="RupiahModelBenchmark:app:unspecified"
+    agpVersion="8.5.2"
+    buildFolder="build"
+    bootClassPath="/home/aracel/Android/Sdk/platforms/android-34/android.jar:/home/aracel/Android/Sdk/build-tools/34.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="17"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

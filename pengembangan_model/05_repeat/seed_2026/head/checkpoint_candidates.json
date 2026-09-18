@@ -1,0 +1,19 @@
+[
+  {
+    "trial": "head_seed2026",
+    "seed": 2026,
+    "batch_size": 32,
+    "learning_rate": 0.0010000000474974513,
+    "fraction": 0.0,
+    "epochs": 30,
+    "top_layers": 0,
+    "backbone_layers": 157,
+    "trainable_backbone_layers": 0,
+    "trainable_parameters": 4616,
+    "epoch": 8,
+    "val_loss": 0.5344569683074951,
+    "val_macro_f1": 0.8178557740337324,
+    "val_accuracy": 0.8250342607498169,
+    "weights_path": "/home/aracel/Downloads/Skripsi/pengembangan_model/05_repeat/seed_2026/head/epoch_08.weights.h5"
+  }
+]

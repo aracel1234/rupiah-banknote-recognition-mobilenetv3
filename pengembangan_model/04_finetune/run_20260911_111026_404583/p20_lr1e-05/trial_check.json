@@ -1,0 +1,5 @@
+{
+  "frozen_weights_unchanged": true,
+  "validation_samples_per_epoch": 4378,
+  "test_images_used": 0
+}

@@ -1,0 +1,43 @@
+{
+  "status": "complete",
+  "stage": 5,
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "completed_runs": 3,
+  "macro_f1_mean": 0.9225795137068555,
+  "macro_f1_std": 0.011686558281644803,
+  "selected": {
+    "trial": "finetune_seed42",
+    "seed": 42,
+    "batch_size": 32,
+    "learning_rate": 5.999999757477781e-06,
+    "fraction": 0.35,
+    "epochs": 20,
+    "top_layers": 55,
+    "backbone_layers": 157,
+    "trainable_backbone_layers": 18,
+    "trainable_parameters": 746432,
+    "epoch": 20,
+    "val_loss": 0.23481447994709015,
+    "val_macro_f1": 0.9360119841154804,
+    "val_accuracy": 0.9387848377227783,
+    "weights_path": "/home/aracel/Downloads/Skripsi/pengembangan_model/05_repeat/seed_42/finetune/epoch_20.weights.h5",
+    "model_path": "/home/aracel/Downloads/Skripsi/pengembangan_model/05_repeat/seed_42/finetune/best.keras",
+    "model_sha256": "255cf905675df6dcd4471e3381a535e9bc2b50b15c711a33fe3aa891eee39900",
+    "head_model_sha256": "48b9695b5a27093593bf5cf523cb1a0a3ee77ff7ba97fa570e103fb5d65f5e03",
+    "fine_tuning_accepted": true,
+    "search_signature": "fcb110de870e741ef46f2cc8cdbe396eec95155c1741a9e919ac1bac616b68ad"
+  },
+  "model_path": "/home/aracel/Downloads/Skripsi/pengembangan_model/05_repeat/mobilenetv3small_fp32_best.keras",
+  "model_sha256": "255cf905675df6dcd4471e3381a535e9bc2b50b15c711a33fe3aa891eee39900",
+  "data_manifest_sha256": {
+    "train": "d7a3bc32eade354e4b898553756cf1d998c2311ac4d7baf3e8400761df215350",
+    "validation": "fd97d2f5dccc4c3833d6c5184cd0d9658cb66e135004ed80af61d68e0eaf751d",
+    "test": "98acc760d9176a10831762e62b63e1ca319c2f15446e8ad773882696d6b63493"
+  },
+  "final_fp32_locked": true,
+  "fine_tuning_accepted": true
+}

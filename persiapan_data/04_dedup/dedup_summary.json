@@ -1,0 +1,29 @@
+{
+  "stage2_crops": 40062,
+  "excluded_visual_audit": 115,
+  "dedup_candidates": 39947,
+  "exact_duplicate_groups": 1287,
+  "exact_duplicates_removed": 1365,
+  "exact_conflict_groups": 0,
+  "exact_conflict_samples": 0,
+  "kept_samples": 38582,
+  "ready_for_next_stage": true,
+  "class_before_dedup": {
+    "1000": 6529,
+    "2000": 5330,
+    "5000": 4931,
+    "10000": 5618,
+    "20000": 7955,
+    "50000": 4600,
+    "100000": 4984
+  },
+  "class_after_dedup": {
+    "1000": 6327,
+    "2000": 5184,
+    "5000": 4698,
+    "10000": 5395,
+    "20000": 7781,
+    "50000": 4412,
+    "100000": 4785
+  }
+}

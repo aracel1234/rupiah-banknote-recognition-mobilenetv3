@@ -1,0 +1,76 @@
+{
+  "metadata_valid": true,
+  "split_counts": {
+    "train": 35012,
+    "validation": 4378,
+    "test": 4376
+  },
+  "manifest_sha256": {
+    "train": "d7a3bc32eade354e4b898553756cf1d998c2311ac4d7baf3e8400761df215350",
+    "validation": "fd97d2f5dccc4c3833d6c5184cd0d9658cb66e135004ed80af61d68e0eaf751d",
+    "test": "98acc760d9176a10831762e62b63e1ca319c2f15446e8ad773882696d6b63493"
+  },
+  "parent_groups_cross_split": 0,
+  "related_samples_cross_split": 0,
+  "image_content_checked": false,
+  "pipeline": {
+    "seed": 42,
+    "batch_size_check": 16,
+    "resize": "bilinear",
+    "antialias": false,
+    "rotation_degrees": [
+      -15,
+      15
+    ],
+    "translation_fraction": [
+      -0.1,
+      0.1
+    ],
+    "zoom_keras_factor": [
+      -0.1,
+      0.1
+    ],
+    "brightness_delta": [
+      -38.25,
+      38.25
+    ],
+    "contrast_factor": [
+      0.85,
+      1.15
+    ],
+    "noise_stddev": 2.55,
+    "fill_mode": "reflect",
+    "transform_seed_offsets": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "augmentation_train_only": true
+  },
+  "tensorflow": "2.20.0",
+  "batch_checks": {
+    "train": {
+      "shape": [
+        16,
+        224,
+        224,
+        3
+      ],
+      "min": 0.0,
+      "max": 255.0
+    },
+    "validation": {
+      "shape": [
+        16,
+        224,
+        224,
+        3
+      ],
+      "min": 0.0,
+      "max": 255.0
+    }
+  }
+}

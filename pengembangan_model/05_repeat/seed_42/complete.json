@@ -1,0 +1,22 @@
+{
+  "trial": "finetune_seed42",
+  "seed": 42,
+  "batch_size": 32,
+  "learning_rate": 5.999999757477781e-06,
+  "fraction": 0.35,
+  "epochs": 20,
+  "top_layers": 55,
+  "backbone_layers": 157,
+  "trainable_backbone_layers": 18,
+  "trainable_parameters": 746432,
+  "epoch": 20,
+  "val_loss": 0.23481447994709015,
+  "val_macro_f1": 0.9360119841154804,
+  "val_accuracy": 0.9387848377227783,
+  "weights_path": "/home/aracel/Downloads/Skripsi/pengembangan_model/05_repeat/seed_42/finetune/epoch_20.weights.h5",
+  "model_path": "/home/aracel/Downloads/Skripsi/pengembangan_model/05_repeat/seed_42/finetune/best.keras",
+  "model_sha256": "255cf905675df6dcd4471e3381a535e9bc2b50b15c711a33fe3aa891eee39900",
+  "head_model_sha256": "48b9695b5a27093593bf5cf523cb1a0a3ee77ff7ba97fa570e103fb5d65f5e03",
+  "fine_tuning_accepted": true,
+  "search_signature": "fcb110de870e741ef46f2cc8cdbe396eec95155c1741a9e919ac1bac616b68ad"
+}

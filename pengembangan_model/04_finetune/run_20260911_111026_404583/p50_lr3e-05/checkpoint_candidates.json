@@ -1,0 +1,20 @@
+[
+  {
+    "trial": "p50_lr3e-05",
+    "batch_size": 32,
+    "learning_rate": 3e-05,
+    "fraction": 0.5,
+    "epochs": 20,
+    "top_layers": 79,
+    "backbone_layers": 157,
+    "trainable_backbone_layers": 26,
+    "trainable_parameters": 784136,
+    "source_sha256": "ad8072224a48c011d7ddd924f8cc6c8c676029d2b2d68d38c59f5e697e3c8982",
+    "seed": 42,
+    "epoch": 5,
+    "val_loss": 0.2533561885356903,
+    "val_macro_f1": 0.9240315712913373,
+    "val_accuracy": 0.9275925159454346,
+    "weights_path": "/home/aracel/Downloads/Skripsi/pengembangan_model/04_finetune/run_20260911_111026_404583/p50_lr3e-05/epoch_05.weights.h5"
+  }
+]

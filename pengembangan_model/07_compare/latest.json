@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "stage": 7,
+  "selected_candidate": "dynamic_range",
+  "selected_model_sha256": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676",
+  "test_images_used": 4376,
+  "final_assets": "/home/aracel/Downloads/Skripsi/pengembangan_model/07_compare/final_assets",
+  "data_manifest_sha256": {
+    "train": "d7a3bc32eade354e4b898553756cf1d998c2311ac4d7baf3e8400761df215350",
+    "validation": "fd97d2f5dccc4c3833d6c5184cd0d9658cb66e135004ed80af61d68e0eaf751d",
+    "test": "98acc760d9176a10831762e62b63e1ca319c2f15446e8ad773882696d6b63493"
+  },
+  "selection_lock_sha256": "289a06420d7ed262b4a0a371924f03b9f0e7d8efdb254163586da65bc291099c"
+}

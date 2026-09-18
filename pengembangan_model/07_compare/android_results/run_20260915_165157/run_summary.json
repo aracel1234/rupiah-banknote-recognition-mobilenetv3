@@ -1,0 +1,8 @@
+{
+  "device_reported": "22101320G",
+  "android_version": "14",
+  "latency_csv": "/home/aracel/Downloads/Skripsi/pengembangan_model/07_compare/android_results/run_20260915_165157/stage7_latency.csv",
+  "memory_csv": "/home/aracel/Downloads/Skripsi/pengembangan_model/07_compare/android_results/run_20260915_165157/stage7_memory.csv",
+  "protocol_json": "/home/aracel/Downloads/Skripsi/pengembangan_model/07_compare/android_results/run_20260915_165157/android_protocol.json",
+  "tflite_version": "2.17.0"
+}

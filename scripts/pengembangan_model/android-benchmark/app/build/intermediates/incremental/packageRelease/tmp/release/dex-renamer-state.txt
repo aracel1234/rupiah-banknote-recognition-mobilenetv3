@@ -1,0 +1,4 @@
+#Tue Sep 15 14:39:12 WIB 2026
+base.0=/home/aracel/Downloads/Skripsi/scripts/pengembangan_model/android-benchmark/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

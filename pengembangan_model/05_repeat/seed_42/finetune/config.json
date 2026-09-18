@@ -1,0 +1,12 @@
+{
+  "trial": "finetune_seed42",
+  "seed": 42,
+  "batch_size": 32,
+  "learning_rate": 3e-05,
+  "fraction": 0.35,
+  "epochs": 20,
+  "top_layers": 55,
+  "backbone_layers": 157,
+  "trainable_backbone_layers": 18,
+  "trainable_parameters": 746432
+}

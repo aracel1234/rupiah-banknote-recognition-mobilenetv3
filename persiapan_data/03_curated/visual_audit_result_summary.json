@@ -1,0 +1,18 @@
+{
+  "audit_required": 3463,
+  "reviewed": 3463,
+  "pending": 0,
+  "completion_percent": 100.0,
+  "valid": 3348,
+  "valid_percent_of_reviewed": 96.68,
+  "excluded": 115,
+  "excluded_percent_of_reviewed": 3.32,
+  "review": 0,
+  "review_percent_of_reviewed": 0.0,
+  "exclude_reasons": {
+    "poor_visual_quality": 84,
+    "wrong_label": 21,
+    "invalid_object": 9,
+    "object_incomplete": 1
+  }
+}

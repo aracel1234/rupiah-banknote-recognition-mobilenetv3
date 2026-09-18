@@ -1,0 +1,106 @@
+# ============================================================
+# Dataset Mentah - Uang
+# ============================================================
+
+/persiapan_data/raw_dataset/uang/*
+
+!/persiapan_data/raw_dataset/uang/all_data_merged.json
+!/persiapan_data/raw_dataset/uang/ds9_valid_1148_jpg.rf.ba4ccd339c218aeaa51d698b941a0af4.jpg
+!/persiapan_data/raw_dataset/uang/ds9_valid_1147_jpg.rf.da97f5677bd6cf00727a857559c607bf.jpg
+
+
+# ============================================================
+# Dataset Mentah - Non Uang
+# ============================================================
+
+/persiapan_data/raw_dataset/non_uang/*
+
+!/persiapan_data/raw_dataset/non_uang/image_001.jpg
+!/persiapan_data/raw_dataset/non_uang/000000272144.jpg
+
+
+# ============================================================
+# Extracted - 100000
+# ============================================================
+
+/persiapan_data/02_extracted/uang/100000/*
+
+!/persiapan_data/02_extracted/uang/100000/ds9_img040343_ann040061.png
+!/persiapan_data/02_extracted/uang/100000/ds9_img040340_ann040059.png
+
+
+# ============================================================
+# Extracted - 50000
+# ============================================================
+
+/persiapan_data/02_extracted/uang/50000/*
+
+!/persiapan_data/02_extracted/uang/50000/ds9_img040306_ann040034.png
+!/persiapan_data/02_extracted/uang/50000/ds9_img040289_ann040017.png
+
+
+# ============================================================
+# Extracted - 20000
+# ============================================================
+
+/persiapan_data/02_extracted/uang/20000/*
+
+!/persiapan_data/02_extracted/uang/20000/ds9_img040341_ann040060.png
+!/persiapan_data/02_extracted/uang/20000/ds9_img040334_ann040055.png
+
+
+# ============================================================
+# Extracted - 10000
+# ============================================================
+
+/persiapan_data/02_extracted/uang/10000/*
+
+!/persiapan_data/02_extracted/uang/10000/ds9_img040336_ann040056.png
+!/persiapan_data/02_extracted/uang/10000/ds9_img040267_ann039999.png
+
+
+# ============================================================
+# Extracted - 5000
+# ============================================================
+
+/persiapan_data/02_extracted/uang/5000/*
+
+!/persiapan_data/02_extracted/uang/5000/ds9_img040320_ann040043.png
+!/persiapan_data/02_extracted/uang/5000/ds9_img040292_ann040020.png
+
+
+# ============================================================
+# Extracted - 2000
+# ============================================================
+
+/persiapan_data/02_extracted/uang/2000/*
+
+!/persiapan_data/02_extracted/uang/2000/ds9_img040276_ann040007.png
+!/persiapan_data/02_extracted/uang/2000/ds9_img040296_ann040024.png
+
+
+# ============================================================
+# Extracted - 1000
+# ============================================================
+
+/persiapan_data/02_extracted/uang/1000/*
+
+!/persiapan_data/02_extracted/uang/1000/ds9_img040314_ann040038.png
+!/persiapan_data/02_extracted/uang/1000/ds9_img040290_ann040018.png
+
+
+# ============================================================
+# Laporan Skripsi
+# ============================================================
+
+/laporan_skripsi/
+
+# ============================================================
+# Android signing
+# ============================================================
+
+*.jks
+*.keystore
+key.properties
+keystore.properties
+local.properties

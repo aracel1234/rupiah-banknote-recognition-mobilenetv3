@@ -1,0 +1,111 @@
+{
+  "stage": 6,
+  "bundle_id": "run_20260913_191918_012413",
+  "sample_id": "ds1_img000552_ann000552",
+  "input_file": "input_000.f32",
+  "input_sha256": "d2840248a32c95601a83df3e079accdb5761036ba3cc9785ea0f611210922abc",
+  "class_names_file": "class_names.json",
+  "class_names_sha256": "70c0322a6a8baba0090611bf5b8ef3cae1ba797b3ce0324e3cfac8d2d518f522",
+  "candidates": [
+    {
+      "candidate": "fp32",
+      "file_name": "mobilenetv3small_fp32.tflite",
+      "model_sha256": "bbcdee096fe23d19026b530643c17e512ff9eacbb75404ec82683315768795bd",
+      "input_shape": [
+        1,
+        224,
+        224,
+        3
+      ],
+      "output_shape": [
+        1,
+        8
+      ],
+      "input_dtype": "float32",
+      "output_dtype": "float32",
+      "input_quantization": [
+        0.0,
+        0
+      ],
+      "output_quantization": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "candidate": "fp16",
+      "file_name": "mobilenetv3small_fp16.tflite",
+      "model_sha256": "b3e37e8d3278cbcc60537a6ad1fec3a00d4b2de3506a379d8264febdd927e790",
+      "input_shape": [
+        1,
+        224,
+        224,
+        3
+      ],
+      "output_shape": [
+        1,
+        8
+      ],
+      "input_dtype": "float32",
+      "output_dtype": "float32",
+      "input_quantization": [
+        0.0,
+        0
+      ],
+      "output_quantization": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "candidate": "dynamic_range",
+      "file_name": "mobilenetv3small_dynamic_range.tflite",
+      "model_sha256": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676",
+      "input_shape": [
+        1,
+        224,
+        224,
+        3
+      ],
+      "output_shape": [
+        1,
+        8
+      ],
+      "input_dtype": "float32",
+      "output_dtype": "float32",
+      "input_quantization": [
+        0.0,
+        0
+      ],
+      "output_quantization": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "candidate": "full_int8",
+      "file_name": "mobilenetv3small_full_int8.tflite",
+      "model_sha256": "fe8db97ca3a464f35deeba83f5f77d92dcae55c78c71cccfc1a847716e6e37e7",
+      "input_shape": [
+        1,
+        224,
+        224,
+        3
+      ],
+      "output_shape": [
+        1,
+        8
+      ],
+      "input_dtype": "int8",
+      "output_dtype": "int8",
+      "input_quantization": [
+        1.0,
+        -128
+      ],
+      "output_quantization": [
+        0.00390625,
+        -128
+      ]
+    }
+  ]
+}

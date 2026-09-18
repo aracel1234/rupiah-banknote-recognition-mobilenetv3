@@ -1,0 +1,24 @@
+{
+  "status": "complete",
+  "reason": "wireless_adb_disconnect",
+  "preserved_memory_sessions": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "session_5_preserved_candidates": [
+    "fp32",
+    "fp16",
+    "dynamic_range"
+  ],
+  "session_5_repeated_candidates": [
+    "full_int8"
+  ],
+  "latency_repeated": false,
+  "latency_csv_sha256": "533462e70bd56d5bdf04d05301f324e530d12a0628425715567a21c3256e14b2",
+  "memory_csv_sha256": "0037882556b582f53000b6f81709d9af8de03a88acdfda67c6b0f2cfd66a66b4",
+  "device_reported": "22101320G",
+  "android_version": "14",
+  "tflite_version": "2.17.0"
+}

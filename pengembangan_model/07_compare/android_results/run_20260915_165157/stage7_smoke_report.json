@@ -1,0 +1,26 @@
+{
+  "stage": 7,
+  "all_passed": true,
+  "candidates": [
+    {
+      "candidate": "fp32",
+      "passed": true,
+      "message": "ok"
+    },
+    {
+      "candidate": "fp16",
+      "passed": true,
+      "message": "ok"
+    },
+    {
+      "candidate": "dynamic_range",
+      "passed": true,
+      "message": "ok"
+    },
+    {
+      "candidate": "full_int8",
+      "passed": true,
+      "message": "ok"
+    }
+  ]
+}

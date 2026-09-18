@@ -1,0 +1,40 @@
+{
+  "stage": 3,
+  "completed_trials": 4,
+  "selected": {
+    "trial": "b32_lr1e-03",
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "fraction": 0.0,
+    "epochs": 30,
+    "top_layers": 0,
+    "backbone_layers": 157,
+    "trainable_backbone_layers": 0,
+    "trainable_parameters": 4616,
+    "source_sha256": "93fd28e138d969425ff324afeb17105592946ecd011c15e821bf3f9b886dc923",
+    "seed": 42,
+    "epoch": 7,
+    "val_loss": 0.5234485864639282,
+    "val_macro_f1": 0.8152033191630178,
+    "val_accuracy": 0.8259479403495789,
+    "weights_path": "/home/aracel/Downloads/Skripsi/pengembangan_model/03_head/run_20260910_030615_654450/b32_lr1e-03/epoch_07.weights.h5"
+  },
+  "model_path": "/home/aracel/Downloads/Skripsi/pengembangan_model/03_head/run_20260910_030615_654450/best_head.keras",
+  "model_sha256": "ad8072224a48c011d7ddd924f8cc6c8c676029d2b2d68d38c59f5e697e3c8982",
+  "reload_max_abs_diff": 0.0,
+  "top_layers": 0,
+  "backbone_layers": 157,
+  "trainable_backbone_layers": 0,
+  "trainable_parameters": 4616,
+  "data_manifest_sha256": {
+    "train": "d7a3bc32eade354e4b898553756cf1d998c2311ac4d7baf3e8400761df215350",
+    "validation": "fd97d2f5dccc4c3833d6c5184cd0d9658cb66e135004ed80af61d68e0eaf751d",
+    "test": "98acc760d9176a10831762e62b63e1ca319c2f15446e8ad773882696d6b63493"
+  },
+  "initial_model_sha256": "93fd28e138d969425ff324afeb17105592946ecd011c15e821bf3f9b886dc923",
+  "final_fp32_locked": false,
+  "status": "complete",
+  "seed": 42,
+  "tensorflow": "2.20.0",
+  "keras": "3.15.0"
+}

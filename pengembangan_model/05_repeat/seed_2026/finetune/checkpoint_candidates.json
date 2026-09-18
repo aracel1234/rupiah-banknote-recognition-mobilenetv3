@@ -1,0 +1,19 @@
+[
+  {
+    "trial": "finetune_seed2026",
+    "seed": 2026,
+    "batch_size": 32,
+    "learning_rate": 1.1999999287581886e-06,
+    "fraction": 0.35,
+    "epochs": 20,
+    "top_layers": 55,
+    "backbone_layers": 157,
+    "trainable_backbone_layers": 18,
+    "trainable_parameters": 746432,
+    "epoch": 13,
+    "val_loss": 0.27603188157081604,
+    "val_macro_f1": 0.9169822952635192,
+    "val_accuracy": 0.9214252829551697,
+    "weights_path": "/home/aracel/Downloads/Skripsi/pengembangan_model/05_repeat/seed_2026/finetune/epoch_13.weights.h5"
+  }
+]

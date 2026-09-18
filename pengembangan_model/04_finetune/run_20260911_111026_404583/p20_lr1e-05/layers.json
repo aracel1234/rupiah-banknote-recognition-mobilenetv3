@@ -1,0 +1,1101 @@
+[
+  {
+    "index": 0,
+    "name": "input_layer",
+    "type": "InputLayer",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 1,
+    "name": "rescaling",
+    "type": "Rescaling",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 2,
+    "name": "conv",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 3,
+    "name": "conv_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 4,
+    "name": "activation",
+    "type": "Activation",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 5,
+    "name": "expanded_conv_depthwise_pad",
+    "type": "ZeroPadding2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 6,
+    "name": "expanded_conv_depthwise",
+    "type": "DepthwiseConv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 7,
+    "name": "expanded_conv_depthwise_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 8,
+    "name": "re_lu",
+    "type": "ReLU",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 9,
+    "name": "expanded_conv_squeeze_excite_avg_pool",
+    "type": "GlobalAveragePooling2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 10,
+    "name": "expanded_conv_squeeze_excite_conv",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 11,
+    "name": "expanded_conv_squeeze_excite_relu",
+    "type": "ReLU",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 12,
+    "name": "expanded_conv_squeeze_excite_conv_1",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 13,
+    "name": "re_lu_1",
+    "type": "ReLU",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 14,
+    "name": "expanded_conv_squeeze_excite_mul",
+    "type": "Multiply",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 15,
+    "name": "expanded_conv_project",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 16,
+    "name": "expanded_conv_project_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 17,
+    "name": "expanded_conv_1_expand",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 18,
+    "name": "expanded_conv_1_expand_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 19,
+    "name": "re_lu_2",
+    "type": "ReLU",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 20,
+    "name": "expanded_conv_1_depthwise_pad",
+    "type": "ZeroPadding2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 21,
+    "name": "expanded_conv_1_depthwise",
+    "type": "DepthwiseConv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 22,
+    "name": "expanded_conv_1_depthwise_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 23,
+    "name": "re_lu_3",
+    "type": "ReLU",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 24,
+    "name": "expanded_conv_1_project",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 25,
+    "name": "expanded_conv_1_project_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 26,
+    "name": "expanded_conv_2_expand",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 27,
+    "name": "expanded_conv_2_expand_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 28,
+    "name": "re_lu_4",
+    "type": "ReLU",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 29,
+    "name": "expanded_conv_2_depthwise",
+    "type": "DepthwiseConv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 30,
+    "name": "expanded_conv_2_depthwise_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 31,
+    "name": "re_lu_5",
+    "type": "ReLU",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 32,
+    "name": "expanded_conv_2_project",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 33,
+    "name": "expanded_conv_2_project_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 34,
+    "name": "expanded_conv_2_add",
+    "type": "Add",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 35,
+    "name": "expanded_conv_3_expand",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 36,
+    "name": "expanded_conv_3_expand_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 37,
+    "name": "activation_1",
+    "type": "Activation",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 38,
+    "name": "expanded_conv_3_depthwise_pad",
+    "type": "ZeroPadding2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 39,
+    "name": "expanded_conv_3_depthwise",
+    "type": "DepthwiseConv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 40,
+    "name": "expanded_conv_3_depthwise_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 41,
+    "name": "activation_2",
+    "type": "Activation",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 42,
+    "name": "expanded_conv_3_squeeze_excite_avg_pool",
+    "type": "GlobalAveragePooling2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 43,
+    "name": "expanded_conv_3_squeeze_excite_conv",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 44,
+    "name": "expanded_conv_3_squeeze_excite_relu",
+    "type": "ReLU",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 45,
+    "name": "expanded_conv_3_squeeze_excite_conv_1",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 46,
+    "name": "re_lu_6",
+    "type": "ReLU",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 47,
+    "name": "expanded_conv_3_squeeze_excite_mul",
+    "type": "Multiply",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 48,
+    "name": "expanded_conv_3_project",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 49,
+    "name": "expanded_conv_3_project_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 50,
+    "name": "expanded_conv_4_expand",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 51,
+    "name": "expanded_conv_4_expand_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 52,
+    "name": "activation_3",
+    "type": "Activation",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 53,
+    "name": "expanded_conv_4_depthwise",
+    "type": "DepthwiseConv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 54,
+    "name": "expanded_conv_4_depthwise_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 55,
+    "name": "activation_4",
+    "type": "Activation",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 56,
+    "name": "expanded_conv_4_squeeze_excite_avg_pool",
+    "type": "GlobalAveragePooling2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 57,
+    "name": "expanded_conv_4_squeeze_excite_conv",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 58,
+    "name": "expanded_conv_4_squeeze_excite_relu",
+    "type": "ReLU",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 59,
+    "name": "expanded_conv_4_squeeze_excite_conv_1",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 60,
+    "name": "re_lu_7",
+    "type": "ReLU",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 61,
+    "name": "expanded_conv_4_squeeze_excite_mul",
+    "type": "Multiply",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 62,
+    "name": "expanded_conv_4_project",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 63,
+    "name": "expanded_conv_4_project_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 64,
+    "name": "expanded_conv_4_add",
+    "type": "Add",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 65,
+    "name": "expanded_conv_5_expand",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 66,
+    "name": "expanded_conv_5_expand_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 67,
+    "name": "activation_5",
+    "type": "Activation",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 68,
+    "name": "expanded_conv_5_depthwise",
+    "type": "DepthwiseConv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 69,
+    "name": "expanded_conv_5_depthwise_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 70,
+    "name": "activation_6",
+    "type": "Activation",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 71,
+    "name": "expanded_conv_5_squeeze_excite_avg_pool",
+    "type": "GlobalAveragePooling2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 72,
+    "name": "expanded_conv_5_squeeze_excite_conv",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 73,
+    "name": "expanded_conv_5_squeeze_excite_relu",
+    "type": "ReLU",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 74,
+    "name": "expanded_conv_5_squeeze_excite_conv_1",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 75,
+    "name": "re_lu_8",
+    "type": "ReLU",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 76,
+    "name": "expanded_conv_5_squeeze_excite_mul",
+    "type": "Multiply",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 77,
+    "name": "expanded_conv_5_project",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 78,
+    "name": "expanded_conv_5_project_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 79,
+    "name": "expanded_conv_5_add",
+    "type": "Add",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 80,
+    "name": "expanded_conv_6_expand",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 81,
+    "name": "expanded_conv_6_expand_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 82,
+    "name": "activation_7",
+    "type": "Activation",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 83,
+    "name": "expanded_conv_6_depthwise",
+    "type": "DepthwiseConv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 84,
+    "name": "expanded_conv_6_depthwise_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 85,
+    "name": "activation_8",
+    "type": "Activation",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 86,
+    "name": "expanded_conv_6_squeeze_excite_avg_pool",
+    "type": "GlobalAveragePooling2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 87,
+    "name": "expanded_conv_6_squeeze_excite_conv",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 88,
+    "name": "expanded_conv_6_squeeze_excite_relu",
+    "type": "ReLU",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 89,
+    "name": "expanded_conv_6_squeeze_excite_conv_1",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 90,
+    "name": "re_lu_9",
+    "type": "ReLU",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 91,
+    "name": "expanded_conv_6_squeeze_excite_mul",
+    "type": "Multiply",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 92,
+    "name": "expanded_conv_6_project",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 93,
+    "name": "expanded_conv_6_project_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 94,
+    "name": "expanded_conv_7_expand",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 95,
+    "name": "expanded_conv_7_expand_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 96,
+    "name": "activation_9",
+    "type": "Activation",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 97,
+    "name": "expanded_conv_7_depthwise",
+    "type": "DepthwiseConv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 98,
+    "name": "expanded_conv_7_depthwise_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 99,
+    "name": "activation_10",
+    "type": "Activation",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 100,
+    "name": "expanded_conv_7_squeeze_excite_avg_pool",
+    "type": "GlobalAveragePooling2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 101,
+    "name": "expanded_conv_7_squeeze_excite_conv",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 102,
+    "name": "expanded_conv_7_squeeze_excite_relu",
+    "type": "ReLU",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 103,
+    "name": "expanded_conv_7_squeeze_excite_conv_1",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 104,
+    "name": "re_lu_10",
+    "type": "ReLU",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 105,
+    "name": "expanded_conv_7_squeeze_excite_mul",
+    "type": "Multiply",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 106,
+    "name": "expanded_conv_7_project",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 107,
+    "name": "expanded_conv_7_project_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 108,
+    "name": "expanded_conv_7_add",
+    "type": "Add",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 109,
+    "name": "expanded_conv_8_expand",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 110,
+    "name": "expanded_conv_8_expand_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 111,
+    "name": "activation_11",
+    "type": "Activation",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 112,
+    "name": "expanded_conv_8_depthwise_pad",
+    "type": "ZeroPadding2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 113,
+    "name": "expanded_conv_8_depthwise",
+    "type": "DepthwiseConv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 114,
+    "name": "expanded_conv_8_depthwise_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 115,
+    "name": "activation_12",
+    "type": "Activation",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 116,
+    "name": "expanded_conv_8_squeeze_excite_avg_pool",
+    "type": "GlobalAveragePooling2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 117,
+    "name": "expanded_conv_8_squeeze_excite_conv",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 118,
+    "name": "expanded_conv_8_squeeze_excite_relu",
+    "type": "ReLU",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 119,
+    "name": "expanded_conv_8_squeeze_excite_conv_1",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 120,
+    "name": "re_lu_11",
+    "type": "ReLU",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 121,
+    "name": "expanded_conv_8_squeeze_excite_mul",
+    "type": "Multiply",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 122,
+    "name": "expanded_conv_8_project",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 123,
+    "name": "expanded_conv_8_project_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 124,
+    "name": "expanded_conv_9_expand",
+    "type": "Conv2D",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 125,
+    "name": "expanded_conv_9_expand_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 126,
+    "name": "activation_13",
+    "type": "Activation",
+    "trainable": true,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 127,
+    "name": "expanded_conv_9_depthwise",
+    "type": "DepthwiseConv2D",
+    "trainable": true,
+    "has_trainable_weights": true
+  },
+  {
+    "index": 128,
+    "name": "expanded_conv_9_depthwise_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 129,
+    "name": "activation_14",
+    "type": "Activation",
+    "trainable": true,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 130,
+    "name": "expanded_conv_9_squeeze_excite_avg_pool",
+    "type": "GlobalAveragePooling2D",
+    "trainable": true,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 131,
+    "name": "expanded_conv_9_squeeze_excite_conv",
+    "type": "Conv2D",
+    "trainable": true,
+    "has_trainable_weights": true
+  },
+  {
+    "index": 132,
+    "name": "expanded_conv_9_squeeze_excite_relu",
+    "type": "ReLU",
+    "trainable": true,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 133,
+    "name": "expanded_conv_9_squeeze_excite_conv_1",
+    "type": "Conv2D",
+    "trainable": true,
+    "has_trainable_weights": true
+  },
+  {
+    "index": 134,
+    "name": "re_lu_12",
+    "type": "ReLU",
+    "trainable": true,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 135,
+    "name": "expanded_conv_9_squeeze_excite_mul",
+    "type": "Multiply",
+    "trainable": true,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 136,
+    "name": "expanded_conv_9_project",
+    "type": "Conv2D",
+    "trainable": true,
+    "has_trainable_weights": true
+  },
+  {
+    "index": 137,
+    "name": "expanded_conv_9_project_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 138,
+    "name": "expanded_conv_9_add",
+    "type": "Add",
+    "trainable": true,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 139,
+    "name": "expanded_conv_10_expand",
+    "type": "Conv2D",
+    "trainable": true,
+    "has_trainable_weights": true
+  },
+  {
+    "index": 140,
+    "name": "expanded_conv_10_expand_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 141,
+    "name": "activation_15",
+    "type": "Activation",
+    "trainable": true,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 142,
+    "name": "expanded_conv_10_depthwise",
+    "type": "DepthwiseConv2D",
+    "trainable": true,
+    "has_trainable_weights": true
+  },
+  {
+    "index": 143,
+    "name": "expanded_conv_10_depthwise_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 144,
+    "name": "activation_16",
+    "type": "Activation",
+    "trainable": true,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 145,
+    "name": "expanded_conv_10_squeeze_excite_avg_pool",
+    "type": "GlobalAveragePooling2D",
+    "trainable": true,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 146,
+    "name": "expanded_conv_10_squeeze_excite_conv",
+    "type": "Conv2D",
+    "trainable": true,
+    "has_trainable_weights": true
+  },
+  {
+    "index": 147,
+    "name": "expanded_conv_10_squeeze_excite_relu",
+    "type": "ReLU",
+    "trainable": true,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 148,
+    "name": "expanded_conv_10_squeeze_excite_conv_1",
+    "type": "Conv2D",
+    "trainable": true,
+    "has_trainable_weights": true
+  },
+  {
+    "index": 149,
+    "name": "re_lu_13",
+    "type": "ReLU",
+    "trainable": true,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 150,
+    "name": "expanded_conv_10_squeeze_excite_mul",
+    "type": "Multiply",
+    "trainable": true,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 151,
+    "name": "expanded_conv_10_project",
+    "type": "Conv2D",
+    "trainable": true,
+    "has_trainable_weights": true
+  },
+  {
+    "index": 152,
+    "name": "expanded_conv_10_project_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 153,
+    "name": "expanded_conv_10_add",
+    "type": "Add",
+    "trainable": true,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 154,
+    "name": "conv_1",
+    "type": "Conv2D",
+    "trainable": true,
+    "has_trainable_weights": true
+  },
+  {
+    "index": 155,
+    "name": "conv_1_bn",
+    "type": "BatchNormalization",
+    "trainable": false,
+    "has_trainable_weights": false
+  },
+  {
+    "index": 156,
+    "name": "activation_17",
+    "type": "Activation",
+    "trainable": true,
+    "has_trainable_weights": false
+  }
+]

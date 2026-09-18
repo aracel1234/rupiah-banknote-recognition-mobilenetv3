@@ -1,0 +1,36 @@
+[
+  {
+    "trial": "head_seed123",
+    "seed": 123,
+    "batch_size": 32,
+    "learning_rate": 0.00020000000949949026,
+    "fraction": 0.0,
+    "epochs": 30,
+    "top_layers": 0,
+    "backbone_layers": 157,
+    "trainable_backbone_layers": 0,
+    "trainable_parameters": 4616,
+    "epoch": 10,
+    "val_loss": 0.5591873526573181,
+    "val_macro_f1": 0.8015027052875967,
+    "val_accuracy": 0.8122430443763733,
+    "weights_path": "/home/aracel/Downloads/Skripsi/pengembangan_model/05_repeat/seed_123/head/epoch_10.weights.h5"
+  },
+  {
+    "trial": "head_seed123",
+    "seed": 123,
+    "batch_size": 32,
+    "learning_rate": 0.00020000000949949026,
+    "fraction": 0.0,
+    "epochs": 30,
+    "top_layers": 0,
+    "backbone_layers": 157,
+    "trainable_backbone_layers": 0,
+    "trainable_parameters": 4616,
+    "epoch": 13,
+    "val_loss": 0.5578232407569885,
+    "val_macro_f1": 0.8019299594794691,
+    "val_accuracy": 0.8138419389724731,
+    "weights_path": "/home/aracel/Downloads/Skripsi/pengembangan_model/05_repeat/seed_123/head/epoch_13.weights.h5"
+  }
+]

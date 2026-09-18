@@ -1,0 +1,13 @@
+{
+  "trial": "p35_lr1e-05",
+  "batch_size": 32,
+  "learning_rate": 1e-05,
+  "fraction": 0.35,
+  "epochs": 20,
+  "top_layers": 55,
+  "backbone_layers": 157,
+  "trainable_backbone_layers": 18,
+  "trainable_parameters": 746432,
+  "source_sha256": "ad8072224a48c011d7ddd924f8cc6c8c676029d2b2d68d38c59f5e697e3c8982",
+  "seed": 42
+}

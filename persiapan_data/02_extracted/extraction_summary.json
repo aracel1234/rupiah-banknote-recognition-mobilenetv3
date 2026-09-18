@@ -1,0 +1,19 @@
+{
+  "source_images": 40344,
+  "source_annotations": 40062,
+  "excluded_no_annotation": 1785,
+  "bbox_clipped": 1992,
+  "crops_saved": 40062,
+  "issues": 0,
+  "output_format": "PNG",
+  "resize_applied": false,
+  "class_counts": {
+    "1000": 6532,
+    "10000": 5627,
+    "100000": 5006,
+    "2000": 5339,
+    "20000": 7962,
+    "5000": 4954,
+    "50000": 4642
+  }
+}

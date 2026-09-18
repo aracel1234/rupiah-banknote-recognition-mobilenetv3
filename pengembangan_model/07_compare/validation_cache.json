@@ -1,0 +1,17 @@
+{
+  "identity": {
+    "evaluation_version": 3,
+    "data_manifest_sha256": {
+      "train": "d7a3bc32eade354e4b898553756cf1d998c2311ac4d7baf3e8400761df215350",
+      "validation": "fd97d2f5dccc4c3833d6c5184cd0d9658cb66e135004ed80af61d68e0eaf751d",
+      "test": "98acc760d9176a10831762e62b63e1ca319c2f15446e8ad773882696d6b63493"
+    },
+    "artifact_sha256": {
+      "fp32": "bbcdee096fe23d19026b530643c17e512ff9eacbb75404ec82683315768795bd",
+      "fp16": "b3e37e8d3278cbcc60537a6ad1fec3a00d4b2de3506a379d8264febdd927e790",
+      "dynamic_range": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676",
+      "full_int8": "fe8db97ca3a464f35deeba83f5f77d92dcae55c78c71cccfc1a847716e6e37e7"
+    }
+  },
+  "npz_sha256": "e73fdd20b2d2ae5e06b48184f31f75b62e20dd24cfb44338ecd6baefce402e5e"
+}

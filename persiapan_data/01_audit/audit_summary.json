@@ -1,0 +1,35 @@
+{
+  "money_images_json": 40344,
+  "money_files_disk": 40344,
+  "annotations": 40062,
+  "nonmoney_files_disk": 8000,
+  "missing_money_files": 0,
+  "money_files_not_in_json": 0,
+  "images_without_annotation": 1785,
+  "images_one_annotation": 37629,
+  "images_multiple_annotations": 930,
+  "annotation_without_image": 0,
+  "bbox_invalid_size": 0,
+  "bbox_outside_image": 1992,
+  "source_counts": {
+    "ds1": 2157,
+    "ds10": 1552,
+    "ds2": 1000,
+    "ds3": 921,
+    "ds4": 8601,
+    "ds5": 8396,
+    "ds6": 3420,
+    "ds7": 1788,
+    "ds8": 2729,
+    "ds9": 9780
+  },
+  "class_counts": {
+    "dua puluh ribu": 7962,
+    "dua ribu": 5339,
+    "lima puluh ribu": 4642,
+    "lima ribu": 4954,
+    "sepuluh ribu": 5627,
+    "seratus ribu": 5006,
+    "seribu": 6532
+  }
+}

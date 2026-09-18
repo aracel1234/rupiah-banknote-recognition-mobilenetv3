@@ -1,0 +1,85 @@
+{
+  "seed": 42,
+  "split_method": "parent_group_stratified_greedy_v1",
+  "allocation_objective": "sum_squared_class_fraction_error",
+  "dataset_total": 43766,
+  "split_total": {
+    "train": 35012,
+    "validation": 4378,
+    "test": 4376
+  },
+  "split_ratio_target": {
+    "train": 0.8,
+    "validation": 0.1,
+    "test": 0.1
+  },
+  "split_ratio_actual": {
+    "train": 0.799982,
+    "validation": 0.100032,
+    "test": 0.099986
+  },
+  "class_counts": {
+    "train": {
+      "1000": 5061,
+      "2000": 4147,
+      "5000": 3758,
+      "10000": 4316,
+      "20000": 6225,
+      "50000": 3530,
+      "100000": 3828,
+      "nonuang": 4147
+    },
+    "validation": {
+      "1000": 633,
+      "2000": 518,
+      "5000": 470,
+      "10000": 540,
+      "20000": 778,
+      "50000": 441,
+      "100000": 479,
+      "nonuang": 519
+    },
+    "test": {
+      "1000": 633,
+      "2000": 519,
+      "5000": 470,
+      "10000": 539,
+      "20000": 778,
+      "50000": 441,
+      "100000": 478,
+      "nonuang": 518
+    }
+  },
+  "class_weights_by_label": {
+    "1000": 0.86475005,
+    "2000": 1.05534121,
+    "5000": 1.16458222,
+    "10000": 1.01401761,
+    "20000": 0.70305221,
+    "50000": 1.2398017,
+    "100000": 1.14328631,
+    "nonuang": 1.05534121
+  },
+  "distribution_error_J": 0.00144999,
+  "parent_groups_total": 42263,
+  "parent_groups_cross_split": 0,
+  "related_samples_cross_split": 0,
+  "mixed_label_parent_groups": 0,
+  "group_counts": {
+    "train": 33813,
+    "validation": 4201,
+    "test": 4249
+  },
+  "dataset_manifest_sha256": "6e3c6fc55110b77d1f761f29eb5a687db666a2156ba51c211d5664fd96286188",
+  "money_manifest_sha256": "92f49b7911154254ece8a327f556f07fb5df7c868cd8690b6db59b294300fe15",
+  "image_content_checked": false,
+  "nonmoney_content_deduplicated": false,
+  "ready_for_training": true,
+  "readiness_scope": "manifest_integrity_and_known_parent_groups_only",
+  "numpy_version": "1.26.4",
+  "pandas_version": "3.0.3",
+  "train_manifest_sha256": "d7a3bc32eade354e4b898553756cf1d998c2311ac4d7baf3e8400761df215350",
+  "validation_manifest_sha256": "fd97d2f5dccc4c3833d6c5184cd0d9658cb66e135004ed80af61d68e0eaf751d",
+  "test_manifest_sha256": "98acc760d9176a10831762e62b63e1ca319c2f15446e8ad773882696d6b63493",
+  "split_manifest_sha256": "8517fe7a28b8314ecc65652a996cd843b4f7978c6b4ed9b6caee9345d014c1c1"
+}

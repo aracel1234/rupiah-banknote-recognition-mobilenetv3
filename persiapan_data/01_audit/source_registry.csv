@@ -1,0 +1,12 @@
+source_id,url_sumber,pemilik,nama_proyek,versi,tanggal_akses,kelas_tersedia,jumlah_citra_awal,format_anotasi,lisensi,status_penggunaan
+ds1,https://universe.roboflow.com/agil-skripsi-2/5-rotasi-dan-crop-20-50-80,agil-skripsi-2,"5 - rotasi dan crop 20, 50, 80 Computer Vision Model",V6,2026-04-16,"7 kelas",2157,COCO,"CC BY 4.0",Diterima
+ds2,https://universe.roboflow.com/final-1-4a4rh/1rb/dataset/1,final-1-4a4rh,"1rb Computer Vision Model",V1,2026-04-16,"1 kelas",1000,COCO,"CC BY 4.0",Diterima
+ds3,https://universe.roboflow.com/final-xkyim/20rb-uxlxm,final-xkyim,"20rb Computer Vision Dataset",V1,2026-04-16,"1 kelas",921,COCO,"CC BY 4.0",Diterima
+ds4,https://universe.roboflow.com/currency-yimpm/deteksiuang-xllap,currency-yimpm,"deteksiuang Computer Vision Model",V13,2026-04-16,"7 kelas",8601,COCO,"CC BY 4.0",Diterima
+ds5,https://universe.roboflow.com/nur-hasanah-xhvuu/money-chuen,nur-hasanah-xhvuu,"money Computer Vision Model",V2,2026-04-16,"7 kelas",8396,COCO,"CC BY 4.0",Diterima
+ds6,https://universe.roboflow.com/raplong/rupiah-nkyzq,raplong,"Rupiah Computer Vision Dataset",V2,2026-04-16,"7 kelas",3420,COCO,"CC BY 4.0",Diterima
+ds7,https://universe.roboflow.com/tugas-akhir-afuhz/rupiah-m55hl,tugas-akhir-afuhz,"rupiah Computer Vision Model",V2,2026-04-16,"7 kelas",1788,COCO,"CC BY 4.0",Diterima
+ds8,https://universe.roboflow.com/myta/rupiah-detector,myta,"Rupiah Detector Computer Vision Dataset",V3,2026-04-16,"7 kelas",2729,COCO,"CC BY 4.0",Diterima
+ds9,https://universe.roboflow.com/teamkito-labs/uang-wfprv,teamkito-labs,"Uang Computer Vision Dataset",V3,2026-04-16,"7 kelas",9780,COCO,"CC BY 4.0",Diterima
+ds10,https://universe.roboflow.com/ramzi-guyzk/uang-rupiah-li6sa,ramzi-guyzk,"Uang Rupiah Computer Vision Dataset",V2,2026-04-16,"7 kelas",1552,COCO,"CC BY 4.0",Diterima
+ds11,https://www.kaggle.com/datasets/clkmuhammed/microsoft-coco-2017-common-objects-in-context,"Muhammed Çelik","Microsoft COCO 2017 (Common Objects in Context)","Kaggle Snapshot",2026-05-22,"1 kelas nonuang",8000,COCO,"COCO annotations CC BY 4.0",Diterima

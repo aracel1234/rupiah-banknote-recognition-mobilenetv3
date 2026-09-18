@@ -1,0 +1,47 @@
+{
+  "status": "complete",
+  "stage": 6,
+  "run_dir": "/home/aracel/Downloads/Skripsi/pengembangan_model/06_tflite/run_20260913_191918_012413",
+  "source_model_path": "/home/aracel/Downloads/Skripsi/pengembangan_model/05_repeat/mobilenetv3small_fp32_best.keras",
+  "source_model_sha256": "255cf905675df6dcd4471e3381a535e9bc2b50b15c711a33fe3aa891eee39900",
+  "saved_model_sha256": "f6bf4d47c113408cd7e428c56b6584fa3d9214edc7a7c656245b92f4391c9c97",
+  "data_manifest_sha256": {
+    "train": "d7a3bc32eade354e4b898553756cf1d998c2311ac4d7baf3e8400761df215350",
+    "validation": "fd97d2f5dccc4c3833d6c5184cd0d9658cb66e135004ed80af61d68e0eaf751d",
+    "test": "98acc760d9176a10831762e62b63e1ca319c2f15446e8ad773882696d6b63493"
+  },
+  "coverage_metadata_sha256": "957e993e5dd14a40864a6bdf14cf8d50c840b597392426df42e8e1f7da59b5c5",
+  "human_metadata_policy": "existing GUI audit accepted; no second manual audit required",
+  "automatic_metadata_policy": "group_id and all proxies recomputed from source data at execution time",
+  "representative_samples": 400,
+  "representative_target_by_class": {
+    "1000": 50,
+    "2000": 50,
+    "5000": 50,
+    "10000": 50,
+    "20000": 50,
+    "50000": 50,
+    "100000": 50,
+    "nonuang": 50
+  },
+  "smoke_samples": 80,
+  "python_valid": true,
+  "android_verified": true,
+  "all_valid": true,
+  "ready_for_stage7": true,
+  "candidates": [
+    "fp32",
+    "fp16",
+    "dynamic_range",
+    "full_int8"
+  ],
+  "android_bundle_path": "/home/aracel/Downloads/Skripsi/pengembangan_model/06_tflite/run_20260913_191918_012413/android_verification_bundle/stage6",
+  "android_bundle_sha256": "20d673792d10c74868c92895ef7121f93003967f1c8b218f88e8927acd991013",
+  "android_bundle_id": "run_20260913_191918_012413",
+  "tensorflow": "2.20.0",
+  "smoke_runtime": "CPU batch-1; CUDA hidden; oneDNN disabled",
+  "proxy_note": "brightness/orientation/scale are sampling proxies, not physical lux, exact angle, or camera distance.",
+  "android_report_path": "/home/aracel/Downloads/Skripsi/pengembangan_model/stage6_android_verification.json",
+  "android_report_sha256": "75cd5902cc20642e4d777f6842f8aa049653b7ba55afab461f3d505c0a56574a",
+  "android_verified_at_utc": "2026-09-13T20:41:56.520315+00:00"
+}

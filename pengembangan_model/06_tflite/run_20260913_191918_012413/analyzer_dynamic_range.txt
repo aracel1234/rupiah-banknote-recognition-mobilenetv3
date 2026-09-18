@@ -1,0 +1,361 @@
+=== /home/aracel/Downloads/Skripsi/pengembangan_model/06_tflite/run_20260913_191918_012413/mobilenetv3small_dynamic_range.tflite ===
+
+Your TFLite model has '1' subgraph(s). In the subgraph description below,
+T# represents the Tensor numbers. For example, in Subgraph#0, the MUL op takes
+tensor #0 and tensor #1 as input and produces tensor #111 as output.
+
+Subgraph#0 main(T#0) -> [T#218]
+  Op#0 MUL(T#0, T#1) -> [T#111]
+  Op#1 ADD(T#111, T#4) -> [T#112]
+  Op#2 CONV_2D(T#112, T#5, T#9) -> [T#113]
+  Op#3 HARD_SWISH(T#113) -> [T#114]
+  Op#4 DEPTHWISE_CONV_2D(T#114, T#10, T#61) -> [T#115]
+  Op#5 MEAN(T#115, T#2[1, 2]) -> [T#116]
+  Op#6 CONV_2D(T#116, T#6, T#60) -> [T#117]
+  Op#7 CONV_2D(T#117, T#7, T#59) -> [T#118]
+  Op#8 MUL(T#118, T#3) -> [T#119]
+  Op#9 MUL(T#115, T#119) -> [T#120]
+  Op#10 CONV_2D(T#120, T#8, T#11) -> [T#121]
+  Op#11 CONV_2D(T#121, T#109, T#58) -> [T#122]
+  Op#12 DEPTHWISE_CONV_2D(T#122, T#12, T#57) -> [T#123]
+  Op#13 CONV_2D(T#123, T#108, T#13) -> [T#124]
+  Op#14 CONV_2D(T#124, T#107, T#56) -> [T#125]
+  Op#15 DEPTHWISE_CONV_2D(T#125, T#14, T#55) -> [T#126]
+  Op#16 CONV_2D(T#126, T#106, T#15) -> [T#127]
+  Op#17 ADD(T#124, T#127) -> [T#128]
+  Op#18 CONV_2D(T#128, T#105, T#16) -> [T#129]
+  Op#19 HARD_SWISH(T#129) -> [T#130]
+  Op#20 DEPTHWISE_CONV_2D(T#130, T#72, T#54) -> [T#131]
+  Op#21 HARD_SWISH(T#131) -> [T#132]
+  Op#22 MEAN(T#132, T#2[1, 2]) -> [T#133]
+  Op#23 CONV_2D(T#133, T#104, T#53) -> [T#134]
+  Op#24 CONV_2D(T#134, T#103, T#52) -> [T#135]
+  Op#25 MUL(T#135, T#3) -> [T#136]
+  Op#26 MUL(T#132, T#136) -> [T#137]
+  Op#27 CONV_2D(T#137, T#102, T#17) -> [T#138]
+  Op#28 CONV_2D(T#138, T#101, T#18) -> [T#139]
+  Op#29 HARD_SWISH(T#139) -> [T#140]
+  Op#30 DEPTHWISE_CONV_2D(T#140, T#71, T#51) -> [T#141]
+  Op#31 HARD_SWISH(T#141) -> [T#142]
+  Op#32 MEAN(T#142, T#2[1, 2]) -> [T#143]
+  Op#33 CONV_2D(T#143, T#100, T#50) -> [T#144]
+  Op#34 CONV_2D(T#144, T#99, T#49) -> [T#145]
+  Op#35 MUL(T#145, T#3) -> [T#146]
+  Op#36 MUL(T#142, T#146) -> [T#147]
+  Op#37 CONV_2D(T#147, T#98, T#19) -> [T#148]
+  Op#38 ADD(T#138, T#148) -> [T#149]
+  Op#39 CONV_2D(T#149, T#97, T#20) -> [T#150]
+  Op#40 HARD_SWISH(T#150) -> [T#151]
+  Op#41 DEPTHWISE_CONV_2D(T#151, T#70, T#48) -> [T#152]
+  Op#42 HARD_SWISH(T#152) -> [T#153]
+  Op#43 MEAN(T#153, T#2[1, 2]) -> [T#154]
+  Op#44 CONV_2D(T#154, T#96, T#47) -> [T#155]
+  Op#45 CONV_2D(T#155, T#95, T#46) -> [T#156]
+  Op#46 MUL(T#156, T#3) -> [T#157]
+  Op#47 MUL(T#153, T#157) -> [T#158]
+  Op#48 CONV_2D(T#158, T#94, T#21) -> [T#159]
+  Op#49 ADD(T#149, T#159) -> [T#160]
+  Op#50 CONV_2D(T#160, T#93, T#22) -> [T#161]
+  Op#51 HARD_SWISH(T#161) -> [T#162]
+  Op#52 DEPTHWISE_CONV_2D(T#162, T#69, T#45) -> [T#163]
+  Op#53 HARD_SWISH(T#163) -> [T#164]
+  Op#54 MEAN(T#164, T#2[1, 2]) -> [T#165]
+  Op#55 CONV_2D(T#165, T#92, T#44) -> [T#166]
+  Op#56 CONV_2D(T#166, T#91, T#43) -> [T#167]
+  Op#57 MUL(T#167, T#3) -> [T#168]
+  Op#58 MUL(T#164, T#168) -> [T#169]
+  Op#59 CONV_2D(T#169, T#90, T#23) -> [T#170]
+  Op#60 CONV_2D(T#170, T#89, T#24) -> [T#171]
+  Op#61 HARD_SWISH(T#171) -> [T#172]
+  Op#62 DEPTHWISE_CONV_2D(T#172, T#68, T#42) -> [T#173]
+  Op#63 HARD_SWISH(T#173) -> [T#174]
+  Op#64 MEAN(T#174, T#2[1, 2]) -> [T#175]
+  Op#65 CONV_2D(T#175, T#88, T#41) -> [T#176]
+  Op#66 CONV_2D(T#176, T#87, T#40) -> [T#177]
+  Op#67 MUL(T#177, T#3) -> [T#178]
+  Op#68 MUL(T#174, T#178) -> [T#179]
+  Op#69 CONV_2D(T#179, T#86, T#25) -> [T#180]
+  Op#70 ADD(T#170, T#180) -> [T#181]
+  Op#71 CONV_2D(T#181, T#85, T#26) -> [T#182]
+  Op#72 HARD_SWISH(T#182) -> [T#183]
+  Op#73 DEPTHWISE_CONV_2D(T#183, T#67, T#39) -> [T#184]
+  Op#74 HARD_SWISH(T#184) -> [T#185]
+  Op#75 MEAN(T#185, T#2[1, 2]) -> [T#186]
+  Op#76 CONV_2D(T#186, T#84, T#38) -> [T#187]
+  Op#77 CONV_2D(T#187, T#83, T#37) -> [T#188]
+  Op#78 MUL(T#188, T#3) -> [T#189]
+  Op#79 MUL(T#185, T#189) -> [T#190]
+  Op#80 CONV_2D(T#190, T#82, T#27) -> [T#191]
+  Op#81 CONV_2D(T#191, T#81, T#28) -> [T#192]
+  Op#82 HARD_SWISH(T#192) -> [T#193]
+  Op#83 DEPTHWISE_CONV_2D(T#193, T#66, T#36) -> [T#194]
+  Op#84 HARD_SWISH(T#194) -> [T#195]
+  Op#85 MEAN(T#195, T#2[1, 2]) -> [T#196]
+  Op#86 CONV_2D(T#196, T#80, T#35) -> [T#197]
+  Op#87 CONV_2D(T#197, T#79, T#34) -> [T#198]
+  Op#88 MUL(T#198, T#3) -> [T#199]
+  Op#89 MUL(T#195, T#199) -> [T#200]
+  Op#90 CONV_2D(T#200, T#78, T#29) -> [T#201]
+  Op#91 ADD(T#191, T#201) -> [T#202]
+  Op#92 CONV_2D(T#202, T#77, T#30) -> [T#203]
+  Op#93 HARD_SWISH(T#203) -> [T#204]
+  Op#94 DEPTHWISE_CONV_2D(T#204, T#65, T#33) -> [T#205]
+  Op#95 HARD_SWISH(T#205) -> [T#206]
+  Op#96 MEAN(T#206, T#2[1, 2]) -> [T#207]
+  Op#97 CONV_2D(T#207, T#76, T#32) -> [T#208]
+  Op#98 CONV_2D(T#208, T#75, T#31) -> [T#209]
+  Op#99 MUL(T#209, T#3) -> [T#210]
+  Op#100 MUL(T#206, T#210) -> [T#211]
+  Op#101 CONV_2D(T#211, T#74, T#64) -> [T#212]
+  Op#102 ADD(T#202, T#212) -> [T#213]
+  Op#103 CONV_2D(T#213, T#73, T#63) -> [T#214]
+  Op#104 HARD_SWISH(T#214) -> [T#215]
+  Op#105 MEAN(T#215, T#2[1, 2]) -> [T#216]
+  Op#106 FULLY_CONNECTED(T#216, T#110, T#62) -> [T#217]
+  Op#107 SOFTMAX(T#217) -> [T#218]
+
+Tensors of Subgraph#0
+  T#0(serving_default_rgb_image:0) shape:[1, 224, 224, 3], type:FLOAT32
+  T#1(arith.constant) shape:[], type:FLOAT32 RO 4 bytes, buffer: 2, data:[0.00784314]
+  T#2(arith.constant1) shape:[2], type:INT32 RO 8 bytes, buffer: 3, data:[1, 2]
+  T#3(arith.constant2) shape:[], type:FLOAT32 RO 4 bytes, buffer: 4, data:[0.166667]
+  T#4(arith.constant3) shape:[], type:FLOAT32 RO 4 bytes, buffer: 5, data:[-1]
+  T#5(arith.constant4) shape:[16, 3, 3, 3], type:FLOAT32 RO 1728 bytes, buffer: 6, data:[0.0171114, 0.0247497, 0.0120461, 0.0362049, 0.0619331, ...]
+  T#6(arith.constant5) shape:[8, 1, 1, 16], type:FLOAT32 RO 512 bytes, buffer: 7, data:[0.00496456, 0.0103362, 0.0146162, 0.017015, 0.0132118, ...]
+  T#7(arith.constant6) shape:[16, 1, 1, 8], type:FLOAT32 RO 512 bytes, buffer: 8, data:[0.0179051, 3.75141e-17, 0.00658274, 0.0755465, 1.18876e-17, ...]
+  T#8(arith.constant7) shape:[16, 1, 1, 16], type:FLOAT32 RO 1024 bytes, buffer: 9, data:[-0.00102517, 0.115525, 0.483767, -1.08673, 1.30663, ...]
+  T#9(arith.constant8) shape:[16], type:FLOAT32 RO 64 bytes, buffer: 10, data:[2.4773, 14.3516, 14.6436, 3.16523, 2.50851, ...]
+  T#10(arith.constant9) shape:[1, 3, 3, 16], type:FLOAT32 RO 576 bytes, buffer: 11, data:[-22.644, 0.523474, -2.77464, 2.5782, 0.421895, ...]
+  T#11(arith.constant10) shape:[16], type:FLOAT32 RO 64 bytes, buffer: 12, data:[-31.0195, -3.29911, -2.42777, 2.79054, 32.8301, ...]
+  T#12(arith.constant11) shape:[1, 3, 3, 72], type:FLOAT32 RO 2592 bytes, buffer: 13, data:[-0.12247, -0.374618, -0.481635, 0.611433, -0.126536, ...]
+  T#13(arith.constant12) shape:[24], type:FLOAT32 RO 96 bytes, buffer: 14, data:[-10.3847, -19.1602, 3.49879, 28.5233, 114.971, ...]
+  T#14(arith.constant13) shape:[1, 3, 3, 88], type:FLOAT32 RO 3168 bytes, buffer: 15, data:[-0.134373, 0.0592616, 0.564978, -0.171349, -0.0947143, ...]
+  T#15(arith.constant14) shape:[24], type:FLOAT32 RO 96 bytes, buffer: 16, data:[3.72498, -5.91671, -34.5274, 28.2421, 2.92738, ...]
+  T#16(arith.constant15) shape:[96], type:FLOAT32 RO 384 bytes, buffer: 17, data:[-0.0784856, -0.459458, 0.0391156, 0.146303, -0.157558, ...]
+  T#17(arith.constant16) shape:[40], type:FLOAT32 RO 160 bytes, buffer: 18, data:[-19.3706, -15.7581, -10.864, -12.2034, 9.93461, ...]
+  T#18(arith.constant17) shape:[240], type:FLOAT32 RO 960 bytes, buffer: 19, data:[0.00999936, 1.02277, 1.70278, 0.25364, 0.122287, ...]
+  T#19(arith.constant18) shape:[40], type:FLOAT32 RO 160 bytes, buffer: 20, data:[-4.69721, 0.795801, 0.828273, -0.289204, 4.63574, ...]
+  T#20(arith.constant19) shape:[240], type:FLOAT32 RO 960 bytes, buffer: 21, data:[0.80781, 1.09644, -0.37517, 1.9122, 0.00379616, ...]
+  T#21(arith.constant20) shape:[40], type:FLOAT32 RO 160 bytes, buffer: 22, data:[2.91559, 0.00564898, -4.32884, 12.5245, -1.17289, ...]
+  T#22(arith.constant21) shape:[120], type:FLOAT32 RO 480 bytes, buffer: 23, data:[-0.215866, 2.97858, 0.0866392, 2.23097, 0.2276, ...]
+  T#23(arith.constant22) shape:[48], type:FLOAT32 RO 192 bytes, buffer: 24, data:[-12.3099, 26.2206, 1.06007, 5.22667, -1.92741, ...]
+  T#24(arith.constant23) shape:[144], type:FLOAT32 RO 576 bytes, buffer: 25, data:[0.0419164, -0.305137, -0.205977, -0.0786417, -0.651341, ...]
+  T#25(arith.constant24) shape:[48], type:FLOAT32 RO 192 bytes, buffer: 26, data:[-0.506606, -3.69356, -0.495415, -0.0800932, -1.72955, ...]
+  T#26(arith.constant25) shape:[288], type:FLOAT32 RO 1152 bytes, buffer: 27, data:[0.00600664, -1.19717, -1.77102, -1.12342, -1.21983, ...]
+  T#27(arith.constant26) shape:[96], type:FLOAT32 RO 384 bytes, buffer: 28, data:[0.452032, -2.95345, 0.881139, -6.98733, -0.254376, ...]
+  T#28(arith.constant27) shape:[576], type:FLOAT32 RO 2304 bytes, buffer: 29, data:[2.23794, -0.368577, -0.082909, 0.355556, -0.831806, ...]
+  T#29(arith.constant28) shape:[96], type:FLOAT32 RO 384 bytes, buffer: 30, data:[-1.40441, -0.54777, -0.695648, -0.249643, 1.45287, ...]
+  T#30(arith.constant29) shape:[576], type:FLOAT32 RO 2304 bytes, buffer: 31, data:[-1.03314, -1.49966, -1.98633, 0.0500108, -0.557127, ...]
+  T#31(arith.constant30) shape:[576], type:FLOAT32 RO 2304 bytes, buffer: 32, data:[2.84824, 2.24278, 2.15691, 1.61814, 2.32312, ...]
+  T#32(arith.constant31) shape:[144], type:FLOAT32 RO 576 bytes, buffer: 33, data:[-0.658507, 0.129363, 0.595263, -0.36794, -1.15862, ...]
+  T#33(arith.constant32) shape:[576], type:FLOAT32 RO 2304 bytes, buffer: 34, data:[-0.439777, 0.985928, 1.20887, 1.86899, -1.9769, ...]
+  T#34(arith.constant33) shape:[576], type:FLOAT32 RO 2304 bytes, buffer: 35, data:[1.17615, 1.02336, 1.35594, 0.644753, 0.918574, ...]
+  T#35(arith.constant34) shape:[144], type:FLOAT32 RO 576 bytes, buffer: 36, data:[-0.380296, 0.273697, -0.945591, 0.728201, 0.381851, ...]
+  T#36(arith.constant35) shape:[576], type:FLOAT32 RO 2304 bytes, buffer: 37, data:[-0.800116, -0.695876, -0.422815, -2.08551, 0.938326, ...]
+  T#37(arith.constant36) shape:[288], type:FLOAT32 RO 1152 bytes, buffer: 38, data:[3.5463, 2.74127, 3.10444, 5.28181, 2.34521, ...]
+  T#38(arith.constant37) shape:[72], type:FLOAT32 RO 288 bytes, buffer: 39, data:[-0.0517272, 1.50754, -0.793895, 2.40948, 1.09273, ...]
+  T#39(arith.constant38) shape:[288], type:FLOAT32 RO 1152 bytes, buffer: 40, data:[-0.674326, 2.75253, 2.15115, 0.47215, 2.55725, ...]
+  T#40(arith.constant39) shape:[144], type:FLOAT32 RO 576 bytes, buffer: 41, data:[1.5923, 0.511066, 0.739476, 4.53221, 1.007, ...]
+  T#41(arith.constant40) shape:[40], type:FLOAT32 RO 160 bytes, buffer: 42, data:[0.316195, 1.01602, 0.935971, 0.00405872, 0.49471, ...]
+  T#42(arith.constant41) shape:[144], type:FLOAT32 RO 576 bytes, buffer: 43, data:[-0.561419, -1.48357, 0.3359, 0.23714, 2.17705, ...]
+  T#43(arith.constant42) shape:[120], type:FLOAT32 RO 480 bytes, buffer: 44, data:[6.03816, 3.52296, 2.70165, 4.03277, 5.29276, ...]
+  T#44(arith.constant43) shape:[32], type:FLOAT32 RO 128 bytes, buffer: 45, data:[-0.162925, 0.338832, 0.868719, -0.325084, -0.202439, ...]
+  T#45(arith.constant44) shape:[120], type:FLOAT32 RO 480 bytes, buffer: 46, data:[2.62257, 2.41904, 5.2475, 2.67907, -4.65905, ...]
+  T#46(arith.constant45) shape:[240], type:FLOAT32 RO 960 bytes, buffer: 47, data:[1.13587, 0.461292, 4.1067, 0.741154, 0.663654, ...]
+  T#47(arith.constant46) shape:[64], type:FLOAT32 RO 256 bytes, buffer: 48, data:[0.0831293, 0.196454, 0.280151, 0.441619, 0.239741, ...]
+  T#48(arith.constant47) shape:[240], type:FLOAT32 RO 960 bytes, buffer: 49, data:[-1.32331, 1.21074, -1.15846, -1.50775, -0.16724, ...]
+  T#49(arith.constant48) shape:[240], type:FLOAT32 RO 960 bytes, buffer: 50, data:[2.77776, 2.45824, 5.6976, 0.895185, 0.863479, ...]
+  T#50(arith.constant49) shape:[64], type:FLOAT32 RO 256 bytes, buffer: 51, data:[1.39677, 1.06674, 0.624371, 0.831094, -0.538301, ...]
+  T#51(arith.constant50) shape:[240], type:FLOAT32 RO 960 bytes, buffer: 52, data:[-1.21139, 0.443901, 0.741925, -0.655071, -0.750594, ...]
+  T#52(arith.constant51) shape:[96], type:FLOAT32 RO 384 bytes, buffer: 53, data:[5.99917, 6.00073, 5.54222, 6.00747, 6.00463, ...]
+  T#53(arith.constant52) shape:[24], type:FLOAT32 RO 96 bytes, buffer: 54, data:[-0.048169, 0.144234, 0.156489, 1.13601, -0.0325411, ...]
+  T#54(arith.constant53) shape:[96], type:FLOAT32 RO 384 bytes, buffer: 55, data:[0.197214, 1.77036, 2.08734, 1.07582, 2.359, ...]
+  T#55(arith.constant54) shape:[88], type:FLOAT32 RO 352 bytes, buffer: 56, data:[4.81573, 7.97202, -10.6187, -27.4213, 7.46072, ...]
+  T#56(arith.constant55) shape:[88], type:FLOAT32 RO 352 bytes, buffer: 57, data:[4.01191, -1.61572, 7.56232, 6.29048, -3.409, ...]
+  T#57(arith.constant56) shape:[72], type:FLOAT32 RO 288 bytes, buffer: 58, data:[9.53812, 4.94703, 8.68907, -11.6387, 12.976, ...]
+  T#58(arith.constant57) shape:[72], type:FLOAT32 RO 288 bytes, buffer: 59, data:[-0.292976, 0.558218, 0.500535, 4.87749, 0.159531, ...]
+  T#59(arith.constant58) shape:[16], type:FLOAT32 RO 64 bytes, buffer: 60, data:[4.79613, 4.51841, 5.16267, 2.2163, 4.10017, ...]
+  T#60(arith.constant59) shape:[8], type:FLOAT32 RO 32 bytes, buffer: 61, data:[0.661976, -1.38051, 0.238036, 2.96023, -1.4941, ...]
+  T#61(arith.constant60) shape:[16], type:FLOAT32 RO 64 bytes, buffer: 62, data:[4.95195, -23.895, 10.5867, 13.7761, 9.61156, ...]
+  T#62(arith.constant61) shape:[8], type:FLOAT32 RO 32 bytes, buffer: 63, data:[0.0316474, -0.0131273, 0.0475191, -0.0359618, -0.00207522, ...]
+  T#63(arith.constant62) shape:[576], type:FLOAT32 RO 2304 bytes, buffer: 64, data:[-5.00269, -6.31168, -2.93572, -2.64729, -3.29231, ...]
+  T#64(arith.constant63) shape:[96], type:FLOAT32 RO 384 bytes, buffer: 65, data:[0.306745, -1.81656, -0.902031, -1.97582, -1.48582, ...]
+  T#65(tfl.pseudo_qconst) shape:[1, 5, 5, 576], type:INT8 RO 14400 bytes, buffer: 66, data:[., ., 
+, ., ., ...]
+  T#66(tfl.pseudo_qconst1) shape:[1, 5, 5, 576], type:INT8 RO 14400 bytes, buffer: 67, data:[., ., ., ., ., ...]
+  T#67(tfl.pseudo_qconst2) shape:[1, 5, 5, 288], type:INT8 RO 7200 bytes, buffer: 68, data:[., ., ., ., ., ...]
+  T#68(tfl.pseudo_qconst3) shape:[1, 5, 5, 144], type:INT8 RO 3600 bytes, buffer: 69, data:[., ., ., ., ., ...]
+  T#69(tfl.pseudo_qconst4) shape:[1, 5, 5, 120], type:INT8 RO 3000 bytes, buffer: 70, data:[., ., ., ., ., ...]
+  T#70(tfl.pseudo_qconst5) shape:[1, 5, 5, 240], type:INT8 RO 6000 bytes, buffer: 71, data:[., ., ., ., ., ...]
+  T#71(tfl.pseudo_qconst6) shape:[1, 5, 5, 240], type:INT8 RO 6000 bytes, buffer: 72, data:[., ., ., ., ., ...]
+  T#72(tfl.pseudo_qconst7) shape:[1, 5, 5, 96], type:INT8 RO 2400 bytes, buffer: 73, data:[., ., ., ., ., ...]
+  T#73(tfl.pseudo_qconst8) shape:[576, 1, 1, 96], type:INT8 RO 55296 bytes, buffer: 74, data:[., ., ., ., ., ...]
+  T#74(tfl.pseudo_qconst9) shape:[96, 1, 1, 576], type:INT8 RO 55296 bytes, buffer: 75, data:[., ., 9, ., ., ...]
+  T#75(tfl.pseudo_qconst10) shape:[576, 1, 1, 144], type:INT8 RO 82944 bytes, buffer: 76, data:[., .,  , ., ., ...]
+  T#76(tfl.pseudo_qconst11) shape:[144, 1, 1, 576], type:INT8 RO 82944 bytes, buffer: 77, data:[., ., ., ., ., ...]
+  T#77(tfl.pseudo_qconst12) shape:[576, 1, 1, 96], type:INT8 RO 55296 bytes, buffer: 78, data:[., 5, ., ., ., ...]
+  T#78(tfl.pseudo_qconst13) shape:[96, 1, 1, 576], type:INT8 RO 55296 bytes, buffer: 79, data:[., ., ., ., ., ...]
+  T#79(tfl.pseudo_qconst14) shape:[576, 1, 1, 144], type:INT8 RO 82944 bytes, buffer: 80, data:[T, ., ., ., ., ...]
+  T#80(tfl.pseudo_qconst15) shape:[144, 1, 1, 576], type:INT8 RO 82944 bytes, buffer: 81, data:[., ., ., ., Q, ...]
+  T#81(tfl.pseudo_qconst16) shape:[576, 1, 1, 96], type:INT8 RO 55296 bytes, buffer: 82, data:[., ., ., ., ., ...]
+  T#82(tfl.pseudo_qconst17) shape:[96, 1, 1, 288], type:INT8 RO 27648 bytes, buffer: 83, data:[., ., ., ., ., ...]
+  T#83(tfl.pseudo_qconst18) shape:[288, 1, 1, 72], type:INT8 RO 20736 bytes, buffer: 84, data:[., @, ., ., 
+, ...]
+  T#84(tfl.pseudo_qconst19) shape:[72, 1, 1, 288], type:INT8 RO 20736 bytes, buffer: 85, data:[., ., ., ., ., ...]
+  T#85(tfl.pseudo_qconst20) shape:[288, 1, 1, 48], type:INT8 RO 13824 bytes, buffer: 86, data:[., &, ., ., ., ...]
+  T#86(tfl.pseudo_qconst21) shape:[48, 1, 1, 144], type:INT8 RO 6912 bytes, buffer: 87, data:[., ., ., ., ., ...]
+  T#87(tfl.pseudo_qconst22) shape:[144, 1, 1, 40], type:INT8 RO 5760 bytes, buffer: 88, data:[., ., ., ., B, ...]
+  T#88(tfl.pseudo_qconst23) shape:[40, 1, 1, 144], type:INT8 RO 5760 bytes, buffer: 89, data:[., ., ., ., ., ...]
+  T#89(tfl.pseudo_qconst24) shape:[144, 1, 1, 48], type:INT8 RO 6912 bytes, buffer: 90, data:[., ., ", $, ., ...]
+  T#90(tfl.pseudo_qconst25) shape:[48, 1, 1, 120], type:INT8 RO 5760 bytes, buffer: 91, data:[., 
+, 8, ., -, ...]
+  T#91(tfl.pseudo_qconst26) shape:[120, 1, 1, 32], type:INT8 RO 3840 bytes, buffer: 92, data:[., ., ., ., ., ...]
+  T#92(tfl.pseudo_qconst27) shape:[32, 1, 1, 120], type:INT8 RO 3840 bytes, buffer: 93, data:[., ., ., ., ., ...]
+  T#93(tfl.pseudo_qconst28) shape:[120, 1, 1, 40], type:INT8 RO 4800 bytes, buffer: 94, data:[., ., ,, ., ., ...]
+  T#94(tfl.pseudo_qconst29) shape:[40, 1, 1, 240], type:INT8 RO 9600 bytes, buffer: 95, data:[., ., -, ., ., ...]
+  T#95(tfl.pseudo_qconst30) shape:[240, 1, 1, 64], type:INT8 RO 15360 bytes, buffer: 96, data:[., ., ., N, ., ...]
+  T#96(tfl.pseudo_qconst31) shape:[64, 1, 1, 240], type:INT8 RO 15360 bytes, buffer: 97, data:[., ., ., ., &, ...]
+  T#97(tfl.pseudo_qconst32) shape:[240, 1, 1, 40], type:INT8 RO 9600 bytes, buffer: 98, data:[., U, ., ., R, ...]
+  T#98(tfl.pseudo_qconst33) shape:[40, 1, 1, 240], type:INT8 RO 9600 bytes, buffer: 99, data:[., ., -, ., ', ...]
+  T#99(tfl.pseudo_qconst34) shape:[240, 1, 1, 64], type:INT8 RO 15360 bytes, buffer: 100, data:[c, ., #, b, ., ...]
+  T#100(tfl.pseudo_qconst35) shape:[64, 1, 1, 240], type:INT8 RO 15360 bytes, buffer: 101, data:[., ., ., ., n, ...]
+  T#101(tfl.pseudo_qconst36) shape:[240, 1, 1, 40], type:INT8 RO 9600 bytes, buffer: 102, data:[., ., ., ., ., ...]
+  T#102(tfl.pseudo_qconst37) shape:[40, 1, 1, 96], type:INT8 RO 3840 bytes, buffer: 103, data:[., ., ., ., ., ...]
+  T#103(tfl.pseudo_qconst38) shape:[96, 1, 1, 24], type:INT8 RO 2304 bytes, buffer: 104, data:[., ., ., ., ., ...]
+  T#104(tfl.pseudo_qconst39) shape:[24, 1, 1, 96], type:INT8 RO 2304 bytes, buffer: 105, data:[., ., ., ., ., ...]
+  T#105(tfl.pseudo_qconst40) shape:[96, 1, 1, 24], type:INT8 RO 2304 bytes, buffer: 106, data:[., ., ., ., ., ...]
+  T#106(tfl.pseudo_qconst41) shape:[24, 1, 1, 88], type:INT8 RO 2112 bytes, buffer: 107, data:[., ., ., ., ., ...]
+  T#107(tfl.pseudo_qconst42) shape:[88, 1, 1, 24], type:INT8 RO 2112 bytes, buffer: 108, data:[., ., ., ., ., ...]
+  T#108(tfl.pseudo_qconst43) shape:[24, 1, 1, 72], type:INT8 RO 1728 bytes, buffer: 109, data:[., ., ., ., ., ...]
+  T#109(tfl.pseudo_qconst44) shape:[72, 1, 1, 16], type:INT8 RO 1152 bytes, buffer: 110, data:[E, ., Z, ., ., ...]
+  T#110(tfl.pseudo_qconst45) shape:[8, 576], type:INT8 RO 4608 bytes, buffer: 111, data:[(, ., ., ., ., ...]
+  T#111(rupiah_mobilenetv3_small_1/backbone_1/rescaling_1/mul) shape:[1, 224, 224, 3], type:FLOAT32
+  T#112(rupiah_mobilenetv3_small_1/backbone_1/rescaling_1/add) shape:[1, 224, 224, 3], type:FLOAT32
+  T#113(rupiah_mobilenetv3_small_1/backbone_1/conv_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/conv_1/convolution;) shape:[1, 112, 112, 16], type:FLOAT32
+  T#114(rupiah_mobilenetv3_small_1/backbone_1/activation_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_1/truediv) shape:[1, 112, 112, 16], type:FLOAT32
+  T#115(rupiah_mobilenetv3_small_1/backbone_1/re_lu_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_depthwise_1/depthwise;;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_depthwise_pad_1/Pad) shape:[1, 56, 56, 16], type:FLOAT32
+  T#116(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_squeeze_excite_avg_pool_1/Mean) shape:[1, 1, 1, 16], type:FLOAT32
+  T#117(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_squeeze_excite_relu_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_squeeze_excite_conv_1/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_squeeze_excite_conv_1/convolution;) shape:[1, 1, 1, 8], type:FLOAT32
+  T#118(rupiah_mobilenetv3_small_1/backbone_1/re_lu_1_2/Relu6;rupiah_mobilenetv3_small_1/backbone_1/Add;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_squeeze_excite_conv_1_2/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_squeeze_excite_conv_1_2/convolution;) shape:[1, 1, 1, 16], type:FLOAT32
+  T#119(rupiah_mobilenetv3_small_1/backbone_1/Mul) shape:[1, 1, 1, 16], type:FLOAT32
+  T#120(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_squeeze_excite_mul_1/Mul) shape:[1, 56, 56, 16], type:FLOAT32
+  T#121(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_project_1/convolution;) shape:[1, 56, 56, 16], type:FLOAT32
+  T#122(rupiah_mobilenetv3_small_1/backbone_1/re_lu_2_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_1_expand_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_1_expand_1/convolution;) shape:[1, 56, 56, 72], type:FLOAT32
+  T#123(rupiah_mobilenetv3_small_1/backbone_1/re_lu_3_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_1_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_1_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_1_depthwise_1/depthwise;;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_1_depthwise_pad_1/Pad) shape:[1, 28, 28, 72], type:FLOAT32
+  T#124(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_1_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_1_project_1/convolution;) shape:[1, 28, 28, 24], type:FLOAT32
+  T#125(rupiah_mobilenetv3_small_1/backbone_1/re_lu_4_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_2_expand_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_2_expand_1/convolution;) shape:[1, 28, 28, 88], type:FLOAT32
+  T#126(rupiah_mobilenetv3_small_1/backbone_1/re_lu_5_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_2_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_2_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_2_depthwise_1/depthwise;) shape:[1, 28, 28, 88], type:FLOAT32
+  T#127(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_2_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_2_project_1/convolution;) shape:[1, 28, 28, 24], type:FLOAT32
+  T#128(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_2_add_1/Add) shape:[1, 28, 28, 24], type:FLOAT32
+  T#129(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_expand_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_expand_1/convolution;) shape:[1, 28, 28, 96], type:FLOAT32
+  T#130(rupiah_mobilenetv3_small_1/backbone_1/activation_1_2/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_1_2/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_1_2/add;rupiah_mobilenetv3_small_1/backbone_1/activation_1_2/truediv) shape:[1, 28, 28, 96], type:FLOAT32
+  T#131(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_depthwise_1/depthwise;;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_depthwise_pad_1/Pad) shape:[1, 14, 14, 96], type:FLOAT32
+  T#132(rupiah_mobilenetv3_small_1/backbone_1/activation_2_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_2_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_2_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_2_1/truediv) shape:[1, 14, 14, 96], type:FLOAT32
+  T#133(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_squeeze_excite_avg_pool_1/Mean) shape:[1, 1, 1, 96], type:FLOAT32
+  T#134(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_squeeze_excite_relu_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_squeeze_excite_conv_1/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_squeeze_excite_conv_1/convolution;) shape:[1, 1, 1, 24], type:FLOAT32
+  T#135(rupiah_mobilenetv3_small_1/backbone_1/re_lu_6_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/Add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_squeeze_excite_conv_1_2/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_squeeze_excite_conv_1_2/convolution;) shape:[1, 1, 1, 96], type:FLOAT32
+  T#136(rupiah_mobilenetv3_small_1/backbone_1/Mul_1) shape:[1, 1, 1, 96], type:FLOAT32
+  T#137(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_squeeze_excite_mul_1/Mul) shape:[1, 14, 14, 96], type:FLOAT32
+  T#138(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_project_1/convolution;) shape:[1, 14, 14, 40], type:FLOAT32
+  T#139(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_expand_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_expand_1/convolution;) shape:[1, 14, 14, 240], type:FLOAT32
+  T#140(rupiah_mobilenetv3_small_1/backbone_1/activation_3_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_3_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_3_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_3_1/truediv) shape:[1, 14, 14, 240], type:FLOAT32
+  T#141(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_depthwise_1/depthwise;) shape:[1, 14, 14, 240], type:FLOAT32
+  T#142(rupiah_mobilenetv3_small_1/backbone_1/activation_4_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_4_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_4_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_4_1/truediv) shape:[1, 14, 14, 240], type:FLOAT32
+  T#143(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_squeeze_excite_avg_pool_1/Mean) shape:[1, 1, 1, 240], type:FLOAT32
+  T#144(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_squeeze_excite_relu_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_squeeze_excite_conv_1/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_squeeze_excite_conv_1/convolution;) shape:[1, 1, 1, 64], type:FLOAT32
+  T#145(rupiah_mobilenetv3_small_1/backbone_1/re_lu_7_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/Add_2;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_squeeze_excite_conv_1_2/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_squeeze_excite_conv_1_2/convolution;) shape:[1, 1, 1, 240], type:FLOAT32
+  T#146(rupiah_mobilenetv3_small_1/backbone_1/Mul_2) shape:[1, 1, 1, 240], type:FLOAT32
+  T#147(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_squeeze_excite_mul_1/Mul) shape:[1, 14, 14, 240], type:FLOAT32
+  T#148(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_project_1/convolution;) shape:[1, 14, 14, 40], type:FLOAT32
+  T#149(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_add_1/Add) shape:[1, 14, 14, 40], type:FLOAT32
+  T#150(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_expand_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_expand_1/convolution;) shape:[1, 14, 14, 240], type:FLOAT32
+  T#151(rupiah_mobilenetv3_small_1/backbone_1/activation_5_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_5_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_5_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_5_1/truediv) shape:[1, 14, 14, 240], type:FLOAT32
+  T#152(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_depthwise_1/depthwise;) shape:[1, 14, 14, 240], type:FLOAT32
+  T#153(rupiah_mobilenetv3_small_1/backbone_1/activation_6_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_6_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_6_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_6_1/truediv) shape:[1, 14, 14, 240], type:FLOAT32
+  T#154(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_squeeze_excite_avg_pool_1/Mean) shape:[1, 1, 1, 240], type:FLOAT32
+  T#155(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_squeeze_excite_relu_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_squeeze_excite_conv_1/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_squeeze_excite_conv_1/convolution;) shape:[1, 1, 1, 64], type:FLOAT32
+  T#156(rupiah_mobilenetv3_small_1/backbone_1/re_lu_8_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/Add_3;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_squeeze_excite_conv_1_2/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_squeeze_excite_conv_1_2/convolution;) shape:[1, 1, 1, 240], type:FLOAT32
+  T#157(rupiah_mobilenetv3_small_1/backbone_1/Mul_3) shape:[1, 1, 1, 240], type:FLOAT32
+  T#158(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_squeeze_excite_mul_1/Mul) shape:[1, 14, 14, 240], type:FLOAT32
+  T#159(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_project_1/convolution;) shape:[1, 14, 14, 40], type:FLOAT32
+  T#160(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_add_1/Add) shape:[1, 14, 14, 40], type:FLOAT32
+  T#161(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_expand_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_expand_1/convolution;) shape:[1, 14, 14, 120], type:FLOAT32
+  T#162(rupiah_mobilenetv3_small_1/backbone_1/activation_7_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_7_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_7_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_7_1/truediv) shape:[1, 14, 14, 120], type:FLOAT32
+  T#163(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_depthwise_1/depthwise;) shape:[1, 14, 14, 120], type:FLOAT32
+  T#164(rupiah_mobilenetv3_small_1/backbone_1/activation_8_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_8_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_8_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_8_1/truediv) shape:[1, 14, 14, 120], type:FLOAT32
+  T#165(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_squeeze_excite_avg_pool_1/Mean) shape:[1, 1, 1, 120], type:FLOAT32
+  T#166(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_squeeze_excite_relu_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_squeeze_excite_conv_1/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_squeeze_excite_conv_1/convolution;) shape:[1, 1, 1, 32], type:FLOAT32
+  T#167(rupiah_mobilenetv3_small_1/backbone_1/re_lu_9_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/Add_4;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_squeeze_excite_conv_1_2/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_squeeze_excite_conv_1_2/convolution;) shape:[1, 1, 1, 120], type:FLOAT32
+  T#168(rupiah_mobilenetv3_small_1/backbone_1/Mul_4) shape:[1, 1, 1, 120], type:FLOAT32
+  T#169(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_squeeze_excite_mul_1/Mul) shape:[1, 14, 14, 120], type:FLOAT32
+  T#170(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_project_1/convolution;) shape:[1, 14, 14, 48], type:FLOAT32
+  T#171(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_expand_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_expand_1/convolution;) shape:[1, 14, 14, 144], type:FLOAT32
+  T#172(rupiah_mobilenetv3_small_1/backbone_1/activation_9_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_9_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_9_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_9_1/truediv) shape:[1, 14, 14, 144], type:FLOAT32
+  T#173(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_depthwise_1/depthwise;) shape:[1, 14, 14, 144], type:FLOAT32
+  T#174(rupiah_mobilenetv3_small_1/backbone_1/activation_10_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_10_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_10_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_10_1/truediv) shape:[1, 14, 14, 144], type:FLOAT32
+  T#175(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_squeeze_excite_avg_pool_1/Mean) shape:[1, 1, 1, 144], type:FLOAT32
+  T#176(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_squeeze_excite_relu_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_squeeze_excite_conv_1/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_squeeze_excite_conv_1/convolution;) shape:[1, 1, 1, 40], type:FLOAT32
+  T#177(rupiah_mobilenetv3_small_1/backbone_1/re_lu_10_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/Add_5;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_squeeze_excite_conv_1_2/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_squeeze_excite_conv_1_2/convolution;) shape:[1, 1, 1, 144], type:FLOAT32
+  T#178(rupiah_mobilenetv3_small_1/backbone_1/Mul_5) shape:[1, 1, 1, 144], type:FLOAT32
+  T#179(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_squeeze_excite_mul_1/Mul) shape:[1, 14, 14, 144], type:FLOAT32
+  T#180(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_project_1/convolution;) shape:[1, 14, 14, 48], type:FLOAT32
+  T#181(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_add_1/Add) shape:[1, 14, 14, 48], type:FLOAT32
+  T#182(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_expand_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_expand_1/convolution;) shape:[1, 14, 14, 288], type:FLOAT32
+  T#183(rupiah_mobilenetv3_small_1/backbone_1/activation_11_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_11_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_11_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_11_1/truediv) shape:[1, 14, 14, 288], type:FLOAT32
+  T#184(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_depthwise_1/depthwise;;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_depthwise_pad_1/Pad) shape:[1, 7, 7, 288], type:FLOAT32
+  T#185(rupiah_mobilenetv3_small_1/backbone_1/activation_12_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_12_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_12_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_12_1/truediv) shape:[1, 7, 7, 288], type:FLOAT32
+  T#186(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_squeeze_excite_avg_pool_1/Mean) shape:[1, 1, 1, 288], type:FLOAT32
+  T#187(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_squeeze_excite_relu_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_squeeze_excite_conv_1/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_squeeze_excite_conv_1/convolution;) shape:[1, 1, 1, 72], type:FLOAT32
+  T#188(rupiah_mobilenetv3_small_1/backbone_1/re_lu_11_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/Add_6;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_squeeze_excite_conv_1_2/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_squeeze_excite_conv_1_2/convolution;) shape:[1, 1, 1, 288], type:FLOAT32
+  T#189(rupiah_mobilenetv3_small_1/backbone_1/Mul_6) shape:[1, 1, 1, 288], type:FLOAT32
+  T#190(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_squeeze_excite_mul_1/Mul) shape:[1, 7, 7, 288], type:FLOAT32
+  T#191(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_project_1/convolution;) shape:[1, 7, 7, 96], type:FLOAT32
+  T#192(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_expand_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_expand_1/convolution;) shape:[1, 7, 7, 576], type:FLOAT32
+  T#193(rupiah_mobilenetv3_small_1/backbone_1/activation_13_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_13_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_13_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_13_1/truediv) shape:[1, 7, 7, 576], type:FLOAT32
+  T#194(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_depthwise_1/depthwise;) shape:[1, 7, 7, 576], type:FLOAT32
+  T#195(rupiah_mobilenetv3_small_1/backbone_1/activation_14_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_14_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_14_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_14_1/truediv) shape:[1, 7, 7, 576], type:FLOAT32
+  T#196(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_squeeze_excite_avg_pool_1/Mean) shape:[1, 1, 1, 576], type:FLOAT32
+  T#197(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_squeeze_excite_relu_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_squeeze_excite_conv_1/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_squeeze_excite_conv_1/convolution;) shape:[1, 1, 1, 144], type:FLOAT32
+  T#198(rupiah_mobilenetv3_small_1/backbone_1/re_lu_12_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/Add_7;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_squeeze_excite_conv_1_2/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_squeeze_excite_conv_1_2/convolution;) shape:[1, 1, 1, 576], type:FLOAT32
+  T#199(rupiah_mobilenetv3_small_1/backbone_1/Mul_7) shape:[1, 1, 1, 576], type:FLOAT32
+  T#200(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_squeeze_excite_mul_1/Mul) shape:[1, 7, 7, 576], type:FLOAT32
+  T#201(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_project_1/convolution;) shape:[1, 7, 7, 96], type:FLOAT32
+  T#202(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_add_1/Add) shape:[1, 7, 7, 96], type:FLOAT32
+  T#203(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_expand_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_expand_1/convolution;) shape:[1, 7, 7, 576], type:FLOAT32
+  T#204(rupiah_mobilenetv3_small_1/backbone_1/activation_15_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_15_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_15_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_15_1/truediv) shape:[1, 7, 7, 576], type:FLOAT32
+  T#205(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_depthwise_1/depthwise;) shape:[1, 7, 7, 576], type:FLOAT32
+  T#206(rupiah_mobilenetv3_small_1/backbone_1/activation_16_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_16_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_16_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_16_1/truediv) shape:[1, 7, 7, 576], type:FLOAT32
+  T#207(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_squeeze_excite_avg_pool_1/Mean) shape:[1, 1, 1, 576], type:FLOAT32
+  T#208(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_squeeze_excite_relu_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_squeeze_excite_conv_1/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_squeeze_excite_conv_1/convolution;) shape:[1, 1, 1, 144], type:FLOAT32
+  T#209(rupiah_mobilenetv3_small_1/backbone_1/re_lu_13_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/Add_8;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_squeeze_excite_conv_1_2/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_squeeze_excite_conv_1_2/convolution;) shape:[1, 1, 1, 576], type:FLOAT32
+  T#210(rupiah_mobilenetv3_small_1/backbone_1/Mul_8) shape:[1, 1, 1, 576], type:FLOAT32
+  T#211(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_squeeze_excite_mul_1/Mul) shape:[1, 7, 7, 576], type:FLOAT32
+  T#212(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_project_1/convolution;) shape:[1, 7, 7, 96], type:FLOAT32
+  T#213(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_add_1/Add) shape:[1, 7, 7, 96], type:FLOAT32
+  T#214(rupiah_mobilenetv3_small_1/backbone_1/conv_1_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/conv_1_2/convolution;) shape:[1, 7, 7, 576], type:FLOAT32
+  T#215(rupiah_mobilenetv3_small_1/backbone_1/activation_17_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_17_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_17_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_17_1/truediv) shape:[1, 7, 7, 576], type:FLOAT32
+  T#216(rupiah_mobilenetv3_small_1/global_average_pool_1/Mean) shape:[1, 576], type:FLOAT32
+  T#217(rupiah_mobilenetv3_small_1/scores_1/MatMul;rupiah_mobilenetv3_small_1/scores_1/BiasAdd) shape:[1, 8], type:FLOAT32
+  T#218(StatefulPartitionedCall_1:0) shape:[1, 8], type:FLOAT32
+
+---------------------------------------------------------------
+Your TFLite model has '1' signature_def(s).
+
+Signature#0 key: 'serving_default'
+- Subgraph: Subgraph#0
+- Inputs: 
+    'rgb_image' : T#0
+- Outputs: 
+    'output_0' : T#218
+
+---------------------------------------------------------------
+              Model size:    1107648 bytes
+    Non-data buffer size:     147508 bytes (13.32 %)
+  Total data buffer size:     960140 bytes (86.68 %)
+    (Zero value buffers):          0 bytes (00.00 %)
+
+* Buffers of TFLite model are mostly used for constant tensors.
+  And zero value buffers are buffers filled with zeros.
+  Non-data buffers area are used to store operators, subgraphs and etc.
+  You can find more details from https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/schema/schema.fbs
+

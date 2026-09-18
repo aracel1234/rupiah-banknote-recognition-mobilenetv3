@@ -1,0 +1,12 @@
+{
+  "trial": "head_seed2026",
+  "seed": 2026,
+  "batch_size": 32,
+  "learning_rate": 0.001,
+  "fraction": 0.0,
+  "epochs": 30,
+  "top_layers": 0,
+  "backbone_layers": 157,
+  "trainable_backbone_layers": 0,
+  "trainable_parameters": 4616
+}

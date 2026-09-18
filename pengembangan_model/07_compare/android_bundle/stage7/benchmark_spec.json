@@ -1,0 +1,81 @@
+{
+  "stage": 7,
+  "device": "POCO X5 Pro 5G",
+  "execution": "CPU_XNNPACK",
+  "threads": 4,
+  "input_count": 80,
+  "input_shape": [
+    1,
+    224,
+    224,
+    3
+  ],
+  "input_domain": "RGB float32 [0,255] before candidate-specific quantization",
+  "warmup_latency": 30,
+  "stable_inference_per_session": 500,
+  "sessions": 5,
+  "memory_warmup": 20,
+  "memory_active_seconds": 30,
+  "candidates": [
+    {
+      "candidate": "fp32",
+      "file_name": "mobilenetv3small_fp32.tflite",
+      "model_sha256": "bbcdee096fe23d19026b530643c17e512ff9eacbb75404ec82683315768795bd",
+      "input_dtype": "float32",
+      "output_dtype": "float32",
+      "input_quantization": [
+        0.0,
+        0
+      ],
+      "output_quantization": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "candidate": "fp16",
+      "file_name": "mobilenetv3small_fp16.tflite",
+      "model_sha256": "b3e37e8d3278cbcc60537a6ad1fec3a00d4b2de3506a379d8264febdd927e790",
+      "input_dtype": "float32",
+      "output_dtype": "float32",
+      "input_quantization": [
+        0.0,
+        0
+      ],
+      "output_quantization": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "candidate": "dynamic_range",
+      "file_name": "mobilenetv3small_dynamic_range.tflite",
+      "model_sha256": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676",
+      "input_dtype": "float32",
+      "output_dtype": "float32",
+      "input_quantization": [
+        0.0,
+        0
+      ],
+      "output_quantization": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "candidate": "full_int8",
+      "file_name": "mobilenetv3small_full_int8.tflite",
+      "model_sha256": "fe8db97ca3a464f35deeba83f5f77d92dcae55c78c71cccfc1a847716e6e37e7",
+      "input_dtype": "int8",
+      "output_dtype": "int8",
+      "input_quantization": [
+        1.0,
+        -128
+      ],
+      "output_quantization": [
+        0.00390625,
+        -128
+      ]
+    }
+  ]
+}

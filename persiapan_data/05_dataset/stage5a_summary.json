@@ -1,0 +1,24 @@
+{
+  "money_samples": 38582,
+  "money_class_counts": {
+    "1000": 6327,
+    "2000": 5184,
+    "5000": 4698,
+    "10000": 5395,
+    "20000": 7781,
+    "50000": 4412,
+    "100000": 4785
+  },
+  "money_median": 5184,
+  "money_min": 4412,
+  "money_max": 7781,
+  "money_ir": 1.7636,
+  "nonmoney_available": 8000,
+  "nonmoney_target": 5184,
+  "nonmoney_excess": 2816,
+  "nonmoney_parent_groups": {
+    ".": 8000
+  },
+  "coco_annotation_candidates": [],
+  "target_dataset_size": 43766
+}

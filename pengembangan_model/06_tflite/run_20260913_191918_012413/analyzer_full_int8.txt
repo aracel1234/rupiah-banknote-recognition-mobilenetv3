@@ -1,0 +1,361 @@
+=== /home/aracel/Downloads/Skripsi/pengembangan_model/06_tflite/run_20260913_191918_012413/mobilenetv3small_full_int8.tflite ===
+
+Your TFLite model has '1' subgraph(s). In the subgraph description below,
+T# represents the Tensor numbers. For example, in Subgraph#0, the MUL op takes
+tensor #0 and tensor #110 as input and produces tensor #111 as output.
+
+Subgraph#0 main(T#0) -> [T#218]
+  Op#0 MUL(T#0, T#110) -> [T#111]
+  Op#1 ADD(T#111, T#109) -> [T#112]
+  Op#2 CONV_2D(T#112, T#108, T#107[647694, 702295, 165143, 81658, 19148, ...]) -> [T#113]
+  Op#3 HARD_SWISH(T#113) -> [T#114]
+  Op#4 DEPTHWISE_CONV_2D(T#114, T#106, T#105[290, -45594, 4149, 890, 7342, ...]) -> [T#115]
+  Op#5 MEAN(T#115, T#1[1, 2]) -> [T#116]
+  Op#6 CONV_2D(T#116, T#104, T#103[38882, -1073741824, 38873, 39372, -1073741824, ...]) -> [T#117]
+  Op#7 CONV_2D(T#117, T#102, T#101[163030, 192553, 336094, 37498, 115260, ...]) -> [T#118]
+  Op#8 MUL(T#118, T#100) -> [T#119]
+  Op#9 MUL(T#115, T#119) -> [T#120]
+  Op#10 CONV_2D(T#120, T#99, T#98[-4750, -430, -277, 387, 3226, ...]) -> [T#121]
+  Op#11 CONV_2D(T#121, T#97, T#96[-46, 116, 139, 2609, 43, ...]) -> [T#122]
+  Op#12 DEPTHWISE_CONV_2D(T#122, T#95, T#94[4555, 704, 2080, -1440, 8861, ...]) -> [T#123]
+  Op#13 CONV_2D(T#123, T#93, T#92[-2611, -5456, 2048, 9641, 20252, ...]) -> [T#124]
+  Op#14 CONV_2D(T#124, T#91, T#90[6329, -567, 28990, 36994, -1704, ...]) -> [T#125]
+  Op#15 DEPTHWISE_CONV_2D(T#125, T#89, T#88[3031, 3271, -2977, -4543, 1318, ...]) -> [T#126]
+  Op#16 CONV_2D(T#126, T#87, T#86[1748, -8126, -11949, 20427, 1821, ...]) -> [T#127]
+  Op#17 ADD(T#124, T#127) -> [T#128]
+  Op#18 CONV_2D(T#128, T#85, T#84[-718, -498, 45, 395, -288, ...]) -> [T#129]
+  Op#19 HARD_SWISH(T#129) -> [T#130]
+  Op#20 DEPTHWISE_CONV_2D(T#130, T#83, T#82[41, 4441, 5910, 2680, 8179, ...]) -> [T#131]
+  Op#21 HARD_SWISH(T#131) -> [T#132]
+  Op#22 MEAN(T#132, T#1[1, 2]) -> [T#133]
+  Op#23 CONV_2D(T#133, T#81, T#80[-266675728, 4513, 12637, 5595, -180155648, ...]) -> [T#134]
+  Op#24 CONV_2D(T#134, T#79, T#78[1073741824, 1073741824, 157870, 1073741824, 1073741824, ...]) -> [T#135]
+  Op#25 MUL(T#135, T#100) -> [T#136]
+  Op#26 MUL(T#132, T#136) -> [T#137]
+  Op#27 CONV_2D(T#137, T#77, T#76[-11275, -11252, -8534, -6295, 10077, ...]) -> [T#138]
+  Op#28 CONV_2D(T#138, T#75, T#74[787, 8430, 21484, 7009, 10685, ...]) -> [T#139]
+  Op#29 HARD_SWISH(T#139) -> [T#140]
+  Op#30 DEPTHWISE_CONV_2D(T#140, T#73, T#72[-131, 402, 927, -67, -39, ...]) -> [T#141]
+  Op#31 HARD_SWISH(T#141) -> [T#142]
+  Op#32 MEAN(T#142, T#1[1, 2]) -> [T#143]
+  Op#33 CONV_2D(T#143, T#71, T#70[44258, 10707, 13344, 20021, -8660, ...]) -> [T#144]
+  Op#34 CONV_2D(T#144, T#69, T#68[165766, 49098, 205627, 35961, 15588, ...]) -> [T#145]
+  Op#35 MUL(T#145, T#100) -> [T#146]
+  Op#36 MUL(T#142, T#146) -> [T#147]
+  Op#37 CONV_2D(T#147, T#67, T#66[-3831, 987, 478, -124, 3942, ...]) -> [T#148]
+  Op#38 ADD(T#138, T#148) -> [T#149]
+  Op#39 CONV_2D(T#149, T#65, T#64[3962, 2746, -12521, 9459, 416, ...]) -> [T#150]
+  Op#40 HARD_SWISH(T#150) -> [T#151]
+  Op#41 DEPTHWISE_CONV_2D(T#151, T#63, T#62[-2051, 6451, -654, -2304, -5, ...]) -> [T#152]
+  Op#42 HARD_SWISH(T#152) -> [T#153]
+  Op#43 MEAN(T#153, T#1[1, 2]) -> [T#154]
+  Op#44 CONV_2D(T#154, T#61, T#60[2067, 5093, 2437, 10722, 4296, ...]) -> [T#155]
+  Op#45 CONV_2D(T#155, T#59, T#58[41742, 26584, 140395, 17233, 13570, ...]) -> [T#156]
+  Op#46 MUL(T#156, T#100) -> [T#157]
+  Op#47 MUL(T#153, T#157) -> [T#158]
+  Op#48 CONV_2D(T#158, T#57, T#56[1702, 3, -1883, 2954, -607, ...]) -> [T#159]
+  Op#49 ADD(T#149, T#159) -> [T#160]
+  Op#50 CONV_2D(T#160, T#55, T#54[-518, 5314, 264, 6170, 5901, ...]) -> [T#161]
+  Op#51 HARD_SWISH(T#161) -> [T#162]
+  Op#52 DEPTHWISE_CONV_2D(T#162, T#53, T#52[7989, 8704, 1990, 3392, -317, ...]) -> [T#163]
+  Op#53 HARD_SWISH(T#163) -> [T#164]
+  Op#54 MEAN(T#164, T#1[1, 2]) -> [T#165]
+  Op#55 CONV_2D(T#165, T#51, T#50[-1073741824, 348213, 336734, -1073741824, -1073741824, ...]) -> [T#166]
+  Op#56 CONV_2D(T#166, T#49, T#48[1073741824, 1073741824, 1073741824, 1073741824, 1073741824, ...]) -> [T#167]
+  Op#57 MUL(T#167, T#100) -> [T#168]
+  Op#58 MUL(T#164, T#168) -> [T#169]
+  Op#59 CONV_2D(T#169, T#47, T#46[-15428, 19021, 885, 5547, -1738, ...]) -> [T#170]
+  Op#60 CONV_2D(T#170, T#45, T#44[2923, -1911, -1804, -5385, -10799, ...]) -> [T#171]
+  Op#61 HARD_SWISH(T#171) -> [T#172]
+  Op#62 DEPTHWISE_CONV_2D(T#172, T#43, T#42[-25, -537, 88, 31, 329, ...]) -> [T#173]
+  Op#63 HARD_SWISH(T#173) -> [T#174]
+  Op#64 MEAN(T#174, T#1[1, 2]) -> [T#175]
+  Op#65 CONV_2D(T#175, T#41, T#40[9029, 36957, 16946, 61, 7247, ...]) -> [T#176]
+  Op#66 CONV_2D(T#176, T#39, T#38[93543, 25879, 46435, 186760, 52275, ...]) -> [T#177]
+  Op#67 MUL(T#177, T#100) -> [T#178]
+  Op#68 MUL(T#174, T#178) -> [T#179]
+  Op#69 CONV_2D(T#179, T#37, T#36[-627, -3398, -843, -137, -2613, ...]) -> [T#180]
+  Op#70 ADD(T#170, T#180) -> [T#181]
+  Op#71 CONV_2D(T#181, T#35, T#34[335, -7049, -8039, -7498, -4240, ...]) -> [T#182]
+  Op#72 HARD_SWISH(T#182) -> [T#183]
+  Op#73 DEPTHWISE_CONV_2D(T#183, T#33, T#32[-106, 1674, 2451, 1163, 2093, ...]) -> [T#184]
+  Op#74 HARD_SWISH(T#184) -> [T#185]
+  Op#75 MEAN(T#185, T#1[1, 2]) -> [T#186]
+  Op#76 CONV_2D(T#186, T#31, T#30[-722, 35210, -13109, 50045, 22913, ...]) -> [T#187]
+  Op#77 CONV_2D(T#187, T#29, T#28[96371, 60902, 109563, 137522, 74065, ...]) -> [T#188]
+  Op#78 MUL(T#188, T#100) -> [T#189]
+  Op#79 MUL(T#185, T#189) -> [T#190]
+  Op#80 CONV_2D(T#190, T#27, T#26[796, -6158, 1714, -14036, -506, ...]) -> [T#191]
+  Op#81 CONV_2D(T#191, T#25, T#24[8654, -4572, -1502, 6723, -11032, ...]) -> [T#192]
+  Op#82 HARD_SWISH(T#192) -> [T#193]
+  Op#83 DEPTHWISE_CONV_2D(T#193, T#23, T#22[-2701, -304, -111, -632, 309, ...]) -> [T#194]
+  Op#84 HARD_SWISH(T#194) -> [T#195]
+  Op#85 MEAN(T#195, T#1[1, 2]) -> [T#196]
+  Op#86 CONV_2D(T#196, T#21, T#20[-4486, 5248, -12086, 10855, 7916, ...]) -> [T#197]
+  Op#87 CONV_2D(T#197, T#19, T#18[30900, 41613, 60617, 11718, 35887, ...]) -> [T#198]
+  Op#88 MUL(T#198, T#100) -> [T#199]
+  Op#89 MUL(T#195, T#199) -> [T#200]
+  Op#90 CONV_2D(T#200, T#17, T#16[-937, -448, -447, -109, 922, ...]) -> [T#201]
+  Op#91 ADD(T#191, T#201) -> [T#202]
+  Op#92 CONV_2D(T#202, T#15, T#14[-5419, -7352, -7466, 3361, -4199, ...]) -> [T#203]
+  Op#93 HARD_SWISH(T#203) -> [T#204]
+  Op#94 DEPTHWISE_CONV_2D(T#204, T#13, T#12[-118, 132, 249, 29, -161, ...]) -> [T#205]
+  Op#95 HARD_SWISH(T#205) -> [T#206]
+  Op#96 MEAN(T#206, T#1[1, 2]) -> [T#207]
+  Op#97 CONV_2D(T#207, T#11, T#10[-1542, 867, 2371, -1246, -4235, ...]) -> [T#208]
+  Op#98 CONV_2D(T#208, T#9, T#8[37931, 9939, 29355, 14620, 38145, ...]) -> [T#209]
+  Op#99 MUL(T#209, T#100) -> [T#210]
+  Op#100 MUL(T#206, T#210) -> [T#211]
+  Op#101 CONV_2D(T#211, T#7, T#6[172, -543, -462, -968, -889, ...]) -> [T#212]
+  Op#102 ADD(T#202, T#212) -> [T#213]
+  Op#103 CONV_2D(T#213, T#5, T#4[-3256, -3096, -2129, -1665, -2846, ...]) -> [T#214]
+  Op#104 HARD_SWISH(T#214) -> [T#215]
+  Op#105 MEAN(T#215, T#1[1, 2]) -> [T#216]
+  Op#106 FULLY_CONNECTED(T#216, T#3, T#2[72, -50, 182, -82, -5, ...]) -> [T#217]
+  Op#107 SOFTMAX(T#217) -> [T#218]
+
+Tensors of Subgraph#0
+  T#0(serving_default_rgb_image:0) shape:[1, 224, 224, 3], type:INT8
+  T#1(arith.constant) shape:[2], type:INT32 RO 8 bytes, buffer: 2, data:[1, 2]
+  T#2(tfl.pseudo_qconst) shape:[8], type:INT32 RO 32 bytes, buffer: 3, data:[72, -50, 182, -82, -5, ...]
+  T#3(tfl.pseudo_qconst1) shape:[8, 576], type:INT8 RO 4608 bytes, buffer: 4, data:[(, ., ., ., ., ...]
+  T#4(tfl.pseudo_qconst2) shape:[576], type:INT32 RO 2304 bytes, buffer: 5, data:[-3256, -3096, -2129, -1665, -2846, ...]
+  T#5(tfl.pseudo_qconst3) shape:[576, 1, 1, 96], type:INT8 RO 55296 bytes, buffer: 6, data:[., ., ., ., ., ...]
+  T#6(tfl.pseudo_qconst4) shape:[96], type:INT32 RO 384 bytes, buffer: 7, data:[172, -543, -462, -968, -889, ...]
+  T#7(tfl.pseudo_qconst5) shape:[96, 1, 1, 576], type:INT8 RO 55296 bytes, buffer: 8, data:[., ., 9, ., ., ...]
+  T#8(tfl.pseudo_qconst6) shape:[576], type:INT32 RO 2304 bytes, buffer: 9, data:[37931, 9939, 29355, 14620, 38145, ...]
+  T#9(tfl.pseudo_qconst7) shape:[576, 1, 1, 144], type:INT8 RO 82944 bytes, buffer: 10, data:[., .,  , ., ., ...]
+  T#10(tfl.pseudo_qconst8) shape:[144], type:INT32 RO 576 bytes, buffer: 11, data:[-1542, 867, 2371, -1246, -4235, ...]
+  T#11(tfl.pseudo_qconst9) shape:[144, 1, 1, 576], type:INT8 RO 82944 bytes, buffer: 12, data:[., ., ., ., ., ...]
+  T#12(tfl.pseudo_qconst10) shape:[576], type:INT32 RO 2304 bytes, buffer: 13, data:[-118, 132, 249, 29, -161, ...]
+  T#13(tfl.pseudo_qconst11) shape:[1, 5, 5, 576], type:INT8 RO 14400 bytes, buffer: 14, data:[., ., 
+, ., ., ...]
+  T#14(tfl.pseudo_qconst12) shape:[576], type:INT32 RO 2304 bytes, buffer: 15, data:[-5419, -7352, -7466, 3361, -4199, ...]
+  T#15(tfl.pseudo_qconst13) shape:[576, 1, 1, 96], type:INT8 RO 55296 bytes, buffer: 16, data:[., 5, ., ., ., ...]
+  T#16(tfl.pseudo_qconst14) shape:[96], type:INT32 RO 384 bytes, buffer: 17, data:[-937, -448, -447, -109, 922, ...]
+  T#17(tfl.pseudo_qconst15) shape:[96, 1, 1, 576], type:INT8 RO 55296 bytes, buffer: 18, data:[., ., ., ., ., ...]
+  T#18(tfl.pseudo_qconst16) shape:[576], type:INT32 RO 2304 bytes, buffer: 19, data:[30900, 41613, 60617, 11718, 35887, ...]
+  T#19(tfl.pseudo_qconst17) shape:[576, 1, 1, 144], type:INT8 RO 82944 bytes, buffer: 20, data:[T, ., ., ., ., ...]
+  T#20(tfl.pseudo_qconst18) shape:[144], type:INT32 RO 576 bytes, buffer: 21, data:[-4486, 5248, -12086, 10855, 7916, ...]
+  T#21(tfl.pseudo_qconst19) shape:[144, 1, 1, 576], type:INT8 RO 82944 bytes, buffer: 22, data:[., ., ., ., Q, ...]
+  T#22(tfl.pseudo_qconst20) shape:[576], type:INT32 RO 2304 bytes, buffer: 23, data:[-2701, -304, -111, -632, 309, ...]
+  T#23(tfl.pseudo_qconst21) shape:[1, 5, 5, 576], type:INT8 RO 14400 bytes, buffer: 24, data:[., ., ., ., ., ...]
+  T#24(tfl.pseudo_qconst22) shape:[576], type:INT32 RO 2304 bytes, buffer: 25, data:[8654, -4572, -1502, 6723, -11032, ...]
+  T#25(tfl.pseudo_qconst23) shape:[576, 1, 1, 96], type:INT8 RO 55296 bytes, buffer: 26, data:[., ., ., ., ., ...]
+  T#26(tfl.pseudo_qconst24) shape:[96], type:INT32 RO 384 bytes, buffer: 27, data:[796, -6158, 1714, -14036, -506, ...]
+  T#27(tfl.pseudo_qconst25) shape:[96, 1, 1, 288], type:INT8 RO 27648 bytes, buffer: 28, data:[., ., ., ., ., ...]
+  T#28(tfl.pseudo_qconst26) shape:[288], type:INT32 RO 1152 bytes, buffer: 29, data:[96371, 60902, 109563, 137522, 74065, ...]
+  T#29(tfl.pseudo_qconst27) shape:[288, 1, 1, 72], type:INT8 RO 20736 bytes, buffer: 30, data:[., @, ., ., 
+, ...]
+  T#30(tfl.pseudo_qconst28) shape:[72], type:INT32 RO 288 bytes, buffer: 31, data:[-722, 35210, -13109, 50045, 22913, ...]
+  T#31(tfl.pseudo_qconst29) shape:[72, 1, 1, 288], type:INT8 RO 20736 bytes, buffer: 32, data:[., ., ., ., ., ...]
+  T#32(tfl.pseudo_qconst30) shape:[288], type:INT32 RO 1152 bytes, buffer: 33, data:[-106, 1674, 2451, 1163, 2093, ...]
+  T#33(tfl.pseudo_qconst31) shape:[1, 5, 5, 288], type:INT8 RO 7200 bytes, buffer: 34, data:[., ., ., ., ., ...]
+  T#34(tfl.pseudo_qconst32) shape:[288], type:INT32 RO 1152 bytes, buffer: 35, data:[335, -7049, -8039, -7498, -4240, ...]
+  T#35(tfl.pseudo_qconst33) shape:[288, 1, 1, 48], type:INT8 RO 13824 bytes, buffer: 36, data:[., &, ., ., ., ...]
+  T#36(tfl.pseudo_qconst34) shape:[48], type:INT32 RO 192 bytes, buffer: 37, data:[-627, -3398, -843, -137, -2613, ...]
+  T#37(tfl.pseudo_qconst35) shape:[48, 1, 1, 144], type:INT8 RO 6912 bytes, buffer: 38, data:[., ., ., ., ., ...]
+  T#38(tfl.pseudo_qconst36) shape:[144], type:INT32 RO 576 bytes, buffer: 39, data:[93543, 25879, 46435, 186760, 52275, ...]
+  T#39(tfl.pseudo_qconst37) shape:[144, 1, 1, 40], type:INT8 RO 5760 bytes, buffer: 40, data:[., ., ., ., B, ...]
+  T#40(tfl.pseudo_qconst38) shape:[40], type:INT32 RO 160 bytes, buffer: 41, data:[9029, 36957, 16946, 61, 7247, ...]
+  T#41(tfl.pseudo_qconst39) shape:[40, 1, 1, 144], type:INT8 RO 5760 bytes, buffer: 42, data:[., ., ., ., ., ...]
+  T#42(tfl.pseudo_qconst40) shape:[144], type:INT32 RO 576 bytes, buffer: 43, data:[-25, -537, 88, 31, 329, ...]
+  T#43(tfl.pseudo_qconst41) shape:[1, 5, 5, 144], type:INT8 RO 3600 bytes, buffer: 44, data:[., ., ., ., ., ...]
+  T#44(tfl.pseudo_qconst42) shape:[144], type:INT32 RO 576 bytes, buffer: 45, data:[2923, -1911, -1804, -5385, -10799, ...]
+  T#45(tfl.pseudo_qconst43) shape:[144, 1, 1, 48], type:INT8 RO 6912 bytes, buffer: 46, data:[., ., ", $, ., ...]
+  T#46(tfl.pseudo_qconst44) shape:[48], type:INT32 RO 192 bytes, buffer: 47, data:[-15428, 19021, 885, 5547, -1738, ...]
+  T#47(tfl.pseudo_qconst45) shape:[48, 1, 1, 120], type:INT8 RO 5760 bytes, buffer: 48, data:[., 
+, 8, ., -, ...]
+  T#48(tfl.pseudo_qconst46) shape:[120], type:INT32 RO 480 bytes, buffer: 49, data:[1073741824, 1073741824, 1073741824, 1073741824, 1073741824, ...]
+  T#49(tfl.pseudo_qconst47) shape:[120, 1, 1, 32], type:INT8 RO 3840 bytes, buffer: 50, data:[., ., ., ., ., ...]
+  T#50(tfl.pseudo_qconst48) shape:[32], type:INT32 RO 128 bytes, buffer: 51, data:[-1073741824, 348213, 336734, -1073741824, -1073741824, ...]
+  T#51(tfl.pseudo_qconst49) shape:[32, 1, 1, 120], type:INT8 RO 3840 bytes, buffer: 52, data:[., ., ., ., ., ...]
+  T#52(tfl.pseudo_qconst50) shape:[120], type:INT32 RO 480 bytes, buffer: 53, data:[7989, 8704, 1990, 3392, -317, ...]
+  T#53(tfl.pseudo_qconst51) shape:[1, 5, 5, 120], type:INT8 RO 3000 bytes, buffer: 54, data:[., ., ., ., ., ...]
+  T#54(tfl.pseudo_qconst52) shape:[120], type:INT32 RO 480 bytes, buffer: 55, data:[-518, 5314, 264, 6170, 5901, ...]
+  T#55(tfl.pseudo_qconst53) shape:[120, 1, 1, 40], type:INT8 RO 4800 bytes, buffer: 56, data:[., ., ,, ., ., ...]
+  T#56(tfl.pseudo_qconst54) shape:[40], type:INT32 RO 160 bytes, buffer: 57, data:[1702, 3, -1883, 2954, -607, ...]
+  T#57(tfl.pseudo_qconst55) shape:[40, 1, 1, 240], type:INT8 RO 9600 bytes, buffer: 58, data:[., ., -, ., ., ...]
+  T#58(tfl.pseudo_qconst56) shape:[240], type:INT32 RO 960 bytes, buffer: 59, data:[41742, 26584, 140395, 17233, 13570, ...]
+  T#59(tfl.pseudo_qconst57) shape:[240, 1, 1, 64], type:INT8 RO 15360 bytes, buffer: 60, data:[., ., ., N, ., ...]
+  T#60(tfl.pseudo_qconst58) shape:[64], type:INT32 RO 256 bytes, buffer: 61, data:[2067, 5093, 2437, 10722, 4296, ...]
+  T#61(tfl.pseudo_qconst59) shape:[64, 1, 1, 240], type:INT8 RO 15360 bytes, buffer: 62, data:[., ., ., ., &, ...]
+  T#62(tfl.pseudo_qconst60) shape:[240], type:INT32 RO 960 bytes, buffer: 63, data:[-2051, 6451, -654, -2304, -5, ...]
+  T#63(tfl.pseudo_qconst61) shape:[1, 5, 5, 240], type:INT8 RO 6000 bytes, buffer: 64, data:[., ., ., ., ., ...]
+  T#64(tfl.pseudo_qconst62) shape:[240], type:INT32 RO 960 bytes, buffer: 65, data:[3962, 2746, -12521, 9459, 416, ...]
+  T#65(tfl.pseudo_qconst63) shape:[240, 1, 1, 40], type:INT8 RO 9600 bytes, buffer: 66, data:[., U, ., ., R, ...]
+  T#66(tfl.pseudo_qconst64) shape:[40], type:INT32 RO 160 bytes, buffer: 67, data:[-3831, 987, 478, -124, 3942, ...]
+  T#67(tfl.pseudo_qconst65) shape:[40, 1, 1, 240], type:INT8 RO 9600 bytes, buffer: 68, data:[., ., -, ., ', ...]
+  T#68(tfl.pseudo_qconst66) shape:[240], type:INT32 RO 960 bytes, buffer: 69, data:[165766, 49098, 205627, 35961, 15588, ...]
+  T#69(tfl.pseudo_qconst67) shape:[240, 1, 1, 64], type:INT8 RO 15360 bytes, buffer: 70, data:[c, ., #, b, ., ...]
+  T#70(tfl.pseudo_qconst68) shape:[64], type:INT32 RO 256 bytes, buffer: 71, data:[44258, 10707, 13344, 20021, -8660, ...]
+  T#71(tfl.pseudo_qconst69) shape:[64, 1, 1, 240], type:INT8 RO 15360 bytes, buffer: 72, data:[., ., ., ., n, ...]
+  T#72(tfl.pseudo_qconst70) shape:[240], type:INT32 RO 960 bytes, buffer: 73, data:[-131, 402, 927, -67, -39, ...]
+  T#73(tfl.pseudo_qconst71) shape:[1, 5, 5, 240], type:INT8 RO 6000 bytes, buffer: 74, data:[., ., ., ., ., ...]
+  T#74(tfl.pseudo_qconst72) shape:[240], type:INT32 RO 960 bytes, buffer: 75, data:[787, 8430, 21484, 7009, 10685, ...]
+  T#75(tfl.pseudo_qconst73) shape:[240, 1, 1, 40], type:INT8 RO 9600 bytes, buffer: 76, data:[., ., ., ., ., ...]
+  T#76(tfl.pseudo_qconst74) shape:[40], type:INT32 RO 160 bytes, buffer: 77, data:[-11275, -11252, -8534, -6295, 10077, ...]
+  T#77(tfl.pseudo_qconst75) shape:[40, 1, 1, 96], type:INT8 RO 3840 bytes, buffer: 78, data:[., ., ., ., ., ...]
+  T#78(tfl.pseudo_qconst76) shape:[96], type:INT32 RO 384 bytes, buffer: 79, data:[1073741824, 1073741824, 157870, 1073741824, 1073741824, ...]
+  T#79(tfl.pseudo_qconst77) shape:[96, 1, 1, 24], type:INT8 RO 2304 bytes, buffer: 80, data:[., ., ., ., ., ...]
+  T#80(tfl.pseudo_qconst78) shape:[24], type:INT32 RO 96 bytes, buffer: 81, data:[-266675728, 4513, 12637, 5595, -180155648, ...]
+  T#81(tfl.pseudo_qconst79) shape:[24, 1, 1, 96], type:INT8 RO 2304 bytes, buffer: 82, data:[., ., ., ., ., ...]
+  T#82(tfl.pseudo_qconst80) shape:[96], type:INT32 RO 384 bytes, buffer: 83, data:[41, 4441, 5910, 2680, 8179, ...]
+  T#83(tfl.pseudo_qconst81) shape:[1, 5, 5, 96], type:INT8 RO 2400 bytes, buffer: 84, data:[., ., ., ., ., ...]
+  T#84(tfl.pseudo_qconst82) shape:[96], type:INT32 RO 384 bytes, buffer: 85, data:[-718, -498, 45, 395, -288, ...]
+  T#85(tfl.pseudo_qconst83) shape:[96, 1, 1, 24], type:INT8 RO 2304 bytes, buffer: 86, data:[., ., ., ., ., ...]
+  T#86(tfl.pseudo_qconst84) shape:[24], type:INT32 RO 96 bytes, buffer: 87, data:[1748, -8126, -11949, 20427, 1821, ...]
+  T#87(tfl.pseudo_qconst85) shape:[24, 1, 1, 88], type:INT8 RO 2112 bytes, buffer: 88, data:[., ., ., ., ., ...]
+  T#88(tfl.pseudo_qconst86) shape:[88], type:INT32 RO 352 bytes, buffer: 89, data:[3031, 3271, -2977, -4543, 1318, ...]
+  T#89(tfl.pseudo_qconst87) shape:[1, 3, 3, 88], type:INT8 RO 792 bytes, buffer: 90, data:[., ., ., ., ., ...]
+  T#90(tfl.pseudo_qconst88) shape:[88], type:INT32 RO 352 bytes, buffer: 91, data:[6329, -567, 28990, 36994, -1704, ...]
+  T#91(tfl.pseudo_qconst89) shape:[88, 1, 1, 24], type:INT8 RO 2112 bytes, buffer: 92, data:[., ., ., ., ., ...]
+  T#92(tfl.pseudo_qconst90) shape:[24], type:INT32 RO 96 bytes, buffer: 93, data:[-2611, -5456, 2048, 9641, 20252, ...]
+  T#93(tfl.pseudo_qconst91) shape:[24, 1, 1, 72], type:INT8 RO 1728 bytes, buffer: 94, data:[., ., ., ., ., ...]
+  T#94(tfl.pseudo_qconst92) shape:[72], type:INT32 RO 288 bytes, buffer: 95, data:[4555, 704, 2080, -1440, 8861, ...]
+  T#95(tfl.pseudo_qconst93) shape:[1, 3, 3, 72], type:INT8 RO 648 bytes, buffer: 96, data:[., ., ., S, ., ...]
+  T#96(tfl.pseudo_qconst94) shape:[72], type:INT32 RO 288 bytes, buffer: 97, data:[-46, 116, 139, 2609, 43, ...]
+  T#97(tfl.pseudo_qconst95) shape:[72, 1, 1, 16], type:INT8 RO 1152 bytes, buffer: 98, data:[E, ., Z, ., ., ...]
+  T#98(tfl.pseudo_qconst96) shape:[16], type:INT32 RO 64 bytes, buffer: 99, data:[-4750, -430, -277, 387, 3226, ...]
+  T#99(tfl.pseudo_qconst97) shape:[16, 1, 1, 16], type:INT8 RO 256 bytes, buffer: 100, data:[., ., /, ., ., ...]
+  T#100(tfl.pseudo_qconst98) shape:[], type:INT8 RO 1 bytes, buffer: 101, data:[.]
+  T#101(tfl.pseudo_qconst99) shape:[16], type:INT32 RO 64 bytes, buffer: 102, data:[163030, 192553, 336094, 37498, 115260, ...]
+  T#102(tfl.pseudo_qconst100) shape:[16, 1, 1, 8], type:INT8 RO 128 bytes, buffer: 103, data:[., ., ., ., ., ...]
+  T#103(tfl.pseudo_qconst101) shape:[8], type:INT32 RO 32 bytes, buffer: 104, data:[38882, -1073741824, 38873, 39372, -1073741824, ...]
+  T#104(tfl.pseudo_qconst102) shape:[8, 1, 1, 16], type:INT8 RO 128 bytes, buffer: 105, data:[., =, W, e, N, ...]
+  T#105(tfl.pseudo_qconst103) shape:[16], type:INT32 RO 64 bytes, buffer: 106, data:[290, -45594, 4149, 890, 7342, ...]
+  T#106(tfl.pseudo_qconst104) shape:[1, 3, 3, 16], type:INT8 RO 144 bytes, buffer: 107, data:[., `, ., ., ., ...]
+  T#107(tfl.pseudo_qconst105) shape:[16], type:INT32 RO 64 bytes, buffer: 108, data:[647694, 702295, 165143, 81658, 19148, ...]
+  T#108(tfl.pseudo_qconst106) shape:[16, 3, 3, 3], type:INT8 RO 432 bytes, buffer: 109, data:[#, 3, ., J, ., ...]
+  T#109(tfl.pseudo_qconst107) shape:[], type:INT8 RO 1 bytes, buffer: 110, data:[.]
+  T#110(tfl.pseudo_qconst108) shape:[], type:INT8 RO 1 bytes, buffer: 101, data:[.]
+  T#111(rupiah_mobilenetv3_small_1/backbone_1/rescaling_1/mul) shape:[1, 224, 224, 3], type:INT8
+  T#112(rupiah_mobilenetv3_small_1/backbone_1/rescaling_1/add) shape:[1, 224, 224, 3], type:INT8
+  T#113(rupiah_mobilenetv3_small_1/backbone_1/conv_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/conv_1/convolution;) shape:[1, 112, 112, 16], type:INT8
+  T#114(rupiah_mobilenetv3_small_1/backbone_1/activation_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_1/truediv) shape:[1, 112, 112, 16], type:INT8
+  T#115(rupiah_mobilenetv3_small_1/backbone_1/re_lu_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_depthwise_1/depthwise;;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_depthwise_pad_1/Pad) shape:[1, 56, 56, 16], type:INT8
+  T#116(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_squeeze_excite_avg_pool_1/Mean) shape:[1, 1, 1, 16], type:INT8
+  T#117(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_squeeze_excite_relu_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_squeeze_excite_conv_1/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_squeeze_excite_conv_1/convolution;) shape:[1, 1, 1, 8], type:INT8
+  T#118(rupiah_mobilenetv3_small_1/backbone_1/re_lu_1_2/Relu6;rupiah_mobilenetv3_small_1/backbone_1/Add;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_squeeze_excite_conv_1_2/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_squeeze_excite_conv_1_2/convolution;) shape:[1, 1, 1, 16], type:INT8
+  T#119(rupiah_mobilenetv3_small_1/backbone_1/Mul) shape:[1, 1, 1, 16], type:INT8
+  T#120(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_squeeze_excite_mul_1/Mul) shape:[1, 56, 56, 16], type:INT8
+  T#121(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_project_1/convolution;) shape:[1, 56, 56, 16], type:INT8
+  T#122(rupiah_mobilenetv3_small_1/backbone_1/re_lu_2_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_1_expand_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_1_expand_1/convolution;) shape:[1, 56, 56, 72], type:INT8
+  T#123(rupiah_mobilenetv3_small_1/backbone_1/re_lu_3_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_1_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_1_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_1_depthwise_1/depthwise;;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_1_depthwise_pad_1/Pad) shape:[1, 28, 28, 72], type:INT8
+  T#124(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_1_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_1_project_1/convolution;) shape:[1, 28, 28, 24], type:INT8
+  T#125(rupiah_mobilenetv3_small_1/backbone_1/re_lu_4_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_2_expand_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_2_expand_1/convolution;) shape:[1, 28, 28, 88], type:INT8
+  T#126(rupiah_mobilenetv3_small_1/backbone_1/re_lu_5_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_2_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_2_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_2_depthwise_1/depthwise;) shape:[1, 28, 28, 88], type:INT8
+  T#127(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_2_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_2_project_1/convolution;) shape:[1, 28, 28, 24], type:INT8
+  T#128(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_2_add_1/Add) shape:[1, 28, 28, 24], type:INT8
+  T#129(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_expand_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_expand_1/convolution;) shape:[1, 28, 28, 96], type:INT8
+  T#130(rupiah_mobilenetv3_small_1/backbone_1/activation_1_2/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_1_2/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_1_2/add;rupiah_mobilenetv3_small_1/backbone_1/activation_1_2/truediv) shape:[1, 28, 28, 96], type:INT8
+  T#131(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_depthwise_1/depthwise;;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_depthwise_pad_1/Pad) shape:[1, 14, 14, 96], type:INT8
+  T#132(rupiah_mobilenetv3_small_1/backbone_1/activation_2_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_2_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_2_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_2_1/truediv) shape:[1, 14, 14, 96], type:INT8
+  T#133(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_squeeze_excite_avg_pool_1/Mean) shape:[1, 1, 1, 96], type:INT8
+  T#134(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_squeeze_excite_relu_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_squeeze_excite_conv_1/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_squeeze_excite_conv_1/convolution;) shape:[1, 1, 1, 24], type:INT8
+  T#135(rupiah_mobilenetv3_small_1/backbone_1/re_lu_6_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/Add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_squeeze_excite_conv_1_2/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_squeeze_excite_conv_1_2/convolution;) shape:[1, 1, 1, 96], type:INT8
+  T#136(rupiah_mobilenetv3_small_1/backbone_1/Mul_1) shape:[1, 1, 1, 96], type:INT8
+  T#137(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_squeeze_excite_mul_1/Mul) shape:[1, 14, 14, 96], type:INT8
+  T#138(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_3_project_1/convolution;) shape:[1, 14, 14, 40], type:INT8
+  T#139(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_expand_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_expand_1/convolution;) shape:[1, 14, 14, 240], type:INT8
+  T#140(rupiah_mobilenetv3_small_1/backbone_1/activation_3_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_3_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_3_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_3_1/truediv) shape:[1, 14, 14, 240], type:INT8
+  T#141(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_depthwise_1/depthwise;) shape:[1, 14, 14, 240], type:INT8
+  T#142(rupiah_mobilenetv3_small_1/backbone_1/activation_4_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_4_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_4_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_4_1/truediv) shape:[1, 14, 14, 240], type:INT8
+  T#143(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_squeeze_excite_avg_pool_1/Mean) shape:[1, 1, 1, 240], type:INT8
+  T#144(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_squeeze_excite_relu_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_squeeze_excite_conv_1/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_squeeze_excite_conv_1/convolution;) shape:[1, 1, 1, 64], type:INT8
+  T#145(rupiah_mobilenetv3_small_1/backbone_1/re_lu_7_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/Add_2;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_squeeze_excite_conv_1_2/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_squeeze_excite_conv_1_2/convolution;) shape:[1, 1, 1, 240], type:INT8
+  T#146(rupiah_mobilenetv3_small_1/backbone_1/Mul_2) shape:[1, 1, 1, 240], type:INT8
+  T#147(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_squeeze_excite_mul_1/Mul) shape:[1, 14, 14, 240], type:INT8
+  T#148(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_project_1/convolution;) shape:[1, 14, 14, 40], type:INT8
+  T#149(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_4_add_1/Add) shape:[1, 14, 14, 40], type:INT8
+  T#150(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_expand_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_expand_1/convolution;) shape:[1, 14, 14, 240], type:INT8
+  T#151(rupiah_mobilenetv3_small_1/backbone_1/activation_5_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_5_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_5_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_5_1/truediv) shape:[1, 14, 14, 240], type:INT8
+  T#152(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_depthwise_1/depthwise;) shape:[1, 14, 14, 240], type:INT8
+  T#153(rupiah_mobilenetv3_small_1/backbone_1/activation_6_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_6_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_6_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_6_1/truediv) shape:[1, 14, 14, 240], type:INT8
+  T#154(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_squeeze_excite_avg_pool_1/Mean) shape:[1, 1, 1, 240], type:INT8
+  T#155(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_squeeze_excite_relu_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_squeeze_excite_conv_1/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_squeeze_excite_conv_1/convolution;) shape:[1, 1, 1, 64], type:INT8
+  T#156(rupiah_mobilenetv3_small_1/backbone_1/re_lu_8_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/Add_3;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_squeeze_excite_conv_1_2/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_squeeze_excite_conv_1_2/convolution;) shape:[1, 1, 1, 240], type:INT8
+  T#157(rupiah_mobilenetv3_small_1/backbone_1/Mul_3) shape:[1, 1, 1, 240], type:INT8
+  T#158(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_squeeze_excite_mul_1/Mul) shape:[1, 14, 14, 240], type:INT8
+  T#159(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_project_1/convolution;) shape:[1, 14, 14, 40], type:INT8
+  T#160(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_5_add_1/Add) shape:[1, 14, 14, 40], type:INT8
+  T#161(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_expand_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_expand_1/convolution;) shape:[1, 14, 14, 120], type:INT8
+  T#162(rupiah_mobilenetv3_small_1/backbone_1/activation_7_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_7_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_7_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_7_1/truediv) shape:[1, 14, 14, 120], type:INT8
+  T#163(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_depthwise_1/depthwise;) shape:[1, 14, 14, 120], type:INT8
+  T#164(rupiah_mobilenetv3_small_1/backbone_1/activation_8_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_8_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_8_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_8_1/truediv) shape:[1, 14, 14, 120], type:INT8
+  T#165(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_squeeze_excite_avg_pool_1/Mean) shape:[1, 1, 1, 120], type:INT8
+  T#166(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_squeeze_excite_relu_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_squeeze_excite_conv_1/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_squeeze_excite_conv_1/convolution;) shape:[1, 1, 1, 32], type:INT8
+  T#167(rupiah_mobilenetv3_small_1/backbone_1/re_lu_9_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/Add_4;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_squeeze_excite_conv_1_2/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_squeeze_excite_conv_1_2/convolution;) shape:[1, 1, 1, 120], type:INT8
+  T#168(rupiah_mobilenetv3_small_1/backbone_1/Mul_4) shape:[1, 1, 1, 120], type:INT8
+  T#169(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_squeeze_excite_mul_1/Mul) shape:[1, 14, 14, 120], type:INT8
+  T#170(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_6_project_1/convolution;) shape:[1, 14, 14, 48], type:INT8
+  T#171(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_expand_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_expand_1/convolution;) shape:[1, 14, 14, 144], type:INT8
+  T#172(rupiah_mobilenetv3_small_1/backbone_1/activation_9_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_9_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_9_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_9_1/truediv) shape:[1, 14, 14, 144], type:INT8
+  T#173(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_depthwise_1/depthwise;) shape:[1, 14, 14, 144], type:INT8
+  T#174(rupiah_mobilenetv3_small_1/backbone_1/activation_10_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_10_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_10_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_10_1/truediv) shape:[1, 14, 14, 144], type:INT8
+  T#175(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_squeeze_excite_avg_pool_1/Mean) shape:[1, 1, 1, 144], type:INT8
+  T#176(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_squeeze_excite_relu_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_squeeze_excite_conv_1/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_squeeze_excite_conv_1/convolution;) shape:[1, 1, 1, 40], type:INT8
+  T#177(rupiah_mobilenetv3_small_1/backbone_1/re_lu_10_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/Add_5;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_squeeze_excite_conv_1_2/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_squeeze_excite_conv_1_2/convolution;) shape:[1, 1, 1, 144], type:INT8
+  T#178(rupiah_mobilenetv3_small_1/backbone_1/Mul_5) shape:[1, 1, 1, 144], type:INT8
+  T#179(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_squeeze_excite_mul_1/Mul) shape:[1, 14, 14, 144], type:INT8
+  T#180(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_project_1/convolution;) shape:[1, 14, 14, 48], type:INT8
+  T#181(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_7_add_1/Add) shape:[1, 14, 14, 48], type:INT8
+  T#182(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_expand_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_expand_1/convolution;) shape:[1, 14, 14, 288], type:INT8
+  T#183(rupiah_mobilenetv3_small_1/backbone_1/activation_11_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_11_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_11_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_11_1/truediv) shape:[1, 14, 14, 288], type:INT8
+  T#184(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_depthwise_1/depthwise;;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_depthwise_pad_1/Pad) shape:[1, 7, 7, 288], type:INT8
+  T#185(rupiah_mobilenetv3_small_1/backbone_1/activation_12_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_12_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_12_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_12_1/truediv) shape:[1, 7, 7, 288], type:INT8
+  T#186(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_squeeze_excite_avg_pool_1/Mean) shape:[1, 1, 1, 288], type:INT8
+  T#187(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_squeeze_excite_relu_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_squeeze_excite_conv_1/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_squeeze_excite_conv_1/convolution;) shape:[1, 1, 1, 72], type:INT8
+  T#188(rupiah_mobilenetv3_small_1/backbone_1/re_lu_11_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/Add_6;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_squeeze_excite_conv_1_2/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_squeeze_excite_conv_1_2/convolution;) shape:[1, 1, 1, 288], type:INT8
+  T#189(rupiah_mobilenetv3_small_1/backbone_1/Mul_6) shape:[1, 1, 1, 288], type:INT8
+  T#190(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_squeeze_excite_mul_1/Mul) shape:[1, 7, 7, 288], type:INT8
+  T#191(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_8_project_1/convolution;) shape:[1, 7, 7, 96], type:INT8
+  T#192(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_expand_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_expand_1/convolution;) shape:[1, 7, 7, 576], type:INT8
+  T#193(rupiah_mobilenetv3_small_1/backbone_1/activation_13_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_13_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_13_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_13_1/truediv) shape:[1, 7, 7, 576], type:INT8
+  T#194(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_depthwise_1/depthwise;) shape:[1, 7, 7, 576], type:INT8
+  T#195(rupiah_mobilenetv3_small_1/backbone_1/activation_14_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_14_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_14_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_14_1/truediv) shape:[1, 7, 7, 576], type:INT8
+  T#196(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_squeeze_excite_avg_pool_1/Mean) shape:[1, 1, 1, 576], type:INT8
+  T#197(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_squeeze_excite_relu_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_squeeze_excite_conv_1/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_squeeze_excite_conv_1/convolution;) shape:[1, 1, 1, 144], type:INT8
+  T#198(rupiah_mobilenetv3_small_1/backbone_1/re_lu_12_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/Add_7;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_squeeze_excite_conv_1_2/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_squeeze_excite_conv_1_2/convolution;) shape:[1, 1, 1, 576], type:INT8
+  T#199(rupiah_mobilenetv3_small_1/backbone_1/Mul_7) shape:[1, 1, 1, 576], type:INT8
+  T#200(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_squeeze_excite_mul_1/Mul) shape:[1, 7, 7, 576], type:INT8
+  T#201(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_project_1/convolution;) shape:[1, 7, 7, 96], type:INT8
+  T#202(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_9_add_1/Add) shape:[1, 7, 7, 96], type:INT8
+  T#203(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_expand_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_expand_1/convolution;) shape:[1, 7, 7, 576], type:INT8
+  T#204(rupiah_mobilenetv3_small_1/backbone_1/activation_15_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_15_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_15_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_15_1/truediv) shape:[1, 7, 7, 576], type:INT8
+  T#205(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_depthwise_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_depthwise_bn_1/batchnorm/mul_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_depthwise_1/depthwise;) shape:[1, 7, 7, 576], type:INT8
+  T#206(rupiah_mobilenetv3_small_1/backbone_1/activation_16_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_16_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_16_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_16_1/truediv) shape:[1, 7, 7, 576], type:INT8
+  T#207(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_squeeze_excite_avg_pool_1/Mean) shape:[1, 1, 1, 576], type:INT8
+  T#208(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_squeeze_excite_relu_1/Relu;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_squeeze_excite_conv_1/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_squeeze_excite_conv_1/convolution;) shape:[1, 1, 1, 144], type:INT8
+  T#209(rupiah_mobilenetv3_small_1/backbone_1/re_lu_13_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/Add_8;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_squeeze_excite_conv_1_2/BiasAdd;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_squeeze_excite_conv_1_2/convolution;) shape:[1, 1, 1, 576], type:INT8
+  T#210(rupiah_mobilenetv3_small_1/backbone_1/Mul_8) shape:[1, 1, 1, 576], type:INT8
+  T#211(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_squeeze_excite_mul_1/Mul) shape:[1, 7, 7, 576], type:INT8
+  T#212(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_project_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_project_1/convolution;) shape:[1, 7, 7, 96], type:INT8
+  T#213(rupiah_mobilenetv3_small_1/backbone_1/expanded_conv_10_add_1/Add) shape:[1, 7, 7, 96], type:INT8
+  T#214(rupiah_mobilenetv3_small_1/backbone_1/conv_1_bn_1/batchnorm/add_1;rupiah_mobilenetv3_small_1/backbone_1/conv_1_2/convolution;) shape:[1, 7, 7, 576], type:INT8
+  T#215(rupiah_mobilenetv3_small_1/backbone_1/activation_17_1/mul;;rupiah_mobilenetv3_small_1/backbone_1/activation_17_1/Relu6;rupiah_mobilenetv3_small_1/backbone_1/activation_17_1/add;rupiah_mobilenetv3_small_1/backbone_1/activation_17_1/truediv) shape:[1, 7, 7, 576], type:INT8
+  T#216(rupiah_mobilenetv3_small_1/global_average_pool_1/Mean) shape:[1, 576], type:INT8
+  T#217(rupiah_mobilenetv3_small_1/scores_1/MatMul;rupiah_mobilenetv3_small_1/scores_1/BiasAdd) shape:[1, 8], type:INT8
+  T#218(StatefulPartitionedCall_1:0) shape:[1, 8], type:INT8
+
+---------------------------------------------------------------
+Your TFLite model has '1' signature_def(s).
+
+Signature#0 key: 'serving_default'
+- Subgraph: Subgraph#0
+- Inputs: 
+    'rgb_image' : T#0
+- Outputs: 
+    'output_0' : T#218
+
+---------------------------------------------------------------
+              Model size:    1215496 bytes
+    Non-data buffer size:     262950 bytes (21.63 %)
+  Total data buffer size:     952546 bytes (78.37 %)
+    (Zero value buffers):          0 bytes (00.00 %)
+
+* Buffers of TFLite model are mostly used for constant tensors.
+  And zero value buffers are buffers filled with zeros.
+  Non-data buffers area are used to store operators, subgraphs and etc.
+  You can find more details from https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/schema/schema.fbs
+
