@@ -5,7 +5,7 @@
   "analysis_fps": 3,
   "threads": 4,
   "roi_width_fraction": 0.8,
-  "roi_aspect_ratio": 2.2,
+  "roi_aspect_ratio": 1.3420920964096548,
   "blur_variance_min": 35.0,
   "luma_min": 45.0,
   "luma_max": 220.0,
@@ -17,5 +17,5 @@
   "clahe_grid": 4,
   "yuv_range": "limited_bt601",
   "log_enabled": true,
-  "note": "Parameter awal rekayasa, BELUM hasil kalibrasi. ROI aspect ratio belum median dataset. Jangan laporkan sebagai konfigurasi final penelitian."
+  "note": "ROI aspect ratio sudah melalui pembaharuan, berdasarkan data manifest 04_dedup. "
 }

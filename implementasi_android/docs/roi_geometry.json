@@ -1,0 +1,7 @@
+{
+  "status": "dataset_geometry_only",
+  "samples": 38582,
+  "roi_aspect_ratio": 1.3420920964096548,
+  "formula": "median(width / height), no automatic rotation",
+  "manifest_sha256": "92f49b7911154254ece8a327f556f07fb5df7c868cd8690b6db59b294300fe15"
+}
