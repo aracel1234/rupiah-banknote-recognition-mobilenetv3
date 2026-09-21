@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# First-run bootstrap. Replaced by the official Gradle wrapper after setup succeeds.
+set -euo pipefail
+project_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+bash "$project_dir/tools/00_setup_gradle.sh"
+[[ -f "$project_dir/gradle/wrapper/gradle-wrapper.jar" ]] || exit 1
+exec bash "$project_dir/gradlew" "$@"

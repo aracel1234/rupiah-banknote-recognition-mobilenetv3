@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Pengenalan Nominal Rupiah</string>
+    <string name="title">Pengenalan\nNominal Rupiah</string>
+    <string name="instruction">Tempatkan satu lembar uang di dalam area</string>
+    <string name="preparing">Status: Menyiapkan sistem</string>
+    <string name="empty_nominal">Nominal: —</string>
+    <string name="switch_camera">Ganti Kamera</string>
+    <string name="stop">Hentikan Pengenalan</string>
+    <string name="start">Mulai Pengenalan</string>
+</resources>
