@@ -1,0 +1,146 @@
+[
+  {
+    "reference_id": "REF_001",
+    "sample_id": "ds1_img000552_ann000552",
+    "class_index": 0,
+    "label": "1000",
+    "source_id": "ds1",
+    "reference_file": "REF_001_c00_1000_ds1.png",
+    "sha256": "2f0bb68999fa693caf08f677f05730f2a3a212fb7de23d2852516e8b3899b05a"
+  },
+  {
+    "reference_id": "REF_002",
+    "sample_id": "ds10_img002819_ann002819",
+    "class_index": 0,
+    "label": "1000",
+    "source_id": "ds10",
+    "reference_file": "REF_002_c00_1000_ds10.png",
+    "sha256": "fdd261b2bb9619ea88571456ce4d203ad02e3bc6677987fb06c255ce01a84ec1"
+  },
+  {
+    "reference_id": "REF_003",
+    "sample_id": "ds10_img003562_ann003559",
+    "class_index": 1,
+    "label": "2000",
+    "source_id": "ds10",
+    "reference_file": "REF_003_c01_2000_ds10.png",
+    "sha256": "35d998daf39124442064ed43577e25399bfc6fd5a5e945c01d45196da1fcdf94"
+  },
+  {
+    "reference_id": "REF_004",
+    "sample_id": "ds5_img015666_ann016755",
+    "class_index": 1,
+    "label": "2000",
+    "source_id": "ds5",
+    "reference_file": "REF_004_c01_2000_ds5.png",
+    "sha256": "f70cee78042ffe71c1453aa050fb8f0e58393c999b25741a91393dfa3101b571"
+  },
+  {
+    "reference_id": "REF_005",
+    "sample_id": "ds10_img003553_ann003550",
+    "class_index": 2,
+    "label": "5000",
+    "source_id": "ds10",
+    "reference_file": "REF_005_c02_5000_ds10.png",
+    "sha256": "61bb0acf1d7db6a0f50d43c5235f9d4ba00f5f7755e6975d630b57bda141b876"
+  },
+  {
+    "reference_id": "REF_006",
+    "sample_id": "ds6_img022794_ann023883",
+    "class_index": 2,
+    "label": "5000",
+    "source_id": "ds6",
+    "reference_file": "REF_006_c02_5000_ds6.png",
+    "sha256": "c9c1684784d5218717d8988f0f00aeb1db657f3947e688e1051a02ce2ecb5a79"
+  },
+  {
+    "reference_id": "REF_007",
+    "sample_id": "ds1_img000558_ann000558",
+    "class_index": 3,
+    "label": "10000",
+    "source_id": "ds1",
+    "reference_file": "REF_007_c03_10000_ds1.png",
+    "sha256": "a1832212c0012f6b690f6dfc3fab5aef9ac77575001493b208bffd7bc7a37196"
+  },
+  {
+    "reference_id": "REF_008",
+    "sample_id": "ds9_img034925_ann035377",
+    "class_index": 3,
+    "label": "10000",
+    "source_id": "ds9",
+    "reference_file": "REF_008_c03_10000_ds9.png",
+    "sha256": "80700d8f24d8e37e36dac5d075dc9e851c7920a3bd592aafff12562e1125b63a"
+  },
+  {
+    "reference_id": "REF_009",
+    "sample_id": "ds1_img001987_ann001987",
+    "class_index": 4,
+    "label": "20000",
+    "source_id": "ds1",
+    "reference_file": "REF_009_c04_20000_ds1.png",
+    "sha256": "469e6246b6222b0c6614481c0e6218d923cac4ec8b61e0f00c830b4ca6a81fd1"
+  },
+  {
+    "reference_id": "REF_010",
+    "sample_id": "ds9_img033485_ann034167",
+    "class_index": 4,
+    "label": "20000",
+    "source_id": "ds9",
+    "reference_file": "REF_010_c04_20000_ds9.png",
+    "sha256": "f14b7d2d8af178a316a671f4c806bf93d46717a758a89b4f496f5f435b6a767b"
+  },
+  {
+    "reference_id": "REF_011",
+    "sample_id": "ds10_img003179_ann003178",
+    "class_index": 5,
+    "label": "50000",
+    "source_id": "ds10",
+    "reference_file": "REF_011_c05_50000_ds10.png",
+    "sha256": "5b7756fd3bc55b4c320357f3fee76f967f2bf280ad708df98d4ba17d961731b4"
+  },
+  {
+    "reference_id": "REF_012",
+    "sample_id": "ds8_img029308_ann030406",
+    "class_index": 5,
+    "label": "50000",
+    "source_id": "ds8",
+    "reference_file": "REF_012_c05_50000_ds8.png",
+    "sha256": "ec507a2ba683ca8b6e82253b3b768bf9ab1663f6392a88a801781d9e5e5b894e"
+  },
+  {
+    "reference_id": "REF_013",
+    "sample_id": "ds6_img022746_ann023835",
+    "class_index": 6,
+    "label": "100000",
+    "source_id": "ds6",
+    "reference_file": "REF_013_c06_100000_ds6.png",
+    "sha256": "83fdeec4799da44072ac8f3db48b6153f7c51304d5c3e49f78994cafe306128e"
+  },
+  {
+    "reference_id": "REF_014",
+    "sample_id": "ds8_img028543_ann029641",
+    "class_index": 6,
+    "label": "100000",
+    "source_id": "ds8",
+    "reference_file": "REF_014_c06_100000_ds8.png",
+    "sha256": "ed05f9b0cfd9c53adae6a49ccf17f73da289a8d954b691f5f5beb0eb5d96d57f"
+  },
+  {
+    "reference_id": "REF_015",
+    "sample_id": "nm_000000405513",
+    "class_index": 7,
+    "label": "nonuang",
+    "source_id": "ds11",
+    "reference_file": "REF_015_c07_nonuang_ds11.jpg",
+    "sha256": "cfd5805d4c8f5b54206e3b8be6f4cf7f3b335f8d4a930b9f97435a702e5c2a40"
+  },
+  {
+    "reference_id": "REF_016",
+    "sample_id": "nm_000000496579",
+    "class_index": 7,
+    "label": "nonuang",
+    "source_id": "ds11",
+    "reference_file": "REF_016_c07_nonuang_ds11.jpg",
+    "sha256": "94e3f86d7aed46acd1556e480d20adc3b6a81ba2c911b55115346c6175a616b7"
+  }
+]

@@ -8,6 +8,9 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "0.1.0-dev"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
         ndk { abiFilters += listOf("armeabi-v7a", "arm64-v8a") }
     }
     buildTypes {
@@ -35,4 +38,7 @@ dependencies {
     implementation("androidx.camera:camera-lifecycle:$cameraVersion")
     implementation("androidx.camera:camera-view:$cameraVersion")
     implementation("org.tensorflow:tensorflow-lite:2.17.0")
+    androidTestImplementation("androidx.test:core:1.6.1")
+    androidTestImplementation("androidx.test:runner:1.6.2")
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
 }
