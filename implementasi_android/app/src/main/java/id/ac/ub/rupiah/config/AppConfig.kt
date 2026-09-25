@@ -35,6 +35,32 @@ data class AppConfig(val raw: String) {
         if (status == "calibrated") require(json.getString("calibration_evidence_sha256").matches(Regex("[a-f0-9]{64}")))
     }
     companion object {
-        fun load(context: Context) = AppConfig(context.assets.open("app_config.json").bufferedReader().use { it.readText() })
+        fun load(context: Context): AppConfig {
+            val jsonString = try {
+                context.assets.open("app_config.json").bufferedReader().use { it.readText() }
+            } catch (_: Exception) {
+                """{
+                  "schema_version": 1,
+                  "status": "development_uncalibrated",
+                  "revision": "dev-001",
+                  "analysis_fps": 3,
+                  "threads": 4,
+                  "roi_width_fraction": 0.8,
+                  "roi_aspect_ratio": 1.3420920964096548,
+                  "blur_variance_min": 35.0,
+                  "luma_min": 45.0,
+                  "luma_max": 220.0,
+                  "confidence_threshold": 0.8,
+                  "temporal_window_ms": 1500,
+                  "minimum_results": 3,
+                  "clahe_enabled": false,
+                  "clahe_clip_limit": 2.0,
+                  "clahe_grid": 4,
+                  "yuv_range": "limited_bt601",
+                  "log_enabled": true
+                }"""
+            }
+            return AppConfig(jsonString)
+        }
     }
 }
