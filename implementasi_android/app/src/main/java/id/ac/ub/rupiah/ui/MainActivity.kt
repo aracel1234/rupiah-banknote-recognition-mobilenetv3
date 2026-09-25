@@ -6,8 +6,10 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
+import android.view.View
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.activity.result.contract.ActivityResultContracts
@@ -33,25 +35,59 @@ class MainActivity : ComponentActivity() {
     private var requestedBefore = false
     private val permission = registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
         permissionPending = false
-        if (granted) { wantRecognition = true; maybeStart() }
-        else { wantRecognition = false; stopped("Izin kamera diperlukan. Tekan Mulai Pengenalan untuk memberikan izin.") }
+        if (granted) {
+            wantRecognition = true
+            maybeStart()
+        }
+        else { wantRecognition = false;
+            stopped("Izin kamera diperlukan. Tekan Mulai Pengenalan untuk memberikan izin.")
+        }
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        wantRecognition = savedInstanceState?.getBoolean("want_recognition", true) ?: true
-        status = findViewById(R.id.status); nominal = findViewById(R.id.nominal)
-        toggle = findViewById(R.id.toggle); switchCamera = findViewById(R.id.switchCamera)
-        preview = findViewById(R.id.preview)
-        try { config = AppConfig.load(this); findViewById<RoiOverlay>(R.id.roi).config = config }
-        catch (e: Exception) { wantRecognition = false; stopped("Konfigurasi aplikasi tidak valid.") }
+        wantRecognition =
+            savedInstanceState?.getBoolean(
+                "want_recognition",
+                true
+            ) ?: true
+        status = findViewById(R.id.status)
+        nominal = findViewById(R.id.nominal)
+        toggle = findViewById(R.id.toggle)
+        switchCamera = findViewById(R.id.switchCamera)
+        val previewContainer =
+            findViewById<FrameLayout>(R.id.previewContainer)
+
+        preview = PreviewView(this).apply {
+            importantForAccessibility =
+                View.IMPORTANT_FOR_ACCESSIBILITY_NO
+
+            layoutParams = FrameLayout.LayoutParams(
+                FrameLayout.LayoutParams.MATCH_PARENT,
+                FrameLayout.LayoutParams.MATCH_PARENT
+            )
+        }
+
+        previewContainer.addView(preview, 0)
+        try { config = AppConfig.load(this)
+            findViewById<RoiOverlay>(R.id.roi).config = config
+        }
+        catch (_: Exception) { wantRecognition = false
+            stopped("Konfigurasi aplikasi tidak valid.")
+        }
         switchCamera.isEnabled = false
         if (!wantRecognition && config != null) stopped("Pengenalan dihentikan")
-        switchCamera.setOnClickListener { session?.switchCamera() }
+        switchCamera.setOnClickListener {
+            session?.switchCamera()
+        }
         toggle.setOnClickListener {
             if (session != null || wantRecognition) {
-                wantRecognition = false; stopSession(); stopped("Pengenalan dihentikan")
-            } else { wantRecognition = true; requestOrStart() }
+                wantRecognition = false
+                stopSession()
+                stopped("Pengenalan dihentikan")
+            } else {
+                wantRecognition = true; requestOrStart()
+            }
         }
         preview.addOnLayoutChangeListener { _, l, t, r, b, oldL, oldT, oldR, oldB ->
             if (r - l != oldR - oldL || b - t != oldB - oldT) {
@@ -60,14 +96,25 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
-    override fun onStart() { super.onStart(); foreground = true; if (wantRecognition) requestOrStart() }
-    override fun onStop() { foreground = false; stopSession(); super.onStop() }
+    override fun onStart() {
+        super.onStart()
+        foreground = true; if (wantRecognition) requestOrStart()
+    }
+    override fun onStop() {
+        foreground = false
+        stopSession(); super.onStop()
+    }
     override fun onSaveInstanceState(outState: Bundle) {
-        outState.putBoolean("want_recognition", wantRecognition); super.onSaveInstanceState(outState)
+        outState.putBoolean("want_recognition", wantRecognition)
+        super.onSaveInstanceState(outState)
     }
     private fun requestOrStart() {
-        if (!foreground || config == null || permissionPending) return
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) { maybeStart(); return }
+        if (!foreground || config == null || permissionPending)
+            return
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+            maybeStart()
+            return
+        }
         if (requestedBefore && !shouldShowRequestPermissionRationale(Manifest.permission.CAMERA)) {
             wantRecognition = false
             stopped("Aktifkan izin kamera di setelan aplikasi, lalu tekan Mulai Pengenalan.")
