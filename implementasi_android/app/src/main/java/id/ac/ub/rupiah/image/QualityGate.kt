@@ -2,16 +2,20 @@ package id.ac.ub.rupiah.image
 
 import id.ac.ub.rupiah.config.AppConfig
 
-/** Native ROI Y plane; 4-neighbor Laplacian, interior pixels, population variance. */
-class QualityGate(
-    private val config: AppConfig
-) {
+/**
+ * CLAHE kondisional pada ROI redup sebelum pemeriksaan blur.
+ * Buffer luminans diubah langsung jika CLAHE diterapkan.
+ */
+class QualityGate(private val config: AppConfig) {
+
+    private val clahe = LuminanceClahe(config.grid, config.clipLimit)
 
     data class Result(
         val mean: Double,
         val variance: Double,
         val reason: String?,
-        val enhance: Boolean
+        val enhance: Boolean,
+        val processedMean: Double = mean
     )
 
     fun inspect(
@@ -19,74 +23,94 @@ class QualityGate(
         width: Int,
         height: Int
     ): Result {
-        val count =
-            width * height
+        require(width >= 3 && height >= 3 && y.size == width * height)
 
-        var sum = 0.0
+        val originalMean = mean(y)
+        val enhanced = config.clahe && originalMean < config.lumaMin
 
-        for (i in 0 until count) {
-            sum += y[i]
+        if (enhanced) {
+            // CLAHE menggunakan rentang 0..255.
+            if (config.limitedYuv) {
+                for (i in y.indices) {
+                    y[i] = ((y[i] - 16f) * (255f / 219f))
+                        .coerceIn(0f, 255f)
+                }
+            }
+
+            clahe.apply(y, width, height)
+
+            // Kembalikan ke rentang Y native untuk konversi YUV berikutnya.
+            if (config.limitedYuv) {
+                for (i in y.indices) {
+                    y[i] = 16f + y[i] * (219f / 255f)
+                }
+            }
         }
 
-        val mean =
-            sum / count
+        val processedMean = if (enhanced) mean(y) else originalMean
+        val variance = laplacianVariance(y, width, height)
 
-        var lapSum = 0.0
-        var lapSquared = 0.0
+        val reason = when {
+            processedMean > config.lumaMax ->
+                "Pencahayaan terlalu terang"
+
+            processedMean < config.lumaMin ->
+                "Pencahayaan terlalu redup"
+
+            variance < config.blurMin ->
+                "Citra buram, stabilkan uang atau kamera"
+
+            else -> null
+        }
+
+        return Result(
+            mean = originalMean,
+            variance = variance,
+            reason = reason,
+            enhance = enhanced,
+            processedMean = processedMean
+        )
+    }
+
+    private fun mean(y: FloatArray): Double {
+        var sum = 0.0
+
+        for (value in y) {
+            sum += value
+        }
+
+        return sum / y.size
+    }
+
+    private fun laplacianVariance(
+        y: FloatArray,
+        width: Int,
+        height: Int
+    ): Double {
+        var sum = 0.0
+        var squared = 0.0
 
         for (row in 1 until height - 1) {
             for (col in 1 until width - 1) {
-                val i =
-                    row * width + col
+                val i = row * width + col
 
-                val lap =
-                    (
-                            y[i - 1] +
-                                    y[i + 1] +
-                                    y[i - width] +
-                                    y[i + width] -
-                                    4 * y[i]
-                            ).toDouble()
+                val lap = (
+                        y[i - 1] +
+                                y[i + 1] +
+                                y[i - width] +
+                                y[i + width] -
+                                4 * y[i]
+                        ).toDouble()
 
-                lapSum += lap
-                lapSquared += lap * lap
+                sum += lap
+                squared += lap * lap
             }
         }
 
-        val n =
-            (width - 2) *
-                    (height - 2)
+        val n = (width - 2) * (height - 2)
+        val average = sum / n
 
-        val variance =
-            (
-                    lapSquared / n -
-                            (lapSum / n) *
-                            (lapSum / n)
-                    ).coerceAtLeast(0.0)
-
-        val reason =
-            when {
-                variance < config.blurMin ->
-                    "Citra buram, stabilkan uang atau kamera"
-
-                mean > config.lumaMax ->
-                    "Pencahayaan terlalu terang"
-
-                mean < config.lumaMin &&
-                        !config.clahe ->
-                    "Pencahayaan terlalu redup"
-
-                else ->
-                    null
-            }
-
-        return Result(
-            mean,
-            variance,
-            reason,
-            reason == null &&
-                    mean < config.lumaMin &&
-                    config.clahe
-        )
+        return (squared / n - average * average)
+            .coerceAtLeast(0.0)
     }
 }

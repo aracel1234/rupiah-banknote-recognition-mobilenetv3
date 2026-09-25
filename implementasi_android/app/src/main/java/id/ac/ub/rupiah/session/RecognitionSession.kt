@@ -27,39 +27,32 @@ class RecognitionSession(
 
     private val main = Handler(Looper.getMainLooper())
 
-    private val worker =
-        Executors.newSingleThreadExecutor { task ->
-            Thread(
-                {
-                    android.os.Process.setThreadPriority(
-                        android.os.Process.THREAD_PRIORITY_BACKGROUND
-                    )
-                    task.run()
-                },
-                "RupiahAnalysis"
-            )
-        }
-
-    private val camera =
-        CameraController(
-            context,
-            owner,
-            preview,
-            worker
+    private val worker = Executors.newSingleThreadExecutor { task ->
+        Thread(
+            {
+                android.os.Process.setThreadPriority(
+                    android.os.Process.THREAD_PRIORITY_BACKGROUND
+                )
+                task.run()
+            },
+            "RupiahAnalysis"
         )
+    }
 
-    private val log =
-        EventLog(
-            context,
-            config.logging
-        )
+    private val camera = CameraController(
+        context,
+        owner,
+        preview,
+        worker
+    )
 
-    private val processor =
-        FramePreprocessor(config)
+    private val log = EventLog(context, config.logging)
+    private val processor = FramePreprocessor(config)
 
-    private var model: ModelRunner? = null // worker only
-    private var decision: TemporalDecision? = null // worker only
-    private var lastFrame = 0L // worker only
+    // Diakses pada worker.
+    private var model: ModelRunner? = null
+    private var decision: TemporalDecision? = null
+    private var lastFrame = 0L
 
     @Volatile
     private var active = true
@@ -84,50 +77,37 @@ class RecognitionSession(
             "sdk" to android.os.Build.VERSION.SDK_INT
         )
 
-        ui(
-            "Menyiapkan sistem",
-            null,
-            false,
-            false
-        )
+        ui("Menyiapkan sistem", null, false, false)
 
-        speech =
-            SpeechOutput(
-                context,
-                log,
-                { error ->
-                    if (active) {
-                        if (error != null) {
-                            fail(error)
-                        } else {
-                            speechReady = true
-                            beginWhenReady()
-                        }
-                    }
-                },
-                {
-                    if (active) {
-                        fail(
-                            "Suara tidak dapat diputar. Periksa setelan Text-to-Speech lalu mulai kembali."
-                        )
+        speech = SpeechOutput(
+            context,
+            log,
+            { error ->
+                if (active) {
+                    if (error != null) {
+                        fail(error)
+                    } else {
+                        speechReady = true
+                        beginWhenReady()
                     }
                 }
-            )
+            },
+            {
+                if (active) {
+                    fail(
+                        "Suara tidak dapat diputar. " +
+                                "Periksa setelan Text-to-Speech lalu mulai kembali."
+                    )
+                }
+            }
+        )
 
         worker.execute {
             try {
-                val runner =
-                    ModelRunner(
-                        context,
-                        config.threads
-                    )
+                val runner = ModelRunner(context, config.threads)
 
                 model = runner
-                decision =
-                    TemporalDecision(
-                        config,
-                        runner.labels
-                    )
+                decision = TemporalDecision(config, runner.labels)
 
                 log.event(
                     "model_loaded",
@@ -146,7 +126,8 @@ class RecognitionSession(
                 main.post {
                     if (active) {
                         fail(
-                            "Model tidak dapat disiapkan. Periksa aset aplikasi."
+                            "Model tidak dapat disiapkan. " +
+                                    "Periksa aset aplikasi."
                         )
                     }
                 }
@@ -160,23 +141,12 @@ class RecognitionSession(
     }
 
     private fun beginWhenReady() {
-        if (
-            active &&
-            modelReady &&
-            speechReady &&
-            !binding
-        ) {
-            bind(
-                false,
-                false
-            )
+        if (active && modelReady && speechReady && !binding) {
+            bind(false, false)
         }
     }
 
-    private fun bind(
-        front: Boolean,
-        rollback: Boolean
-    ) {
+    private fun bind(front: Boolean, rollback: Boolean) {
         if (!active) return
 
         binding = true
@@ -191,28 +161,17 @@ class RecognitionSession(
 
         speech?.stop()
 
-        ui(
-            "Menyiapkan kamera",
-            null,
-            front,
-            false
-        )
+        ui("Menyiapkan kamera", null, front, false)
 
         val previous = camera.front
 
         camera.bind(
             front,
             { image ->
-                analyze(
-                    image,
-                    token
-                )
+                analyze(image, token)
             },
             { actual ->
-                if (
-                    active &&
-                    token == epoch
-                ) {
+                if (active && token == epoch) {
                     binding = false
                     streaming = true
 
@@ -237,25 +196,15 @@ class RecognitionSession(
                 }
             },
             { message ->
-                if (
-                    active &&
-                    token == epoch
-                ) {
+                if (active && token == epoch) {
                     log.event(
                         "camera_error",
                         "message" to message
                     )
 
                     if (rollback) {
-                        bind(
-                            previous,
-                            false
-                        )
-
-                        // Failure feedback is one event, never repeated per frame.
-                        speech?.say(
-                            "Kamera tidak dapat diganti"
-                        )
+                        bind(previous, false)
+                        speech?.say("Kamera tidak dapat diganti")
                     } else {
                         fail(message)
                     }
@@ -265,101 +214,56 @@ class RecognitionSession(
     }
 
     fun switchCamera() {
-        if (
-            active &&
-            streaming &&
-            !binding
-        ) {
-            bind(
-                !camera.front,
-                true
-            )
+        if (active && streaming && !binding) {
+            bind(!camera.front, true)
         }
     }
 
-    private fun analyze(
-        image: ImageProxy,
-        token: Int
-    ) {
+    private fun analyze(image: ImageProxy, token: Int) {
         try {
-            if (
-                !active ||
-                token != epoch
-            ) {
-                return
-            }
+            if (!active || token != epoch) return
 
-            val start =
-                SystemClock.elapsedRealtime()
+            val start = SystemClock.elapsedRealtime()
 
-            if (
-                start - lastFrame <
-                (1000L + config.fps - 1) / config.fps
-            ) {
+            if (start - lastFrame < (1000L + config.fps - 1) / config.fps) {
                 return
             }
 
             lastFrame = start
 
-            val runner =
-                model ?: return
+            val runner = model ?: return
+            val state = decision ?: return
 
-            val state =
-                decision ?: return
-
-            val quality =
-                processor.prepare(
-                    image,
-                    runner.input
-                )
-
-            val prepared =
-                SystemClock.elapsedRealtime()
+            // CLAHE dan pemeriksaan kualitas dilakukan dalam prepare().
+            val quality = processor.prepare(image, runner.input)
+            val prepared = SystemClock.elapsedRealtime()
 
             val result: TemporalDecision.Result
             var scores: FloatArray? = null
 
             if (quality.reason != null) {
-                result =
-                    state.reject(
-                        start,
-                        quality.reason
-                    )
+                result = state.reject(start, quality.reason)
             } else {
                 scores = runner.run()
-
-                result =
-                    state.accept(
-                        scores,
-                        start
-                    )
+                result = state.accept(scores, start)
             }
 
-            val ended =
-                SystemClock.elapsedRealtime()
+            val ended = SystemClock.elapsedRealtime()
 
-            if (
-                !active ||
-                token != epoch
-            ) {
-                return
-            }
+            if (!active || token != epoch) return
 
-            if (
-                result.announce &&
-                result.label != null
-            ) {
-                state.markAnnounced(
-                    result.label
-                )
+            if (result.announce && result.label != null) {
+                state.markAnnounced(result.label)
             }
 
             log.frame(
                 "quality_mean_y" to quality.mean,
+                "quality_processed_mean_y" to quality.processedMean,
                 "quality_laplacian_variance" to quality.variance,
-                "preprocess_ms" to prepared - start,
-                "inference_ms" to ended - prepared,
-                "pipeline_ms" to ended - start,
+                "quality_policy" to "clahe_before_blur_v2",
+                "preprocess_ms" to (prepared - start),
+                "inference_ms" to (ended - prepared),
+                "pipeline_ms" to (ended - start),
                 "status" to result.status,
                 "scores" to scores?.joinToString(","),
                 "label" to result.label,
@@ -367,11 +271,7 @@ class RecognitionSession(
             )
 
             main.post {
-                if (
-                    active &&
-                    token == epoch &&
-                    streaming
-                ) {
+                if (active && token == epoch && streaming) {
                     ui(
                         result.status,
                         result.label,
@@ -379,17 +279,11 @@ class RecognitionSession(
                         true
                     )
 
-                    if (
-                        result.announce &&
-                        result.label != null
-                    ) {
-                        if (
-                            speech?.nominal(
-                                result.label
-                            ) != true
-                        ) {
+                    if (result.announce && result.label != null) {
+                        if (speech?.nominal(result.label) != true) {
                             fail(
-                                "Suara tidak dapat diputar. Periksa setelan Text-to-Speech."
+                                "Suara tidak dapat diputar. " +
+                                        "Periksa setelan Text-to-Speech."
                             )
                         } else {
                             log.event(
@@ -398,12 +292,8 @@ class RecognitionSession(
                             )
                         }
                     }
-                } else if (
-                    active &&
-                    token == epoch &&
-                    result.announce
-                ) {
-                    // Preview was not streaming yet: allow a fresh decision, no lost first announcement.
+                } else if (active && token == epoch && result.announce) {
+                    // Izinkan keputusan baru jika preview belum siap.
                     worker.execute {
                         decision?.reset()
                     }
@@ -416,12 +306,10 @@ class RecognitionSession(
             )
 
             main.post {
-                if (
-                    active &&
-                    token == epoch
-                ) {
+                if (active && token == epoch) {
                     fail(
-                        "Pengenalan terhenti karena kesalahan pemrosesan. Mulai kembali."
+                        "Pengenalan terhenti karena kesalahan pemrosesan. " +
+                                "Mulai kembali."
                     )
                 }
             }
@@ -445,11 +333,12 @@ class RecognitionSession(
         speech?.close()
         speech = null
 
-        // Close after pending inference; never close Interpreter concurrently with invoke.
+        // Model ditutup setelah pekerjaan inferensi yang sedang berjalan.
         worker.execute {
             decision?.reset()
             model?.close()
             model = null
+
             log.event("session_closed")
         }
 

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "status": "development_uncalibrated",
-  "revision": "dev-001",
+  "revision": "dev-002-clahe-before-blur",
   "analysis_fps": 3,
   "threads": 4,
   "roi_width_fraction": 0.8,
@@ -12,10 +12,10 @@
   "confidence_threshold": 0.8,
   "temporal_window_ms": 1500,
   "minimum_results": 3,
-  "clahe_enabled": false,
+  "clahe_enabled": true,
   "clahe_clip_limit": 2.0,
   "clahe_grid": 4,
   "yuv_range": "limited_bt601",
   "log_enabled": true,
-  "note": "ROI aspect ratio sudah melalui pembaharuan, berdasarkan data manifest 04_dedup. "
+  "note": "CLAHE kondisional pada ROI redup sebelum pemeriksaan blur; pencahayaan diperiksa ulang. Ambang sementara belum dikalibrasi."
 }
