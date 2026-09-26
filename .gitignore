@@ -104,3 +104,9 @@
 key.properties
 keystore.properties
 local.properties
+
+# ============================================================
+# Android Validation data
+# ============================================================
+
+/validasi_android/
