@@ -21,6 +21,8 @@ class RecognitionSession(
     owner: LifecycleOwner,
     preview: PreviewView,
     private val config: AppConfig,
+    private val speech: SpeechOutput,
+    private val log: EventLog,
     private val ui: (String, String?, Boolean, Boolean) -> Unit,
     private val fatal: (String) -> Unit
 ) : AutoCloseable {
@@ -46,7 +48,6 @@ class RecognitionSession(
         worker
     )
 
-    private val log = EventLog(context, config.logging)
     private val processor = FramePreprocessor(config)
 
     // Diakses pada worker.
@@ -61,10 +62,10 @@ class RecognitionSession(
     private var epoch = 0
 
     private var modelReady = false
-    private var speechReady = false
     private var binding = false
     private var streaming = false
-    private var speech: SpeechOutput? = null
+    private var firstCamera = true
+    private var announcementPending: String? = null // Worker only.
 
     init {
         log.event(
@@ -78,29 +79,6 @@ class RecognitionSession(
         )
 
         ui("Menyiapkan sistem", null, false, false)
-
-        speech = SpeechOutput(
-            context,
-            log,
-            { error ->
-                if (active) {
-                    if (error != null) {
-                        fail(error)
-                    } else {
-                        speechReady = true
-                        beginWhenReady()
-                    }
-                }
-            },
-            {
-                if (active) {
-                    fail(
-                        "Suara tidak dapat diputar. " +
-                                "Periksa setelan Text-to-Speech lalu mulai kembali."
-                    )
-                }
-            }
-        )
 
         worker.execute {
             try {
@@ -141,7 +119,7 @@ class RecognitionSession(
     }
 
     private fun beginWhenReady() {
-        if (active && modelReady && speechReady && !binding) {
+        if (active && modelReady && !binding) {
             bind(false, false)
         }
     }
@@ -156,10 +134,11 @@ class RecognitionSession(
 
         worker.execute {
             decision?.reset()
+            announcementPending = null
             lastFrame = 0L
         }
 
-        speech?.stop()
+        speech.stop()
 
         ui("Menyiapkan kamera", null, front, false)
 
@@ -186,7 +165,8 @@ class RecognitionSession(
                         true
                     )
 
-                    speech?.camera(actual)
+                    speech.camera(actual, starting = firstCamera)
+                    firstCamera = false
 
                     log.event(
                         "camera_ready",
@@ -204,7 +184,7 @@ class RecognitionSession(
 
                     if (rollback) {
                         bind(previous, false)
-                        speech?.say("Kamera tidak dapat diganti")
+                        speech.say("Kamera tidak dapat diganti")
                     } else {
                         fail(message)
                     }
@@ -252,9 +232,8 @@ class RecognitionSession(
 
             if (!active || token != epoch) return
 
-            if (result.announce && result.label != null) {
-                state.markAnnounced(result.label)
-            }
+            val announce = result.announce && result.label != null && announcementPending == null
+            if (announce) announcementPending = result.label
 
             log.frame(
                 "quality_mean_y" to quality.mean,
@@ -279,23 +258,33 @@ class RecognitionSession(
                         true
                     )
 
-                    if (result.announce && result.label != null) {
-                        if (speech?.nominal(result.label) != true) {
+                    if (announce && result.label != null) {
+                        if (speech.nominal(result.label) != true) {
                             fail(
                                 "Suara tidak dapat diputar. " +
                                         "Periksa setelan Text-to-Speech."
                             )
                         } else {
+                            // Acknowledge on the same worker that owns TemporalDecision.
+                            worker.execute {
+                                if (active && token == epoch) {
+                                    decision?.markAnnounced(result.label)
+                                    announcementPending = null
+                                }
+                            }
                             log.event(
                                 "nominal_announced",
-                                "label" to result.label
+                                "label" to result.label,
+                                "route" to speech.route,
+                                "delivery" to "requested_not_confirmed"
                             )
                         }
                     }
-                } else if (active && token == epoch && result.announce) {
+                } else if (active && token == epoch && announce) {
                     // Izinkan keputusan baru jika preview belum siap.
                     worker.execute {
                         decision?.reset()
+                        announcementPending = null
                     }
                 }
             }
@@ -330,12 +319,13 @@ class RecognitionSession(
         epoch++
 
         camera.stop()
-        speech?.close()
-        speech = null
+        // Activity owns the output, so a stop confirmation can still be spoken.
+        speech.stop()
 
         // Model ditutup setelah pekerjaan inferensi yang sedang berjalan.
         worker.execute {
             decision?.reset()
+            announcementPending = null
             model?.close()
             model = null
 
