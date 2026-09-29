@@ -1,0 +1,16 @@
+{
+  "status": "geometry_annotation_complete",
+  "reviewed_nominal_samples": 210,
+  "annotation_csv_sha256": "e96b5682ac718eb7e704986c9d8bd5e55ba09a6f175ef515eb180c98875e40cb",
+  "config_sha256": "2e6680ad8fd697f646c52c493a21ac76941e9f455c159f1fd7898794fcfa1c34",
+  "geometry_formula": "w=min(width*fraction,height*0.90*aspect); h=w/aspect; centered",
+  "candidate_fractions": [
+    0.7,
+    0.8,
+    0.9
+  ],
+  "aspect_ratio": 1.3420920964096548,
+  "height_cap_fraction": 0.9,
+  "occupancy_threshold": 0.5,
+  "note": "This lock covers geometric ROI evidence only. It does not select final ROI; macro F1 remains the second-priority criterion in the thesis."
+}
