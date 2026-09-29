@@ -1,0 +1,19 @@
+{
+  "nominal_samples": 210,
+  "per_device": {
+    "poco": 105,
+    "redmi": 105
+  },
+  "per_distance": {
+    "10": 70,
+    "20": 70,
+    "30": 70
+  },
+  "auto_score": {
+    "min": 0.0,
+    "median": 0.8251743020811351,
+    "max": 0.9531886431194232
+  },
+  "truncated_hints": 83,
+  "important": "DRAFT ONLY. Every one of the 210 nominal samples requires human review."
+}

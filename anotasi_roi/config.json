@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "purpose": "Post-hoc banknote boundary annotation for controlled ROI calibration analysis in Thesis Subsection 5.7.2",
+  "roi_aspect_ratio": 1.3420920964096548,
+  "candidate_roi_width_fractions": [0.70, 0.80, 0.90],
+  "roi_height_cap_fraction": 0.90,
+  "containment_rule": "All four verified banknote polygon vertices must be inside the candidate ROI. Source-truncated samples are not fully contained for any candidate ROI.",
+  "background_rule": "For a source-complete banknote that is fully contained by a candidate ROI, excessive background is flagged when banknote occupancy is below 0.50 (equivalently background ratio above 0.50).",
+  "banknote_occupancy_threshold": 0.50,
+  "nonmoney_rule": "Nonmoney samples are not boundary-annotated; they remain available for the later eight-class model-performance comparison.",
+  "review_policy": "All 210 nominal ROI samples must be human-reviewed. Automatic boundaries are proposals only and never become final without review."
+}
