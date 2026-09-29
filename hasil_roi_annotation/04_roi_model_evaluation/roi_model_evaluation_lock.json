@@ -1,0 +1,55 @@
+{
+  "status": "roi_model_evaluation_complete",
+  "rows": 720,
+  "samples_per_candidate": 240,
+  "candidate_fractions": [
+    0.7,
+    0.8,
+    0.9
+  ],
+  "selected_roi_width_fraction": 0.9,
+  "model_sha256": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676",
+  "input_sources": {
+    "poco": {
+      "source_type": "directory",
+      "path": "/home/aracel/Downloads/RupiahCalibrationCollectorOutput/poco",
+      "manifest_path": "manifest.csv",
+      "manifest_sha256": "f6fcc23df23632a84663ef1b864eb4271b93bd1d4ee6740d7c548fe5c18c8e38",
+      "roi_samples": 120
+    },
+    "redmi": {
+      "source_type": "directory",
+      "path": "/home/aracel/Downloads/RupiahCalibrationCollectorOutput/redmi",
+      "manifest_path": "manifest.csv",
+      "manifest_sha256": "dca45e1abf5b942480fa231fe86c363d52fc78b439069cedc84018c11d313e41",
+      "roi_samples": 120
+    },
+    "android": {
+      "source_type": "directory",
+      "path": "/home/aracel/Downloads/Skripsi/implementasi_android",
+      "selected_artifact_sha256": {
+        "RoiGeometry.kt": "01242448e7d0a522abc432663d386fc56d3862d6201e2b605aebcca3e1e1feaa",
+        "FramePreprocessor.kt": "f8a8571b5d1e55dccc2ff9ef3367048a5af974d38fd3e96d5b2326afe46e1b78",
+        "ModelRunner.kt": "2d08b2f1f045948269d408259f4187fc2a11fe9411f87133ab009b09c3a6e2e6",
+        "app_config.json": "1d24b9962caaf5a5ab2c22d14823a96c1351fb7e260924ab496fe6137358aa0a",
+        "model.tflite": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676"
+      }
+    }
+  },
+  "geometry_lock_sha256": "8d505316ba9a047db96b9af7531bd925cee3fc23b3831d872b83019a5ea595d4",
+  "output_sha256": {
+    "confusion_matrix_70.csv": "119ef1fbca337fb59882a26f00e4328727881327e4f4b656085a14f4e32e30f9",
+    "confusion_matrix_70.png": "01faaaf97143eb3bc3b2ac3823e7036716ca9ba8f0c099a9b17fbe65ff46848f",
+    "confusion_matrix_80.csv": "6fd1ecbe2b32e84c64a66ed2692b6ce6c17d3de7f4f312dc3a4d0f8aca8423b9",
+    "confusion_matrix_80.png": "68137570e4dcef14eb2e256737849ca73c11d5d38e4a6205e0e70a0ef3a22908",
+    "confusion_matrix_90.csv": "eb6384a95ea4166c11afd0f89e7cf59addc09496aea4a89e8b06ed793a1fce96",
+    "confusion_matrix_90.png": "c856e954abb1a3996e4241bda2044c8c449bf625ddb7ba6336d184502f0683b6",
+    "input_identity.json": "081a1476ce8a3de05e0f56fc1358aa6a1e1c0965009b591d227ed3c18e2469fa",
+    "roi_model_diagnostics.csv": "0db0d76cf9128ab43adb6cffbd8a04e12ba7a4b4c56fac905f9600725639e849",
+    "roi_model_per_class.csv": "f9803ad385f04cd9b71615e5c8a50b0a4389306e462943cf1cbfd5787b259026",
+    "roi_model_predictions.csv": "8ffe4939611ecdb0fe17bb3f12ba40c40c6b67ba9bef3bead2541a7c2089925a",
+    "roi_model_summary.csv": "623783d6c52950451f5104a5534c01bbe2a521cf4eb8d26649e6d0303b6661e0",
+    "roi_selection_decision.json": "48ed33f0a1d0db38fccff631e50ee656c2f0647ec05b875925a1e4c26e2e99a2",
+    "roi_tensor_equivalence.csv": "417f1f6ef51e5fceb38b3f621c4613ebd1b2056110b8ba5732e260acaaf84c31"
+  }
+}

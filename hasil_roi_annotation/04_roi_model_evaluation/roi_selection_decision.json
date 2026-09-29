@@ -1,0 +1,31 @@
+{
+  "status": "roi_selected",
+  "selected_roi_width_fraction": 0.9,
+  "selection_order": [
+    "fully_contained_count",
+    "macro_f1",
+    "excessive_background_count"
+  ],
+  "decision_trace": [
+    {
+      "priority": 1,
+      "criterion": "fully_contained_count_max",
+      "candidates_before": [
+        0.7,
+        0.8,
+        0.9
+      ],
+      "best_value": 117,
+      "candidates_after": [
+        0.9
+      ]
+    }
+  ],
+  "important_rule": "Lower-priority criteria never override a unique winner at a higher-priority criterion.",
+  "model_runtime": "tensorflow 2.20.0",
+  "model_sha256": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676",
+  "input_identity_sha256": "081a1476ce8a3de05e0f56fc1358aa6a1e1c0965009b591d227ed3c18e2469fa",
+  "predictions_sha256": "8ffe4939611ecdb0fe17bb3f12ba40c40c6b67ba9bef3bead2541a7c2089925a",
+  "summary_sha256": "623783d6c52950451f5104a5534c01bbe2a521cf4eb8d26649e6d0303b6661e0",
+  "geometry_summary_sha256": "568c6a9e029f94280f243606c4c7901fbf5367e51123c17adcffbb610bdda331"
+}

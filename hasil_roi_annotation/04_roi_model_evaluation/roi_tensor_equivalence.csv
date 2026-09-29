@@ -1,0 +1,7 @@
+device,candidate_a,candidate_b,identical_tensor_count,total,identical_rate
+poco,0.7,0.8,0,120,0.0
+poco,0.7,0.9,0,120,0.0
+poco,0.8,0.9,120,120,1.0
+redmi,0.7,0.8,0,120,0.0
+redmi,0.7,0.9,0,120,0.0
+redmi,0.8,0.9,0,120,0.0

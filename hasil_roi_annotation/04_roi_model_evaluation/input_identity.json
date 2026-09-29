@@ -1,0 +1,71 @@
+{
+  "poco_source": {
+    "source_type": "directory",
+    "path": "/home/aracel/Downloads/RupiahCalibrationCollectorOutput/poco",
+    "manifest_path": "manifest.csv",
+    "manifest_sha256": "f6fcc23df23632a84663ef1b864eb4271b93bd1d4ee6740d7c548fe5c18c8e38",
+    "roi_samples": 120
+  },
+  "redmi_source": {
+    "source_type": "directory",
+    "path": "/home/aracel/Downloads/RupiahCalibrationCollectorOutput/redmi",
+    "manifest_path": "manifest.csv",
+    "manifest_sha256": "dca45e1abf5b942480fa231fe86c363d52fc78b439069cedc84018c11d313e41",
+    "roi_samples": 120
+  },
+  "android_source": {
+    "source_type": "directory",
+    "path": "/home/aracel/Downloads/Skripsi/implementasi_android",
+    "selected_artifact_sha256": {
+      "RoiGeometry.kt": "01242448e7d0a522abc432663d386fc56d3862d6201e2b605aebcca3e1e1feaa",
+      "FramePreprocessor.kt": "f8a8571b5d1e55dccc2ff9ef3367048a5af974d38fd3e96d5b2326afe46e1b78",
+      "ModelRunner.kt": "2d08b2f1f045948269d408259f4187fc2a11fe9411f87133ab009b09c3a6e2e6",
+      "app_config.json": "1d24b9962caaf5a5ab2c22d14823a96c1351fb7e260924ab496fe6137358aa0a",
+      "model.tflite": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676"
+    }
+  },
+  "model_sha256": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676",
+  "selected_candidate": "dynamic_range",
+  "class_names": [
+    "1000",
+    "2000",
+    "5000",
+    "10000",
+    "20000",
+    "50000",
+    "100000",
+    "nonuang"
+  ],
+  "geometry_hashes": {
+    "roi_object_annotations_reviewed.csv": "e96b5682ac718eb7e704986c9d8bd5e55ba09a6f175ef515eb180c98875e40cb",
+    "roi_geometric_metrics.csv": "90433621959ede01474252ec4e6e4237ce2c4b447792e1c8ee78d058902d7294",
+    "roi_geometric_summary.csv": "568c6a9e029f94280f243606c4c7901fbf5367e51123c17adcffbb610bdda331",
+    "roi_geometric_by_device_distance.csv": "33446d9ada7ef427cca0dd82993e3fec17f9316aec54062093edfb021ce349aa",
+    "roi_geometry_lock.json": "8d505316ba9a047db96b9af7531bd925cee3fc23b3831d872b83019a5ea595d4"
+  },
+  "geometry_priority1_candidates": [
+    0.9
+  ],
+  "android_source_hashes": {
+    "RoiGeometry.kt": "01242448e7d0a522abc432663d386fc56d3862d6201e2b605aebcca3e1e1feaa",
+    "FramePreprocessor.kt": "f8a8571b5d1e55dccc2ff9ef3367048a5af974d38fd3e96d5b2326afe46e1b78",
+    "ModelRunner.kt": "2d08b2f1f045948269d408259f4187fc2a11fe9411f87133ab009b09c3a6e2e6",
+    "app_config.json": "1d24b9962caaf5a5ab2c22d14823a96c1351fb7e260924ab496fe6137358aa0a",
+    "model.tflite": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676"
+  },
+  "app_config_status": "development_uncalibrated",
+  "app_config_revision": "dev-002-clahe-before-blur",
+  "method_boundary": "ROI model evaluation only; quality gate, CLAHE, confidence threshold, and temporal smoothing disabled",
+  "offline_frame_source": "lossless frame_rgb.png from calibration collector after orientation normalization",
+  "preprocess": {
+    "roi_formula": "w=min(width*fraction,height*0.90*aspect); h=w/aspect; centered",
+    "aspect_ratio": 1.3420920964096548,
+    "height_cap_fraction": 0.9,
+    "resize": "224x224 bilinear, half-pixel centers, clamped edges, no antialias",
+    "color_order": "RGB",
+    "dtype": "float32",
+    "external_value_range": "0..255",
+    "normalization": "none outside model",
+    "prediction": "argmax of 8 model scores; no confidence threshold"
+  }
+}
