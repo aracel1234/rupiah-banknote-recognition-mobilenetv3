@@ -1,0 +1,45 @@
+{
+  "status": "static_quality_calibrated",
+  "roi_width_fraction": 0.9,
+  "roi_aspect_ratio": 1.3420920964096548,
+  "roi_height_cap_fraction": 0.9,
+  "blur_variance_min": 23.74892868863396,
+  "blur_selection": {
+    "youden_j": 0.7875000000000001,
+    "sensitivity": 0.8125,
+    "specificity": 0.975,
+    "tie_resolution_rule": [
+      "maximize Youden J",
+      "then maximize min(sensitivity, specificity)",
+      "then minimize |sensitivity-specificity|",
+      "then lower threshold to favor sharp sensitivity"
+    ],
+    "decision_trace": [
+      {
+        "priority": 1,
+        "criterion": "maximize_youden_j",
+        "best_value": 0.7875000000000001,
+        "candidate_thresholds_after": [
+          23.74892868863396,
+          29.75258579997243
+        ]
+      },
+      {
+        "priority": 2,
+        "criterion": "maximize_min_sensitivity_specificity",
+        "best_value": 0.8125,
+        "candidate_thresholds_after": [
+          23.74892868863396
+        ]
+      }
+    ]
+  },
+  "luma_min": 91.93479241966921,
+  "luma_max": 178.81127789279964,
+  "lighting_macro_f1": 0.9005608164561565,
+  "clahe_enabled": false,
+  "clahe_clip_limit": null,
+  "clahe_grid": null,
+  "yuv_range": "limited_bt601",
+  "scope_note": "Static image-quality parameters only. analysis_fps, confidence_threshold, temporal_window_ms, and minimum_results remain pending later calibration."
+}

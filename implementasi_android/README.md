@@ -1,59 +1,78 @@
 # Pengenalan Nominal Rupiah — proyek Android
 
-Proyek lanjutan setelah tahap 7, versi `0.1.0-dev`. Model Dynamic Range hasil seleksi sudah disertakan. Tidak perlu mengulang pelatihan, konversi, atau benchmark model. Aplikasi menggunakan Kotlin, XML Views, CameraX, TensorFlow Lite lokal, dan suara Bahasa Indonesia luring.
+Proyek Android skripsi pengenalan nominal uang Rupiah berbasis MobileNetV3-Small. Model Dynamic Range hasil seleksi tetap digunakan tanpa pelatihan atau konversi ulang. Aplikasi menggunakan Kotlin, XML Views, CameraX, TensorFlow Lite lokal, dan keluaran Bahasa Indonesia luring.
 
-**Status:** implementasi sumber aplikasi dan pemeriksaan statis. Belum dikompilasi menjadi APK di lingkungan penyusunan ini karena Android SDK, Gradle, dan compiler Kotlin tidak tersedia; akses unduhan build tools juga tidak berhasil. Tidak ada hasil pengujian perangkat atau klaim hemat daya yang dibuat. Parameter aplikasi masih `development_uncalibrated`.
+**Status konfigurasi:** `static_quality_calibrated_postinfer_pending`.
 
-## Mulai di KDE Neon
+Kalibrasi kualitas statis Subbab 5.7.2 sudah dikunci. Parameter pascainferensi dan laju analisis belum final karena data urutan Subbab 5.7.3 masih dikumpulkan/dianalisis.
 
-1. Ekstrak ZIP ke folder baru, misalnya `~/Downloads/Skripsi/android-rupiah/RupiahRecognition`. Jangan timpa proyek benchmark lama.
-2. Siapkan Android Studio, JDK 17, Android SDK Platform 35, Build Tools 34.0.0, dan Platform Tools. Pasang komponen SDK melalui SDK Manager. JDK 17 dipilih sebagai Gradle JDK.
-3. Dari terminal di folder proyek, jalankan:
+## Parameter yang sudah dikunci
 
-   ```bash
-   bash tools/00_setup_gradle.sh
-   ```
+- `roi_width_fraction = 0.90`
+- `roi_aspect_ratio = 1.3420920964096548`
+- `roi_height_cap_fraction = 0.90`
+- `blur_variance_min = 23.74892868863396`
+- `luma_min = 91.93479241966921`
+- `luma_max = 178.81127789279964`
+- `clahe_enabled = false`
+- `yuv_range = limited_bt601`
 
-   Langkah satu kali ini mengunduh distribusi resmi Gradle 8.9, memeriksa SHA-256 terhadap checksum resmi, dan membuat wrapper resmi. Internet diperlukan untuk pemasangan dependensi di laptop. Jika JDK 17 belum ada, pasang melalui pengelola paket KDE Neon. Jika unduhan gagal, perbaiki koneksi/proxy lalu jalankan ulang; tidak ada model yang diubah.
-4. Di Android Studio pilih **Open**, pilih folder yang memuat `settings.gradle.kts`, lalu **Sync Project with Gradle Files**. Tidak perlu membuat Empty Activity lagi dan jangan menerima perubahan versi dependensi secara otomatis.
-5. Aktifkan USB debugging pada HP, sambungkan kabel data, dan setujui dialog otorisasi perangkat. Pilih HP sebagai perangkat tujuan.
-6. Siapkan mesin TTS dengan suara Bahasa Indonesia yang sudah diunduh dan dapat digunakan tanpa jaringan. Pengunduhan suara dilakukan lewat setelan Android; aplikasi sendiri tidak mengakses internet.
-7. Tekan **Run app**. Izinkan kamera. Kamera belakang menjadi kamera awal. Ini adalah menjalankan hasil implementasi; paket tidak menjalankan protokol pengujian penelitian.
+Bukti kalibrasi yang digunakan aplikasi berada pada `app/src/main/assets/calibration/`. `AppConfig.load()` memeriksa SHA-256 lock dan kecocokan parameter sebelum sesi pengenalan dapat dimulai.
 
-Alternatif setelah SDK dan wrapper siap:
+## Parameter yang masih sementara
+
+Nilai berikut dipertahankan dari konfigurasi pengembangan sampai Subbab 5.7.3 selesai:
+
+- `analysis_fps = 3`
+- `confidence_threshold = 0.80`
+- `temporal_window_ms = 1500`
+- `minimum_results = 3`
+
+Nilai tersebut tidak boleh disebut sebagai konfigurasi akhir penelitian sebelum hasil data urutan dikunci.
+
+## Build di KDE Neon
+
+1. Buka folder proyek yang memuat `settings.gradle.kts` melalui Android Studio.
+2. Gunakan Gradle Wrapper proyek dan JDK yang sesuai dengan proyek.
+3. Pastikan Android SDK Platform 35 dan komponen build yang diperlukan sudah terpasang.
+4. Lakukan **Sync Project with Gradle Files**.
+5. Karena `app_config.json` dan kode validasi konfigurasi berubah setelah kalibrasi 5.7.2, lakukan build ulang sebelum memasang APK ke perangkat.
+
+Build terminal:
 
 ```bash
-./gradlew :app:assembleDebug
+./gradlew :app:clean :app:assembleDebug
 ```
 
-APK berada di `app/build/outputs/apk/debug/`. Pilih APK ABI yang cocok atau `app-universal-debug.apk`. Perintah pemasangan contoh untuk satu perangkat:
+APK debug berada di `app/build/outputs/apk/debug/`. Proyek menyertakan target `armeabi-v7a`, `arm64-v8a`, dan APK universal.
+
+Pemasangan contoh:
 
 ```bash
 adb devices
 adb install -r app/build/outputs/apk/debug/app-universal-debug.apk
 ```
 
-Jika beberapa perangkat terhubung, tambahkan `adb -s SERIAL`. Paket menyediakan ARM 32-bit dan ARM 64-bit; emulator x86 tidak menjadi sasaran. Minimum Android 6/API 23. Dukungan versi OS tidak membuktikan performa pada semua HP lama.
+Jika beberapa perangkat terhubung, gunakan `adb -s SERIAL`.
 
-## Isi yang perlu dibaca
+## Alur kualitas setelah 5.7.2
 
-| Berkas | Isi |
-|---|---|
-| `docs/01_ANALISIS_SUMBER.md` | Bukti dari skrip, hasil seleksi, dan skripsi terbaru |
-| `docs/02_ARSITEKTUR_DAN_ALUR.md` | Tanggung jawab setiap kelas dan aturan pipeline |
-| `docs/03_TAHAP_LANJUTAN.md` | Urutan kerja setelah tahap 7, sebelum pengujian sistem |
-| `docs/04_KONFIGURASI_DAN_BATASAN.md` | Parameter sementara, kalibrasi yang belum dilakukan, batas build |
-| `docs/05_KETERLACAKAN.md` | Pemetaan kebutuhan dan Bab 5.5–5.11 ke kode |
-| `docs/06_PEMERIKSAAN_TEKNIS.md` | Pemeriksaan yang dilakukan dan yang belum dapat dilakukan |
-| `app/src/main/assets/app_config.json` | Seluruh parameter operasional dalam satu berkas |
-| `tools/08_import_model.py` | Impor ulang aset terpilih secara terverifikasi jika diperlukan |
-| `tools/09_roi_aspect.py` | Hitung median rasio aspek dari PNG uang hasil kurasi |
-| `tools/10_snapshot.py` | Catat identitas versi sumber dan konfigurasi |
+Urutan keputusan kualitas tetap mengikuti rancangan dan implementasi yang sudah ditulis sampai Subbab 5.6:
 
-## Cara aplikasi digunakan
+1. ambil luminansi Y pada ROI;
+2. CLAHE hanya dapat diterapkan secara bersyarat apabila konfigurasi mengaktifkannya;
+3. periksa kelayakan pencahayaan;
+4. periksa ketajaman dengan Varians Laplacian;
+5. ROI yang lolos dikonversi ke RGB, diubah menjadi 224 × 224 dengan bilinear, lalu diteruskan ke model.
 
-Arahkan satu lembar uang ke dalam panduan ROI. Aplikasi menahan citra buram, pencahayaan yang ditolak, prediksi nonuang, dan prediksi yang belum meyakinkan/stabil. Nominal diterima tampil di bawah pratinjau dan diucapkan satu kali. Keluarkan uang selama setidaknya satu jendela penolakan agar nominal yang sama dapat diucapkan kembali. Pergantian kamera mengosongkan riwayat. Tombol kanan menghentikan sesi dan berubah menjadi **Mulai Pengenalan**. Saat aplikasi masuk latar belakang, kamera, model, dan TTS dilepas; kembali ke aplikasi memulai sesi baru jika sebelumnya belum dihentikan pengguna.
+Hasil kalibrasi 5.7.2 memilih **tanpa CLAHE**, sehingga jalur operasional saat ini menggunakan luminansi Y asli untuk gerbang pencahayaan dan ketajaman.
 
-Ukuran ROI, ambang, dan laju yang disertakan hanya nilai awal pengembangan. Jika penolakan terlalu sering, jangan menyimpulkan model rusak atau mengganti nilai berdasarkan data uji. Lanjutkan penentuan parameter sesuai skripsi pada tahap berikutnya.
+## Keterlacakan konfigurasi 5.6 dan 5.7.2
 
-Untuk menghasilkan APK rilis setelah implementasi selesai, gunakan **Build → Generate Signed App Bundle / APK → APK**, simpan keystore sendiri, dan pilih varian release. Konfigurasi release mengaktifkan R8 dan resource shrinking. Jangan membagikan keystore atau memasukkannya ke repositori. Tidak ada sertifikat penandatanganan pribadi yang disertakan.
+Konfigurasi pengembangan yang didokumentasikan pada Subbab 5.6 disimpan sebagai `docs/config_history/app_config_5_6_development.json`. Berkas operasional saat ini adalah `app/src/main/assets/app_config.json` dan telah diperbarui menggunakan hasil 5.7.2. Dengan demikian, nilai pengembangan pada uraian 5.6 tetap dapat ditelusuri tanpa mengembalikan aplikasi ke konfigurasi lama.
+
+## Catatan penggunaan
+
+Kamera belakang menjadi kamera awal. Pergantian kamera mengosongkan riwayat keputusan. Aplikasi menahan ROI yang tidak memenuhi kualitas, kelas nonuang, prediksi di bawah ambang, atau prediksi yang belum stabil. Nominal yang sudah diterima tidak diucapkan berulang pada setiap bingkai. Perilaku pascainferensi tersebut masih menggunakan parameter pengembangan sampai 5.7.3 selesai.
+
+Jangan mengubah kembali parameter ROI, blur, luminansi, atau keputusan CLAHE berdasarkan data urutan 5.7.3. Tahap urutan digunakan untuk parameter yang memang belum dikunci.

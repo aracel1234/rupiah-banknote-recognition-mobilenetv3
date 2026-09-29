@@ -1,50 +1,41 @@
 # Konfigurasi, efisiensi, dan batas hasil
 
-## Nilai awal yang disertakan
+## Status setelah kalibrasi kualitas statis 5.7.2
 
-| Parameter | Awal | Status / alasan |
+| Parameter | Nilai saat ini | Status |
 |---|---:|---|
-| `analysis_fps` | 3 | Batas atas sementara; bukan hasil pemilihan laju berdasarkan P95 |
-| `threads` | 4 | Mengikuti runtime acuan seleksi; bukan kesimpulan paling hemat daya |
-| `roi_width_fraction` | 0,80 | Salah satu kandidat metode, belum dipilih lewat kalibrasi |
-| `roi_aspect_ratio` | 2,20 | Perkiraan sementara; ganti dengan median data kurasi |
-| `blur_variance_min` | 35 | Nilai awal rekayasa; bukan ambang Youden hasil penelitian |
-| `luma_min` / `luma_max` | 45 / 220 | Nilai awal rekayasa, bukan batas pencahayaan terkalibrasi |
-| `confidence_threshold` | 0,80 | Kandidat awal; skor softmax bukan probabilitas benar terkalibrasi |
-| `temporal_window_ms` | 1500 | Kandidat metode, belum hasil pemilihan bersama dua perangkat |
-| `minimum_results` | 3 | Mengikuti persyaratan minimal bukti temporal |
-| `clahe_enabled` | false | Baseline; manfaat CLAHE belum dibuktikan |
-| `clahe_clip_limit` / `clahe_grid` | 2 / 4 | Baru digunakan jika CLAHE dipilih nanti |
-| `yuv_range` | limited_bt601 | Konvensi konversi eksplisit; kesetaraan kamera perlu pemeriksaan perangkat |
-| `log_enabled` | true | Log diagnostik terbatas selama pengembangan |
+| `analysis_fps` | 3 | **Belum final**, menunggu kalibrasi lanjutan |
+| `threads` | 4 | Mengikuti runtime model terpilih |
+| `roi_width_fraction` | **0,90** | **Dikunci 5.7.2** |
+| `roi_aspect_ratio` | **1,3420920964096548** | **Dikunci**, berasal dari geometri dataset |
+| `roi_height_cap_fraction` | **0,90** | **Dikunci**, konsisten dengan implementasi ROI |
+| `blur_variance_min` | **23,74892868863396** | **Dikunci 5.7.2**, hasil Youden dan penyelesaian tie eksplisit |
+| `luma_min` | **91,93479241966921** | **Dikunci 5.7.2** |
+| `luma_max` | **178,81127789279964** | **Dikunci 5.7.2** |
+| `confidence_threshold` | 0,80 | **Belum final**, menunggu 5.7.3 |
+| `temporal_window_ms` | 1500 | **Belum final**, menunggu 5.7.3 |
+| `minimum_results` | 3 | **Belum final**, menunggu 5.7.3 |
+| `clahe_enabled` | **false** | **Dikunci 5.7.2**, tidak ada konfigurasi CLAHE yang memenuhi aturan seleksi |
+| `clahe_clip_limit` / `clahe_grid` | `null` / `null` | Tidak digunakan karena CLAHE tidak dipilih |
+| `yuv_range` | `limited_bt601` | Konvensi konversi aplikasi |
+| `log_enabled` | true | Log diagnostik lokal selama pengembangan |
 
-Semua nilai ini berada pada `app/src/main/assets/app_config.json`. Perubahan membutuhkan build/pemasangan ulang. Tidak ada menu teknis yang membebani pengguna tunanetra. Konfigurasi untuk model tetap float32 karena model yang benar-benar terpilih mempunyai antarmuka itu; tidak ada cabang INT8 yang tidak diperlukan pada produk ini.
+Konfigurasi operasional berada pada `app/src/main/assets/app_config.json`. Bukti kalibrasi statis berada pada `app/src/main/assets/calibration/`. Aplikasi memverifikasi SHA-256 lock dan kecocokan parameter ROI, blur, luminansi, keputusan CLAHE, dan rentang YUV ketika konfigurasi dimuat.
 
-## Cara mengurangi beban yang sudah diterapkan
+## Urutan pemeriksaan kualitas
 
-- Satu model 1,06 MiB; hanya satu runtime lokal, tanpa TensorFlow penuh, OpenCV native, jaringan, akun, database, atau framework UI tambahan.
-- XML Views dan satu layar utama.
-- Permintaan resolusi kamera 640×480, bukan resolusi foto maksimum. CameraX tetap boleh memilih fallback.
-- Throttle sebelum membaca piksel; pemeriksaan Y sebelum RGB/inferensi.
-- Buffer luminansi, RGB ROI, input dan output dipakai ulang selama dimensi tetap.
-- Satu worker; `KEEP_ONLY_LATEST`; ImageProxy selalu dilepas.
-- Model dimuat per sesi, tidak per frame. Pergantian kamera mempertahankan model dan TTS.
-- R8/resource shrinking untuk release; APK ARM per ABI menghindari native library ABI lain pada APK perangkat tertentu.
-- Tidak ada penyimpanan frame; log diputar dan dibatasi.
-- Tidak ada pekerjaan kamera/inferensi saat aplikasi berhenti atau masuk latar belakang.
+Urutan keputusan tetap mengikuti rancangan dan implementasi yang didokumentasikan hingga Subbab 5.6.2:
 
-Pilihan ini mengurangi pekerjaan yang tidak diperlukan, tetapi tidak memberi angka penghematan baterai tanpa pengukuran. Layar dan kamera tetap menggunakan energi; `FLAG_KEEP_SCREEN_ON` hanya aktif saat sesi berjalan agar layar tidak terkunci di tengah penggunaan. Tidak ada wake lock layanan background.
+1. hitung rata-rata luminansi ROI;
+2. terapkan CLAHE hanya jika konfigurasi mengaktifkannya dan ROI berada di bawah ambang redup;
+3. periksa batas pencahayaan;
+4. periksa Varians Laplacian;
+5. lanjutkan ke RGB, resize 224 × 224, dan inferensi apabila ROI lolos.
 
-Empat thread dipertahankan agar runtime awal sesuai catatan seleksi. Bila kelak thread dikurangi demi daya, catat sebagai konfigurasi baru dan jangan menggunakan angka benchmark empat thread untuk mengklaim performa konfigurasi tersebut.
+Karena hasil 5.7.2 menetapkan `clahe_enabled=false`, langkah CLAHE dilewati dan mean Y serta Varians Laplacian menggunakan luminansi Y asli ROI.
 
-## Batas teknis yang masih terbuka
+## Batas yang masih terbuka
 
-1. APK belum dibangun atau dipasang di sini. Kompatibilitas kompilasi dan native runtime tetap perlu dibuktikan lewat build Android Studio pada lingkungan pengguna.
-2. Belum ada pemeriksaan kesetaraan 16 citra referensi yang direncanakan subbab 3.8.2. Tidak ada klaim tensor kamera identik dengan citra dataset.
-3. Belum ada hasil kalibrasi kualitas atau temporal dari perangkat. Konfigurasi bawaan dapat terlalu longgar atau ketat.
-4. Implementasi CLAHE tidak mengklaim persamaan numerik dengan OpenCV; kalibrasi harus memakai implementasi yang sama.
-5. Ukuran model bukan ukuran APK, dan ukuran APK bukan RAM proses. APK akhir, RSS/PSS, latensi aplikasi, dan daya belum diukur.
-6. PreviewView bersama ViewPort dan ROI terpusat dirancang untuk menyelaraskan area; perilaku perangkat dan font/orientasi ekstrem belum diinspeksi pada Android.
-7. Suara luring bergantung pada engine dan voice yang dipasang pada perangkat. Aplikasi menolak memulai pengenalan jika suara luring Bahasa Indonesia tidak tersedia.
-8. ZIP menyediakan sumber untuk pemasangan langsung pada HP ARM Android 6 ke atas. Persyaratan distribusi Play Store dan perangkat 16 KiB page-size bukan cakupan build ini.
-9. Log ringkas bukan dataset penelitian. Peristiwa request TTS berarti permintaan diterima engine; `tts_start` dan `tts_done` dicatat terpisah. Ini tidak sama dengan pengukuran onset audio fisik.
+Konfigurasi kualitas statis sudah selesai, tetapi aplikasi belum berada pada status konfigurasi operasional akhir. `analysis_fps`, `confidence_threshold`, `temporal_window_ms`, dan `minimum_results` masih merupakan nilai pengembangan sampai analisis urutan 5.7.3 selesai. Karena itu status aplikasi masih `static_quality_calibrated_postinfer_pending`, bukan `calibrated`.
+
+Setelah 5.7.3 selesai, nilai pascainferensi dan laju analisis harus diperbarui tanpa mengubah parameter statis yang sudah dikunci, kemudian snapshot dan artefak konfigurasi akhir dibuat kembali.

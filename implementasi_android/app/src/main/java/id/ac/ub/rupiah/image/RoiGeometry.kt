@@ -16,7 +16,7 @@ object RoiGeometry {
             min(
                 width * config.roiFraction,
                 height *
-                        0.90f *
+                        config.roiHeightCap *
                         config.roiAspect
             )
 

@@ -26,19 +26,23 @@ flowchart TD
     A["Bingkai YUV terbaru"] --> B{"Interval analisis terpenuhi?"}
     B -- Tidak --> Z["Tutup ImageProxy"]
     B -- Ya --> C["Orientasi dan ROI"]
-    C --> D{"Kualitas ROI layak?"}
-    D -- Tidak --> E["Status penolakan dan reset bukti"]
-    E --> Z
-    D -- Ya --> F["CLAHE bersyarat, RGB, bilinear 224"]
-    F --> G["Tensor float32 dan inferensi"]
-    G --> H{"Bukan nonuang dan skor cukup?"}
-    H -- Tidak --> E
-    H -- Ya --> I["Rata-rata skor dalam jendela waktu"]
-    I --> J{"Minimal 3 hasil dan keputusan stabil?"}
-    J -- Tidak --> K["Tahan posisi uang"]
-    K --> Z
-    J -- Ya --> L["Nominal visual dan TTS terkendali"]
+    C --> D["Mean Y; CLAHE hanya jika diaktifkan"]
+    D --> E{"Pencahayaan layak?"}
+    E -- Tidak --> R["Status pencahayaan dan reset bukti"]
+    R --> Z
+    E -- Ya --> F{"Varians Laplacian layak?"}
+    F -- Tidak --> Q["Status citra buram dan reset bukti"]
+    Q --> Z
+    F -- Ya --> G["YUV ke RGB; bilinear 224"]
+    G --> H["Tensor float32 dan inferensi"]
+    H --> I{"Bukan nonuang dan skor cukup?"}
+    I -- Tidak --> R
+    I -- Ya --> J["Rata-rata skor dalam jendela waktu"]
+    J --> K{"Minimal hasil dan keputusan stabil?"}
+    K -- Tidak --> L["Tahan posisi uang"]
     L --> Z
+    K -- Ya --> M["Nominal visual dan TTS terkendali"]
+    M --> Z
 ```
 
 ## Kamera dan ROI
@@ -51,9 +55,9 @@ Resolusi yang diminta 640×480 dengan fallback; hasil negosiasi CameraX tidak di
 
 ## Praproses
 
-1. Throttle diterapkan sebelum pekerjaan piksel, batas awal 3 analisis per detik.
-2. Kanal Y ROI disalin ke buffer yang dipakai ulang. Varians Laplacian menggunakan tetangga atas, bawah, kiri, kanan, piksel interior, dan varians populasi. Rata-rata Y menggunakan seluruh piksel ROI.
-3. Citra buram atau terlalu terang ditahan. Citra redup ditahan jika CLAHE mati; bila kelak CLAHE dipilih lewat kalibrasi, citra redup yang lolos blur dapat ditingkatkan pada kanal Y.
+1. Throttle diterapkan sebelum pekerjaan piksel. Nilai 3 analisis per detik masih bersifat pengembangan sampai laju analisis dikunci.
+2. Kanal Y ROI disalin ke buffer yang dipakai ulang. Rata-rata Y menggunakan seluruh piksel ROI. Jika CLAHE diaktifkan, transformasi hanya berlaku pada ROI redup lalu mean Y dihitung kembali. Hasil 5.7.2 menetapkan CLAHE nonaktif.
+3. Pencahayaan diperiksa terlebih dahulu menggunakan ambang hasil kalibrasi. ROI yang lolos kemudian diperiksa dengan Varians Laplacian empat tetangga pada piksel interior dan varians populasi.
 4. U dan V dipertahankan. Konversi awal memakai BT.601 limited range; pilihan `full_bt601` tersedia sebagai konfigurasi eksplisit. Format `YUV_420_888` tidak sendirinya menjamin matriks/rentang warna semua vendor. Kesetaraan kamera tetap harus diperiksa pada tahap integrasi perangkat berikutnya.
 5. RGB ROI di-clamp ke `[0,255]`, lalu di-resize dengan koordinat half-pixel dan bilinear float. Tidak memakai JPEG/Bitmap, normalisasi tambahan, antialias, atau padding letterbox.
 6. Buffer masukan `[1,224,224,3]` berisi float32 urutan RGB. Model telah memiliki rescaling dan softmax internal.

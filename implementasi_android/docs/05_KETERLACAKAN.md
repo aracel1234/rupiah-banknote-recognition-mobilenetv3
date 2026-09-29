@@ -29,13 +29,13 @@ Pemetaan ini menunjukkan lokasi implementasi, bukan pernyataan lulus pengujian f
 | 5.6.4 Pascainferensi | Pemeriksaan nonuang dan threshold |
 | 5.6.5 Stabilisasi temporal | Rata-rata delapan skor dalam W, minimal tiga hasil |
 | 5.6.6 TTS dan status | SpeechOutput, MainActivity |
-| 5.7 Parameter aplikasi | Mekanisme konfigurasi tersedia; hasil kalibrasi belum tersedia |
+| 5.7 Parameter aplikasi | ROI, blur, luminansi, dan keputusan CLAHE sudah dikunci; pascainferensi dan laju analisis masih menunggu 5.7.3 |
 | 5.8 Siklus hidup | Penutupan model/worker, kamera, TTS, callback token |
 | 5.9 Log dan konfigurasi lokal | JSONL terbatas dan app_config.json |
 | 5.10 UI dan aksesibilitas | Tampilan satu layar, tombol sejajar, label TalkBack, suara |
-| 5.11 Artefak akhir | Snapshot pengembangan tersedia; APK dan konfigurasi penelitian akhir belum dikunci |
+| 5.11 Artefak akhir | Snapshot diperbarui setelah 5.7.2; konfigurasi operasional akhir masih menunggu 5.7.3 dan 5.7.4 |
 
-Jangan menulis bahwa 5.7 atau 5.11 final sudah selesai hanya karena kelas konfigurasi dan snapshot telah dibuat. Paket ini tidak mengubah isi laporan pengguna.
+Jangan menulis bahwa seluruh 5.7 atau 5.11 sudah final. Hanya parameter kualitas statis 5.7.2 yang sudah dikunci; parameter pascainferensi, laju analisis, dan penguncian konfigurasi operasional masih harus mengikuti hasil tahap berikutnya.
 
 ## Rujukan API yang diperiksa
 

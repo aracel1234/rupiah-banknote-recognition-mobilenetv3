@@ -1,22 +1,20 @@
-# Catatan pemeriksaan teknis paket
+# Catatan pemeriksaan teknis paket setelah kalibrasi 5.7.2
 
-Tanggal penyusunan: 21 September 2026.
+## Pemeriksaan yang dilakukan pada revisi ini
 
-## Dilakukan
+- Mencocokkan hasil Stage 8 terhadap hash Stage 4, Stage 5, Stage 6, dan Stage 7.
+- Memastikan `static_quality_config_lock.json` mengunci ROI 0,90, rasio aspek 1,3420920964096548, height cap 0,90, ambang blur 23,74892868863396, ambang luminansi 91,93479241966921 dan 178,81127789279964, serta CLAHE nonaktif.
+- Menyalin bukti kalibrasi statis ke `app/src/main/assets/calibration/` tanpa mengubah aset model.
+- Menambahkan pemeriksaan hash dan kecocokan nilai kalibrasi pada `AppConfig.load()`.
+- Mengubah `RoiGeometry` agar height cap berasal dari konfigurasi yang dikunci dan tidak lagi berupa konstanta tersembunyi.
+- Mempertahankan urutan keputusan kualitas sesuai laporan terbaru: CLAHE bersyarat bila diaktifkan, gerbang pencahayaan, lalu gerbang ketajaman.
+- Mempertahankan ModelRunner, TemporalDecision, CameraController, SpeechOutput, MainActivity, dan artefak model agar perilaku 5.6 di luar parameter kualitas tidak berubah selama 5.7.3 masih berlangsung.
 
-- Membaca alur pipeline sumber serta ringkasan dan artefak tahap 1–7 yang relevan untuk integrasi; menelusuri pilihan Dynamic Range ke selection lock.
-- Membaca metode integrasi, penentuan parameter, perancangan komponen, antarmuka, dan kerangka Bab 5.5–5.11 pada PDF terbaru; memeriksa halaman gambar antarmukanya.
-- Membandingkan hash biner model, hash label, identitas model, kontrak tensor, dan selection lock. Model yang dimasukkan identik dengan hasil tahap 7.
-- Memeriksa signature berkas model `TFL3`; ini pemeriksaan format awal, bukan eksekusi model.
-- Mem-parse seluruh XML dan JSON, memeriksa sintaks Python melalui AST dan skrip shell melalui `bash -n`.
-- Menjalankan alat impor aset baru terhadap folder hasil tahap 7 yang dilampirkan; pemeriksaan sumber diterima dan aset disalin ke proyek baru.
-- Meninjau kode secara statis untuk jalur penutupan ImageProxy, kepemilikan interpreter, pembatalan callback kamera lama, pemeriksaan TTS luring, dan status parameter pengembangan.
-- Menyusun snapshot hash sumber dan memastikan isi ZIP dapat dibaca.
+## Yang masih harus dilakukan pada perangkat pengguna
 
-## Belum dilakukan
+- Build ulang `:app:assembleDebug` setelah revisi konfigurasi.
+- Jalankan aplikasi pada POCO X5 Pro 5G dan Redmi 4X untuk memastikan konfigurasi statis termuat tanpa kegagalan verifikasi bukti.
+- Pastikan ROI overlay berubah mengikuti fraksi 0,90 dan log sesi memuat status konfigurasi serta hash lock statis.
+- Selesaikan pengumpulan dan analisis data urutan 5.7.3 sebelum mengubah ambang keyakinan, jendela temporal, minimum hasil, atau laju analisis menjadi nilai final.
 
-- Kompilasi Kotlin/Gradle, Android Lint, build APK debug/release, dan pemasangan pada HP. Lingkungan ini memiliki Java runtime, tetapi tidak memiliki Android SDK, Gradle, maupun compiler Kotlin; percobaan akses unduhan dependency tidak berhasil.
-- Pemeriksaan perilaku pada POCO X5 Pro/Redmi 4X, kesetaraan tensor referensi, suara, orientasi, tata letak Android aktual, atau pengukuran kinerja.
-- Pengumpulan/seleksi parameter kalibrasi, pengujian sistem Bab 6, atau pengukuran daya.
-
-Pemeriksaan statis tidak membuktikan bahwa aplikasi telah berhasil dibangun atau berjalan pada perangkat. Hasil yang diserahkan adalah proyek implementasi sumber untuk tahap pengembangan berikutnya. Tidak ada hasil pengujian penelitian baru yang dilaporkan.
+Revisi ini tidak mengklaim 5.7.3, 5.7.4, atau pengujian Bab 6 telah selesai.

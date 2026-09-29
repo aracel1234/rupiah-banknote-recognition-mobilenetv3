@@ -74,6 +74,10 @@ class RecognitionSession(
             "config_sha256" to ModelRunner.sha256(
                 config.raw.toByteArray()
             ),
+            "config_status" to config.status,
+            "config_revision" to config.revision,
+            "postinference_status" to config.postInferenceStatus,
+            "static_quality_lock_sha256" to config.staticQualityLockSha256,
             "device" to android.os.Build.MODEL,
             "sdk" to android.os.Build.VERSION.SDK_INT
         )
@@ -214,7 +218,7 @@ class RecognitionSession(
             val runner = model ?: return
             val state = decision ?: return
 
-            // CLAHE dan pemeriksaan kualitas dilakukan dalam prepare().
+            // Pemeriksaan kualitas dan CLAHE opsional dilakukan dalam prepare().
             val quality = processor.prepare(image, runner.input)
             val prepared = SystemClock.elapsedRealtime()
 
@@ -239,7 +243,11 @@ class RecognitionSession(
                 "quality_mean_y" to quality.mean,
                 "quality_processed_mean_y" to quality.processedMean,
                 "quality_laplacian_variance" to quality.variance,
-                "quality_policy" to "clahe_before_blur_v2",
+                "quality_policy" to if (config.clahe) {
+                    "conditional_clahe_lighting_then_blur_v3"
+                } else {
+                    "raw_y_lighting_then_blur_static_v1"
+                },
                 "preprocess_ms" to (prepared - start),
                 "inference_ms" to (ended - prepared),
                 "pipeline_ms" to (ended - start),

@@ -25,8 +25,10 @@ class FramePreprocessor(private val config: AppConfig) {
 
         roi.copyLuminance(luminance)
 
-        // QualityGate menerapkan CLAHE kondisional sebelum pemeriksaan blur.
-        // Buffer luminance yang sama digunakan untuk konversi RGB.
+        // QualityGate mengikuti urutan: CLAHE bersyarat bila diaktifkan,
+        // keputusan pencahayaan, lalu keputusan blur. Pada konfigurasi 5.7.2
+        // CLAHE nonaktif sehingga buffer luminansi tetap merupakan raw Y.
+        // Buffer yang sama digunakan untuk konversi RGB jika ROI lolos.
         val quality = gate.inspect(
             luminance,
             roi.width,

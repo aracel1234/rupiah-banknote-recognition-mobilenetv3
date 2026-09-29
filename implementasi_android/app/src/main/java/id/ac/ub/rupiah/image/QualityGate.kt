@@ -3,12 +3,22 @@ package id.ac.ub.rupiah.image
 import id.ac.ub.rupiah.config.AppConfig
 
 /**
- * CLAHE kondisional pada ROI redup sebelum pemeriksaan blur.
- * Buffer luminans diubah langsung jika CLAHE diterapkan.
+ * Quality policy follows the design used in Bab 4 and the implementation flow in 5.6.2:
+ * optional CLAHE for a dim ROI, lighting decision, then blur decision.
+ *
+ * The calibrated 5.7.2 configuration disables CLAHE, so the operational path uses raw Y.
  */
 class QualityGate(private val config: AppConfig) {
 
-    private val clahe = LuminanceClahe(config.grid, config.clipLimit)
+    private val clahe =
+        if (config.clahe) {
+            LuminanceClahe(
+                requireNotNull(config.grid),
+                requireNotNull(config.clipLimit)
+            )
+        } else {
+            null
+        }
 
     data class Result(
         val mean: Double,
@@ -23,32 +33,59 @@ class QualityGate(private val config: AppConfig) {
         width: Int,
         height: Int
     ): Result {
-        require(width >= 3 && height >= 3 && y.size == width * height)
+        require(
+            width >= 3 &&
+                    height >= 3 &&
+                    y.size == width * height
+        )
 
         val originalMean = mean(y)
-        val enhanced = config.clahe && originalMean < config.lumaMin
+        val enhanced =
+            clahe != null &&
+                    originalMean < config.lumaMin
 
         if (enhanced) {
-            // CLAHE menggunakan rentang 0..255.
+            // CLAHE menggunakan domain 0..255.
             if (config.limitedYuv) {
                 for (i in y.indices) {
-                    y[i] = ((y[i] - 16f) * (255f / 219f))
-                        .coerceIn(0f, 255f)
+                    y[i] =
+                        ((y[i] - 16f) * (255f / 219f))
+                            .coerceIn(0f, 255f)
                 }
             }
 
-            clahe.apply(y, width, height)
+            requireNotNull(clahe).apply(
+                y,
+                width,
+                height
+            )
 
-            // Kembalikan ke rentang Y native untuk konversi YUV berikutnya.
+            // Kembalikan ke domain Y native sebelum konversi YUV -> RGB.
             if (config.limitedYuv) {
                 for (i in y.indices) {
-                    y[i] = 16f + y[i] * (219f / 255f)
+                    y[i] =
+                        16f +
+                                y[i] *
+                                (219f / 255f)
                 }
             }
         }
 
-        val processedMean = if (enhanced) mean(y) else originalMean
-        val variance = laplacianVariance(y, width, height)
+        val processedMean =
+            if (enhanced) {
+                mean(y)
+            } else {
+                originalMean
+            }
+
+        // Nilai tetap dihitung untuk log diagnostik. Urutan keputusan di bawah
+        // tetap memprioritaskan pencahayaan, kemudian ketajaman.
+        val variance =
+            laplacianVariance(
+                y,
+                width,
+                height
+            )
 
         val reason = when {
             processedMean > config.lumaMax ->
@@ -92,25 +129,33 @@ class QualityGate(private val config: AppConfig) {
 
         for (row in 1 until height - 1) {
             for (col in 1 until width - 1) {
-                val i = row * width + col
+                val i =
+                    row * width + col
 
-                val lap = (
-                        y[i - 1] +
-                                y[i + 1] +
-                                y[i - width] +
-                                y[i + width] -
-                                4 * y[i]
-                        ).toDouble()
+                val lap =
+                    (
+                            y[i - 1] +
+                                    y[i + 1] +
+                                    y[i - width] +
+                                    y[i + width] -
+                                    4 * y[i]
+                            ).toDouble()
 
                 sum += lap
                 squared += lap * lap
             }
         }
 
-        val n = (width - 2) * (height - 2)
-        val average = sum / n
+        val n =
+            (width - 2) *
+                    (height - 2)
 
-        return (squared / n - average * average)
-            .coerceAtLeast(0.0)
+        val average =
+            sum / n
+
+        return (
+                squared / n -
+                        average * average
+                ).coerceAtLeast(0.0)
     }
 }
