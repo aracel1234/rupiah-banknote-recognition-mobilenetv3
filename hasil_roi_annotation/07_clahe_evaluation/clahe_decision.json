@@ -1,0 +1,12 @@
+{
+  "status": "no_clahe_configuration_passed",
+  "selection_basis": "95% paired stratified bootstrap CI(delta macro-F1 vs none) lower > 0 AND no class recall zero; highest observed macro-F1 among eligible; no hidden tie-break",
+  "evaluation_population": "160 physically labelled redup quality samples; includes tajam and blur as specified by the calibration condition",
+  "baseline_macro_f1": 0.7319715509053744,
+  "selected_config_id": "none",
+  "clahe_enabled": false,
+  "selected_clip_limit": null,
+  "selected_grid": null,
+  "requires_android_parity_confirmation": false,
+  "offline_reconstruction_method": "stored RGB + limited-BT.601 luminance delta after Android CLAHE; raw U/V were not serialized"
+}

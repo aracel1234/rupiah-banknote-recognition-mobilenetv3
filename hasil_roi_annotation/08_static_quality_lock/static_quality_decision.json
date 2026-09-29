@@ -1,0 +1,68 @@
+{
+  "status": "static_quality_ready_to_lock",
+  "static_config": {
+    "status": "static_quality_calibrated",
+    "roi_width_fraction": 0.9,
+    "roi_aspect_ratio": 1.3420920964096548,
+    "roi_height_cap_fraction": 0.9,
+    "blur_variance_min": 23.74892868863396,
+    "blur_selection": {
+      "youden_j": 0.7875000000000001,
+      "sensitivity": 0.8125,
+      "specificity": 0.975,
+      "tie_resolution_rule": [
+        "maximize Youden J",
+        "then maximize min(sensitivity, specificity)",
+        "then minimize |sensitivity-specificity|",
+        "then lower threshold to favor sharp sensitivity"
+      ],
+      "decision_trace": [
+        {
+          "priority": 1,
+          "criterion": "maximize_youden_j",
+          "best_value": 0.7875000000000001,
+          "candidate_thresholds_after": [
+            23.74892868863396,
+            29.75258579997243
+          ]
+        },
+        {
+          "priority": 2,
+          "criterion": "maximize_min_sensitivity_specificity",
+          "best_value": 0.8125,
+          "candidate_thresholds_after": [
+            23.74892868863396
+          ]
+        }
+      ]
+    },
+    "luma_min": 91.93479241966921,
+    "luma_max": 178.81127789279964,
+    "lighting_macro_f1": 0.9005608164561565,
+    "clahe_enabled": false,
+    "clahe_clip_limit": null,
+    "clahe_grid": null,
+    "yuv_range": "limited_bt601",
+    "scope_note": "Static image-quality parameters only. analysis_fps, confidence_threshold, temporal_window_ms, and minimum_results remain pending later calibration."
+  },
+  "dependencies": {
+    "stage4_roi_decision_sha256": "48ed33f0a1d0db38fccff631e50ee656c2f0647ec05b875925a1e4c26e2e99a2",
+    "stage4_lock_sha256": "4177fbf966585a165009594ced0f2af04d63f6d36ff64bedd3f1b99226b9c3c1",
+    "stage5_blur_evidence_sha256": "6659dee71703f27f1b5692ee71627b91194fed7f51ef3097e1ebbf7ccbf9aac9",
+    "stage5_lock_sha256": "dfa1a64137aa7ac48f7f0013b331df6f62c79128f80c0aa6160b828c03173c64",
+    "stage6_lighting_evidence_sha256": "5f74d3be7b846005bd222e7d457a92aed6245561d0dc7df78ea3965fa9db0627",
+    "stage6_lock_sha256": "26f7dd59d05ddd49e02f6b7d955f8a1b5a9a8294e1b2892512832f1f858e29e5",
+    "stage7_clahe_decision_sha256": "216eed06b407d70259733e6873b481d3590647f3b0e25fad4d538469d133dc27",
+    "stage7_lock_sha256": "952210833318840555dedc3bdd12685a59492339c923c46f1510aaf54c1b4452"
+  },
+  "android_source_alignment": {
+    "current_app_config_status": "development_uncalibrated",
+    "current_app_config_revision": "dev-002-clahe-before-blur",
+    "current_qualitygate_sha256": "c2bf3db6c0b9c4aa0f39fcf6bebba3ef59dd929e1c9fa3b6822deb074f9b44cd",
+    "current_app_config_sha256": "1d24b9962caaf5a5ab2c22d14823a96c1351fb7e260924ab496fe6137358aa0a",
+    "current_lighting_reason_before_blur": true,
+    "current_clahe_branch_present": true,
+    "alignment_required_before_sequence_collection": true
+  },
+  "important_rule": "CLAHE is disabled because no tested configuration satisfied the predeclared 95% CI improvement rule. Therefore the raw-Y blur calibration remains applicable."
+}

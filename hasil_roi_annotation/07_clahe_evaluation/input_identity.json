@@ -1,0 +1,119 @@
+{
+  "status": "READY_FOR_CLAHE_EVALUATION",
+  "selected_roi_width_fraction": 0.9,
+  "selected_luma_min": 91.93479241966921,
+  "selected_luma_max": 178.81127789279964,
+  "physical_dim_samples": 160,
+  "dim_samples_per_class": {
+    "1000": 20,
+    "10000": 20,
+    "100000": 20,
+    "2000": 20,
+    "20000": 20,
+    "5000": 20,
+    "50000": 20,
+    "nonuang": 20
+  },
+  "dim_focus_counts": {
+    "blur": 80,
+    "tajam": 80
+  },
+  "dim_device_counts": {
+    "poco": 80,
+    "redmi": 80
+  },
+  "physical_dim_triggered_by_luma_min": 160,
+  "operational_luma_min_trigger_count_all_quality": 164,
+  "operational_trigger_true_lighting_counts": {
+    "normal": 3,
+    "redup": 160,
+    "terang": 1
+  },
+  "mean_source_roi_rgb_clipped_pixel_fraction_dim": 0.12462146572054414,
+  "max_source_roi_rgb_clipped_pixel_fraction_dim": 0.9012106050149529,
+  "stage6_lock_sha256": "26f7dd59d05ddd49e02f6b7d955f8a1b5a9a8294e1b2892512832f1f858e29e5",
+  "stage6_evidence_sha256": "5f74d3be7b846005bd222e7d457a92aed6245561d0dc7df78ea3965fa9db0627",
+  "stage6_sample_predictions_sha256": "f58cf378191f2d936d3788afff1c023466aad457c10eb7c948e2ed2dd376ba6b",
+  "android": {
+    "source_type": "directory",
+    "path": "/home/aracel/Downloads/Skripsi/implementasi_android",
+    "model_sha256": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676",
+    "source_hashes": {
+      "model.tflite": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676",
+      "LuminanceClahe.kt": "93d09592c1c0e05ff6e25a0972c4e6920c8fefba40e4c0f8c36ae309c8d8e245",
+      "QualityGate.kt": "c2bf3db6c0b9c4aa0f39fcf6bebba3ef59dd929e1c9fa3b6822deb074f9b44cd",
+      "FramePreprocessor.kt": "f8a8571b5d1e55dccc2ff9ef3367048a5af974d38fd3e96d5b2326afe46e1b78",
+      "app_config.json": "1d24b9962caaf5a5ab2c22d14823a96c1351fb7e260924ab496fe6137358aa0a"
+    }
+  },
+  "sources": [
+    {
+      "device": "poco",
+      "source_type": "directory",
+      "path": "/home/aracel/Downloads/RupiahCalibrationCollectorOutput/poco",
+      "manifest_path": "manifest.csv",
+      "manifest_sha256": "f6fcc23df23632a84663ef1b864eb4271b93bd1d4ee6740d7c548fe5c18c8e38",
+      "quality_samples": 240
+    },
+    {
+      "device": "redmi",
+      "source_type": "directory",
+      "path": "/home/aracel/Downloads/RupiahCalibrationCollectorOutput/redmi",
+      "manifest_path": "manifest.csv",
+      "manifest_sha256": "dca45e1abf5b942480fa231fe86c363d52fc78b439069cedc84018c11d313e41",
+      "quality_samples": 240
+    }
+  ],
+  "configs": [
+    {
+      "config_id": "none",
+      "clip_limit": null,
+      "grid": null
+    },
+    {
+      "config_id": "clahe_c1p5_g4",
+      "clip_limit": 1.5,
+      "grid": 4
+    },
+    {
+      "config_id": "clahe_c1p5_g8",
+      "clip_limit": 1.5,
+      "grid": 8
+    },
+    {
+      "config_id": "clahe_c2p0_g4",
+      "clip_limit": 2.0,
+      "grid": 4
+    },
+    {
+      "config_id": "clahe_c2p0_g8",
+      "clip_limit": 2.0,
+      "grid": 8
+    },
+    {
+      "config_id": "clahe_c2p5_g4",
+      "clip_limit": 2.5,
+      "grid": 4
+    },
+    {
+      "config_id": "clahe_c2p5_g8",
+      "clip_limit": 2.5,
+      "grid": 8
+    }
+  ],
+  "bootstrap": {
+    "iterations": 2000,
+    "seed": 42,
+    "paired": true,
+    "strata": [
+      "class_label",
+      "device",
+      "focus_condition"
+    ],
+    "ci": "percentile_2.5_97.5"
+  },
+  "selection_rule": "eligible iff 95% paired bootstrap CI lower bound of delta macro-F1 vs none > 0 and min class recall > 0; among eligible choose highest observed macro-F1; exact ties require explicit resolution; if none eligible select none",
+  "reconstruction_method": "stored RGB + limited-BT.601 luminance delta after Android CLAHE; raw U/V were not serialized",
+  "requires_android_parity_confirmation_if_clahe_selected": true,
+  "tflite_runtime": "tensorflow 2.20.0"
+}

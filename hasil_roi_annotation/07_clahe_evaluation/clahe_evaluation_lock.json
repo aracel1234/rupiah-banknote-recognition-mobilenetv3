@@ -1,0 +1,46 @@
+{
+  "status": "clahe_evaluation_evidence_locked",
+  "stage6_lock_sha256": "26f7dd59d05ddd49e02f6b7d955f8a1b5a9a8294e1b2892512832f1f858e29e5",
+  "stage6_evidence_sha256": "5f74d3be7b846005bd222e7d457a92aed6245561d0dc7df78ea3965fa9db0627",
+  "stage6_sample_predictions_sha256": "f58cf378191f2d936d3788afff1c023466aad457c10eb7c948e2ed2dd376ba6b",
+  "model_sha256": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676",
+  "android_source_hashes": {
+    "model.tflite": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676",
+    "LuminanceClahe.kt": "93d09592c1c0e05ff6e25a0972c4e6920c8fefba40e4c0f8c36ae309c8d8e245",
+    "QualityGate.kt": "c2bf3db6c0b9c4aa0f39fcf6bebba3ef59dd929e1c9fa3b6822deb074f9b44cd",
+    "FramePreprocessor.kt": "f8a8571b5d1e55dccc2ff9ef3367048a5af974d38fd3e96d5b2326afe46e1b78",
+    "app_config.json": "1d24b9962caaf5a5ab2c22d14823a96c1351fb7e260924ab496fe6137358aa0a"
+  },
+  "bootstrap": {
+    "iterations": 2000,
+    "seed": 42,
+    "paired": true,
+    "strata": [
+      "class_label",
+      "device",
+      "focus_condition"
+    ],
+    "ci": "percentile_2.5_97.5"
+  },
+  "reconstruction_method": "stored RGB + limited-BT.601 luminance delta after Android CLAHE; raw U/V were not serialized",
+  "decision_status": "no_clahe_configuration_passed",
+  "selected_config_id": "none",
+  "requires_android_parity_confirmation": false,
+  "output_sha256": {
+    "clahe_predictions.csv": "56997da524fa0f6b072ac1feaf07aea282ca7ce94fd1bdb878e739c70395f950",
+    "clahe_summary.csv": "c832e585e1824893c81fcb6d5a9edf93c27c5c71eef120fbd0139f8d0fbfd6be",
+    "clahe_per_class.csv": "0826e38fcf51b3aea1ee3ddd32697bf239bd0931d1bb823a625304f4ef742e45",
+    "clahe_diagnostics.csv": "dde7f8ac9de4d471c47f585d0c3cc45a70940c631002e6ffa44705c56c5fb43f",
+    "clahe_bootstrap_summary.csv": "8fdb7ea6810334c97cf40fc390dc7ee8bed932ca501773c56e0d31cc2bcb4482",
+    "clahe_bootstrap_deltas.csv": "7ae506c76c237bfdd2c35734d46907ea86f05434e71a1780ee43c996d3ad155a",
+    "clahe_decision.json": "216eed06b407d70259733e6873b481d3590647f3b0e25fad4d538469d133dc27",
+    "input_identity.json": "01af86f2deda0b0316c069e8749bd2bdd6fe382d1b99d09fe11c5381fa172ae2",
+    "confusion_none.csv": "a32b1cda414fa001e350c285a2e4406954d38c4544d2670d913191bc5e0abd4f",
+    "confusion_clahe_c1p5_g4.csv": "30c087c59b3091616d294cea35bc29f823d2915f4addc323823be10e16be6685",
+    "confusion_clahe_c1p5_g8.csv": "3fb7d8a4e98b51573b4ee17d3e3d37e87f457a590062a8a8f16cbe1970f88e14",
+    "confusion_clahe_c2p0_g4.csv": "d9cb825c6adfd1abfa3958b8065f0083167ccd6cc6e0bcf26039a65c0061f368",
+    "confusion_clahe_c2p0_g8.csv": "d201b3d5c51d89953aa14e27e957751b2f536841b3113e99bcae44f077ecb5fe",
+    "confusion_clahe_c2p5_g4.csv": "022bfc9990d3686c3ced31897e56788b643a6bdd3a07d647477bc5098a60ef15",
+    "confusion_clahe_c2p5_g8.csv": "eabeff10986ae32d5a106a9a8c320574876cd7192965d9b0f8b6def888b21e7e"
+  }
+}
