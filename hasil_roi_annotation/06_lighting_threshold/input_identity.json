@@ -1,0 +1,23 @@
+{
+  "status": "READY_FOR_LIGHTING_CALIBRATION",
+  "selected_roi_width_fraction": 0.9,
+  "total_quality_samples": 480,
+  "lighting_counts": {
+    "normal": 160,
+    "redup": 160,
+    "terang": 160
+  },
+  "device_counts": {
+    "poco": 240,
+    "redmi": 240
+  },
+  "focus_counts": {
+    "blur": 240,
+    "tajam": 240
+  },
+  "stage5_lock_sha256": "dfa1a64137aa7ac48f7f0013b331df6f62c79128f80c0aa6160b828c03173c64",
+  "stage5_sample_scores_sha256": "593224f94946cbddda5b62e2d758f9ad0533922ca4992f942dec4c7cbf683e84",
+  "method_boundary": "raw mean Y on selected ROI; no blur filtering; no CLAHE; no confidence threshold; no temporal smoothing",
+  "classification_rule": "redup if meanY < T_low; terang if meanY > T_high; otherwise normal",
+  "primary_rule": "maximize macro F1 across redup, normal, terang"
+}

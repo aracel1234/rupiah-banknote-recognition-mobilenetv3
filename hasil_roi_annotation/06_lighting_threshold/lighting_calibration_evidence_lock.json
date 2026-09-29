@@ -1,0 +1,19 @@
+{
+  "status": "lighting_calibration_evidence_locked",
+  "selected_roi_width_fraction": 0.9,
+  "stage5_lock_sha256": "dfa1a64137aa7ac48f7f0013b331df6f62c79128f80c0aa6160b828c03173c64",
+  "stage5_sample_scores_sha256": "593224f94946cbddda5b62e2d758f9ad0533922ca4992f942dec4c7cbf683e84",
+  "method_boundary": "raw mean Y on selected ROI; no blur filtering; no CLAHE; no confidence threshold; no temporal smoothing",
+  "classification_rule": "redup if meanY < T_low; terang if meanY > T_high; otherwise normal",
+  "primary_rule": "maximize macro F1 across redup, normal, terang",
+  "selection_status": "selected_unique_macro_f1_maximum",
+  "output_sha256": {
+    "lighting_threshold_candidates.csv": "36b664f2e9f4b2009318bc95dafda99e94f46b46f68a162c15183690fd93a41b",
+    "lighting_score_distributions.csv": "4cda5c1bbebaf1725c9a106144b2d5d9341b11c59db021cf15c99b037f1a44db",
+    "lighting_threshold_evidence.json": "5f74d3be7b846005bd222e7d457a92aed6245561d0dc7df78ea3965fa9db0627",
+    "input_identity.json": "d6ff1aec2af0deacc9d5776be79363674c24e84e49634b455ccec0a9e3ae8df3",
+    "lighting_sample_predictions.csv": "f58cf378191f2d936d3788afff1c023466aad457c10eb7c948e2ed2dd376ba6b",
+    "lighting_confusion_matrix.csv": "e3113564d1f68f39ae8f99d528e0894ece59fdefb30c3450b5bdfe6a34901cf9",
+    "lighting_diagnostics.csv": "a6126b494216f0f4f3cd9651abaa3e028f4b5ac6312283160c37e4f8e611c0b8"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "status": "lighting_macro_f1_evidence_complete",
+  "selected_roi_width_fraction": 0.9,
+  "n_total": 480,
+  "lighting_counts": {
+    "normal": 160,
+    "redup": 160,
+    "terang": 160
+  },
+  "primary_rule": "maximize macro F1 across redup, normal, terang",
+  "classification_rule": "redup if meanY < T_low; terang if meanY > T_high; otherwise normal",
+  "max_macro_f1": 0.9005608164561565,
+  "argmax_candidate_count": 1,
+  "argmax_candidates": [
+    {
+      "luma_min_candidate": 91.93479241966921,
+      "luma_max_candidate": 178.81127789279964,
+      "accuracy": 0.9020833333333333,
+      "macro_precision": 0.9149446750509417,
+      "macro_recall": 0.9020833333333332,
+      "macro_f1": 0.9005608164561565,
+      "precision_redup": 0.975609756097561,
+      "recall_redup": 1.0,
+      "f1_redup": 0.9876543209876543,
+      "precision_normal": 0.7938144329896907,
+      "recall_normal": 0.9625,
+      "f1_normal": 0.8700564971751412,
+      "precision_terang": 0.9754098360655737,
+      "recall_terang": 0.74375,
+      "f1_terang": 0.8439716312056739
+    }
+  ],
+  "selection_status": "selected_unique_macro_f1_maximum",
+  "method_boundary": "raw mean Y on selected ROI; no blur filtering; no CLAHE; no confidence threshold; no temporal smoothing",
+  "selected_luma_min": 91.93479241966921,
+  "selected_luma_max": 178.81127789279964
+}
