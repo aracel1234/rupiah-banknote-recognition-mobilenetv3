@@ -1,0 +1,7 @@
+{
+  "model.tflite": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676",
+  "class_names.json": "70c0322a6a8baba0090611bf5b8ef3cae1ba797b3ce0324e3cfac8d2d518f522",
+  "tensor_contract.json": "7f2c8c5bc99744f7ad4d3c412ae4ab00bfe5a707d6d7b8b5396e85b3506d15b2",
+  "model_identity.json": "6838debca3dfcf05b729d6cede4b5d84a8e2b8526e09ca467c5ad28382a87181",
+  "selection_lock.json": "289a06420d7ed262b4a0a371924f03b9f0e7d8efdb254163586da65bc291099c"
+}
