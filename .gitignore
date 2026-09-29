@@ -116,7 +116,7 @@ local.properties
 # ============================================================
 
 /scripts/anotasi_roi/hasil_roi_annotation/
-/anotasi_roi/review_images/
+/hasil_roi_annotation/review_images/
 
 # ============================================================
 # Python Preset
