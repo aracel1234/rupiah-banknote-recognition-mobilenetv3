@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/cameraCapabilitiesText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#212121" />
+
+        <TextView
+            android:id="@+id/cameraActualText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:background="@drawable/panel_background"
+            android:textSize="12sp"
+            android:textColor="#212121" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Exposure dan white balance"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#212121" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <Button
+                android:id="@+id/autoExposureButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="AE/AWB otomatis"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/freezeExposureButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:text="Kunci exposure saat ini"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="ISO manual"
+            android:textSize="11sp"
+            android:textColor="#616161" />
+
+        <EditText
+            android:id="@+id/manualIsoInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:singleLine="true"
+            android:hint="contoh: 200" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Shutter manual (ms)"
+            android:textSize="11sp"
+            android:textColor="#616161" />
+
+        <EditText
+            android:id="@+id/manualShutterMsInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:hint="contoh: 10.0000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Aperture (F)"
+            android:textSize="11sp"
+            android:textColor="#616161" />
+
+        <Spinner
+            android:id="@+id/apertureSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/applyManualExposureButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Terapkan ISO + shutter manual"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Jika aperture kamera hanya memiliki satu nilai, F bersifat tetap dan tidak dapat diubah oleh aplikasi."
+            android:textSize="10sp"
+            android:textColor="#616161" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Fokus dan blur"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#212121" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <Button
+                android:id="@+id/autoFocusButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Autofocus"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/lockFocusButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:text="Fokus tengah + kunci"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/manualFocusValueText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Fokus manual"
+            android:textSize="12sp"
+            android:textColor="#212121" />
+
+        <SeekBar
+            android:id="@+id/manualFocusSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/applyManualFocusButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terapkan fokus manual"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="0 D berarti fokus tak hingga. Nilai D yang lebih besar memindahkan fokus ke jarak yang lebih dekat. Gunakan LapVar live hanya sebagai panduan saat membuat kondisi tajam/blur; jangan menjadikannya threshold final."
+            android:textSize="10sp"
+            android:textColor="#616161" />
+    </LinearLayout>
+</ScrollView>
