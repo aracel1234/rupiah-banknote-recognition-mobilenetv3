@@ -1,0 +1,19 @@
+{
+  "status": "blur_calibration_evidence_locked",
+  "selected_roi_width_fraction": 0.9,
+  "stage4_lock_sha256": "4177fbf966585a165009594ced0f2af04d63f6d36ff64bedd3f1b99226b9c3c1",
+  "stage4_decision_sha256": "48ed33f0a1d0db38fccff631e50ee656c2f0647ec05b875925a1e4c26e2e99a2",
+  "android_source_hashes": {
+    "RoiGeometry.kt": "01242448e7d0a522abc432663d386fc56d3862d6201e2b605aebcca3e1e1feaa",
+    "QualityGate.kt": "c2bf3db6c0b9c4aa0f39fcf6bebba3ef59dd929e1c9fa3b6822deb074f9b44cd",
+    "app_config.json": "1d24b9962caaf5a5ab2c22d14823a96c1351fb7e260924ab496fe6137358aa0a"
+  },
+  "method_boundary": "raw Y ROI only; CLAHE/luma thresholds/confidence/temporal smoothing are not applied",
+  "output_sha256": {
+    "blur_sample_scores.csv": "593224f94946cbddda5b62e2d758f9ad0533922ca4992f942dec4c7cbf683e84",
+    "blur_threshold_candidates.csv": "5b5260f56a43a087c60dc258160657f8988ec226afca61355c5f41892f835221",
+    "blur_score_distributions.csv": "572cc459590c7be9f9def2e2aa6efee6a8973d778b2648b01943f2731c663d6e",
+    "blur_threshold_evidence.json": "6659dee71703f27f1b5692ee71627b91194fed7f51ef3097e1ebbf7ccbf9aac9",
+    "input_identity.json": "3ea575d5cb2ef730389cebaf00feb078a49632628bac61453f6c37ed8954bb50"
+  }
+}

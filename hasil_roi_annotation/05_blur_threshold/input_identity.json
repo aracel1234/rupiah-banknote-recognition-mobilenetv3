@@ -1,0 +1,44 @@
+{
+  "status": "READY_FOR_BLUR_CALIBRATION",
+  "selected_roi_width_fraction": 0.9,
+  "aspect_ratio": 1.3420920964096548,
+  "height_cap_fraction": 0.9,
+  "total_quality_samples": 480,
+  "sharp_samples": 240,
+  "blur_samples": 240,
+  "sources": [
+    {
+      "device": "poco",
+      "source_type": "directory",
+      "path": "/home/aracel/Downloads/RupiahCalibrationCollectorOutput/poco",
+      "manifest_path": "manifest.csv",
+      "manifest_sha256": "f6fcc23df23632a84663ef1b864eb4271b93bd1d4ee6740d7c548fe5c18c8e38",
+      "quality_samples": 240,
+      "luma_hash_mismatches": 0
+    },
+    {
+      "device": "redmi",
+      "source_type": "directory",
+      "path": "/home/aracel/Downloads/RupiahCalibrationCollectorOutput/redmi",
+      "manifest_path": "manifest.csv",
+      "manifest_sha256": "dca45e1abf5b942480fa231fe86c363d52fc78b439069cedc84018c11d313e41",
+      "quality_samples": 240,
+      "luma_hash_mismatches": 0
+    }
+  ],
+  "stage4_lock_sha256": "4177fbf966585a165009594ced0f2af04d63f6d36ff64bedd3f1b99226b9c3c1",
+  "stage4_decision_sha256": "48ed33f0a1d0db38fccff631e50ee656c2f0647ec05b875925a1e4c26e2e99a2",
+  "android_source_hashes": {
+    "RoiGeometry.kt": "01242448e7d0a522abc432663d386fc56d3862d6201e2b605aebcca3e1e1feaa",
+    "QualityGate.kt": "c2bf3db6c0b9c4aa0f39fcf6bebba3ef59dd929e1c9fa3b6822deb074f9b44cd",
+    "app_config.json": "1d24b9962caaf5a5ab2c22d14823a96c1351fb7e260924ab496fe6137358aa0a"
+  },
+  "qualitygate_semantics": {
+    "quality_gate_path": "app/src/main/java/id/ac/ub/rupiah/image/QualityGate.kt",
+    "four_neighbor_laplacian_detected": true,
+    "clahe_before_variance_in_current_source": true,
+    "reason_lighting_before_blur_in_current_source": true,
+    "calibration_semantics": "raw luminance ROI; no CLAHE; no luma gate; sharp accepted iff variance >= T"
+  },
+  "method_boundary": "raw Y ROI only; CLAHE/luma thresholds/confidence/temporal smoothing are not applied"
+}

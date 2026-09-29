@@ -1,0 +1,39 @@
+{
+  "status": "blur_youden_evidence_complete",
+  "selected_roi_width_fraction": 0.9,
+  "n_total": 480,
+  "n_sharp": 240,
+  "n_blur": 240,
+  "primary_rule": "maximize sensitivity(T) + specificity(T) - 1",
+  "sharp_accept_rule": "laplacian_variance >= T",
+  "max_youden_j": 0.7875000000000001,
+  "argmax_candidate_count": 2,
+  "argmax_candidates": [
+    {
+      "threshold": 23.74892868863396,
+      "youden_j": 0.7875000000000001,
+      "sensitivity": 0.8125,
+      "specificity": 0.975,
+      "min_sensitivity_specificity": 0.8125,
+      "abs_sensitivity_specificity_gap": 0.16249999999999998,
+      "tp_sharp_accepted": 195,
+      "fn_sharp_rejected": 45,
+      "tn_blur_rejected": 234,
+      "fp_blur_accepted": 6
+    },
+    {
+      "threshold": 29.75258579997243,
+      "youden_j": 0.7875000000000001,
+      "sensitivity": 0.8041666666666667,
+      "specificity": 0.9833333333333333,
+      "min_sensitivity_specificity": 0.8041666666666667,
+      "abs_sensitivity_specificity_gap": 0.17916666666666659,
+      "tp_sharp_accepted": 193,
+      "fn_sharp_rejected": 47,
+      "tn_blur_rejected": 236,
+      "fp_blur_accepted": 4
+    }
+  ],
+  "selection_status": "tie_requires_explicit_resolution",
+  "note": "No lower-level tie-break is silently applied when multiple thresholds share maximum Youden J."
+}
