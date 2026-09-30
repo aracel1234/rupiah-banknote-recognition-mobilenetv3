@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "operational_configuration_calibrated",
+  "revision": "calib-operational-001",
+  "analysis_fps": 3,
+  "threads": 4,
+  "roi_width_fraction": 0.9,
+  "roi_aspect_ratio": 1.3420920964096548,
+  "roi_height_cap_fraction": 0.9,
+  "blur_variance_min": 23.74892868863396,
+  "luma_min": 91.93479241966921,
+  "luma_max": 178.81127789279964,
+  "confidence_threshold": 0.65,
+  "temporal_window_ms": 1500,
+  "minimum_results": 3,
+  "clahe_enabled": false,
+  "clahe_clip_limit": null,
+  "clahe_grid": null,
+  "yuv_range": "limited_bt601",
+  "log_enabled": true
+}

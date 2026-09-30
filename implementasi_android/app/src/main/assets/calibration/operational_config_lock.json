@@ -1,0 +1,50 @@
+{
+  "status": "operational_configuration_locked",
+  "selected_values": {
+    "schema_version": 1,
+    "status": "operational_configuration_calibrated",
+    "revision": "calib-operational-001",
+    "analysis_fps": 3,
+    "threads": 4,
+    "roi_width_fraction": 0.9,
+    "roi_aspect_ratio": 1.3420920964096548,
+    "roi_height_cap_fraction": 0.9,
+    "blur_variance_min": 23.74892868863396,
+    "luma_min": 91.93479241966921,
+    "luma_max": 178.81127789279964,
+    "confidence_threshold": 0.65,
+    "temporal_window_ms": 1500,
+    "minimum_results": 3,
+    "clahe_enabled": false,
+    "clahe_clip_limit": null,
+    "clahe_grid": null,
+    "yuv_range": "limited_bt601",
+    "log_enabled": true
+  },
+  "dependencies": {
+    "static_quality_config_sha256": "d57e466ef72474b5993ead336baad9ca7af23e61cce60c1a2850a35110255212",
+    "static_quality_lock_sha256": "2ee28710fca6945aa4cb4a9e46d379607546bf5df6790de9f554c72a59ee53f6",
+    "sequence_input_audit_sha256": "9cfb161a7cd6cccee34c78e7953711902cac3f959e89862518171247fb23bd57",
+    "sequence_input_lock_sha256": "34addb350bae322d1985f46cae053f5233857d2fdf8700fff902dff5cb67d891",
+    "postinference_decision_sha256": "88ec34d72e3aac461a9475ca86146de2e68dd88fc7be0b9805e7eac0f0811aa3",
+    "postinference_lock_sha256": "e26fb24599e866f6cd9a47429c7554a943e804e5fe51ffe79e98d8546badb2af",
+    "analysis_plan_sha256": "4d260c029731d542cae09782f074258606422c5061643a394753158f0ed21aef",
+    "android_source_hashes_before_final_patch": {
+      "app_config.json": "695d3debfc668f23b66830387c120c32f8fdeca70d90e2a6f43e0533b5902c39",
+      "TemporalDecision.kt": "0762770824729b094f7e02572c8809d5eca9e95bedcba14901376d252b7cf68e",
+      "RecognitionSession.kt": "1d04d498f185a92887e31db39c12ccc6cac5ce91896ad9f25b57e2880a400ae9"
+    }
+  },
+  "diagnostic_counts": {
+    "sequence_failure_count": 1,
+    "target_failure_count": 1,
+    "nonmoney_false_accept_count": 0,
+    "reset_false_announcement_count": 1,
+    "direct_transition_middle_announcement_count": 1
+  },
+  "output_sha256": {
+    "operational_config.json": "fcfcc674d7bc863e31594bfa2ba7e5b2062fe9c946d4fa9cb366b96850034d18",
+    "operational_selection_summary.json": "a279acd1fc1243ff3a3b3507bfd730169374c707d87333e0c6e33287da303508",
+    "android_app_config_final.json": "510baaa3ad8d470f6ea4a9cbda56b2f2c43ef4360694ec1184fb0ef73ede086e"
+  }
+}
