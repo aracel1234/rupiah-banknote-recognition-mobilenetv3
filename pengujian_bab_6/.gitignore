@@ -1,0 +1,35 @@
+# Raw runtime logs and evidence
+**/raw/
+**/logs/
+**/*.jsonl
+**/*.log
+**/video/
+**/videos/
+**/screenshots/
+**/*.mp4
+**/*.mkv
+**/*.mov
+**/*.avi
+
+# Binary builds / archives
+**/*.apk
+**/*.aab
+**/*.zip
+**/*.7z
+**/*.tar
+**/*.tar.gz
+
+# Private physical-device identifiers
+00_identity/private/
+
+# Generated analysis outputs
+06_analysis/generated/
+
+# Python/cache/temp
+**/__pycache__/
+**/*.pyc
+**/*.tmp
+**/*.bak
+**/*~
+.DS_Store
+Thumbs.db
