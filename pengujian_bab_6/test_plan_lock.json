@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "status": "draft_pending_required_metadata",
+  "test_revision": "bab6-test-001",
+  "methodology_alignment": {
+    "functional": "3.9.1",
+    "offline_audio": "3.9.2",
+    "operational": "3.9.3",
+    "latency_e2e": "3.9.4",
+    "error_analysis": "3.10.5"
+  },
+  "locked_choices": {
+    "variation_side": "front",
+    "variation_side_description": "sisi bergambar pahlawan",
+    "nonmoney_variation_object": "NM-WALLET-01",
+    "arm64_apk_only": true,
+    "invalid_trial_policy": "retain_and_retest_with_new_id",
+    "retest_policy": "new_test_id_required",
+    "emission_year_as_analysis_factor": false
+  },
+  "proposed_fixed_fixtures_requiring_confirmation_before_status_locked": {
+    "functional_money_fixture": "BN-50000-NORMAL",
+    "functional_nonmoney_fixture": "NM-WALLET-01",
+    "offline_hold_nominal": "50000",
+    "offline_switch": "20000->50000",
+    "offline_nonmoney_fixture": "NM-WALLET-01",
+    "latency_side": "front"
+  },
+  "required_before_lock": [
+    "fill emission_year for all 21 banknotes",
+    "fill lux meter application name and version",
+    "replace APK sha256 with instrumented ARM64 APK hash",
+    "confirm proposed fixed fixtures or edit them",
+    "regenerate final_artifact_lock and implementation_snapshot after instrumentation patch"
+  ],
+  "validity_policy": {
+    "VALID_PASS": "procedure valid and output matches expected result",
+    "VALID_FAIL": "procedure valid but application result fails expected behavior; retain as research data",
+    "INVALID": "execution violates protocol; exclude from performance denominator and repeat with new ID",
+    "RETEST": "new execution linked to original test_id; never overwrite original record"
+  }
+}

@@ -1,0 +1,11 @@
+object_id,object_group,status,used_for_variation,notes
+NM-HAND-01,tangan kosong,primary,False,tangan kosong pada ROI
+NM-WALLET-01,dompet,primary,True,objek tetap untuk variasi jarak dan pencahayaan
+NM-CARD-01,kartu plastik,primary,False,kartu plastik nonuang
+NM-PAPER-01,kertas/nota,primary,False,kertas atau nota
+NM-BOOK-01,buku,primary,False,buku
+NM-PHONE-01,layar telepon,primary,False,layar telepon
+NM-PACKAGE-01,kemasan produk,primary,False,kemasan produk
+NM-BG-01,latar kosong,primary,False,latar netral tanpa objek
+NM-STATIONERY-01,alat tulis,reserve,False,"cadangan, tidak masuk 8 kelompok utama kecuali protokol diubah sebelum lock"
+NM-PERFUME-01,botol parfum,reserve,False,"cadangan, tidak masuk 8 kelompok utama kecuali protokol diubah sebelum lock"

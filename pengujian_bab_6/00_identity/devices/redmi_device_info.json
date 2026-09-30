@@ -1,0 +1,14 @@
+{
+  "device_id": "redmi_4x",
+  "manufacturer": "Xiaomi",
+  "model": "Redmi 4X",
+  "device_codename": "santoni",
+  "android": "7.1.2",
+  "sdk": 25,
+  "abi": [
+    "arm64-v8a",
+    "armeabi-v7a",
+    "armeabi"
+  ],
+  "role": "perangkat verifikasi tambahan"
+}

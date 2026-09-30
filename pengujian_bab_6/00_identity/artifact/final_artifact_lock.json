@@ -1,0 +1,115 @@
+{
+  "status": "final_android_artifacts_locked",
+  "locked_at_utc": "2026-09-30T18:56:16.931179+00:00",
+  "thesis_stage": "5.11",
+  "operational_revision": "calib-operational-001",
+  "application": {
+    "application_id": "id.ac.ub.rupiah",
+    "compile_sdk": 35,
+    "min_sdk": 23,
+    "target_sdk": 34,
+    "version_code": 1,
+    "version_name": "0.1.0-dev",
+    "jvm_target": "17"
+  },
+  "git": {
+    "commit": "872dae0216c672c291367d3699d5fc9c53565907",
+    "working_tree_clean": false
+  },
+  "configuration": {
+    "app_config_status": "operational_config_locked",
+    "postinference_status": "calibrated_sequence_locked",
+    "selected_values": {
+      "schema_version": 1,
+      "status": "operational_configuration_calibrated",
+      "revision": "calib-operational-001",
+      "analysis_fps": 3,
+      "threads": 4,
+      "roi_width_fraction": 0.9,
+      "roi_aspect_ratio": 1.3420920964096548,
+      "roi_height_cap_fraction": 0.9,
+      "blur_variance_min": 23.74892868863396,
+      "luma_min": 91.93479241966921,
+      "luma_max": 178.81127789279964,
+      "confidence_threshold": 0.65,
+      "temporal_window_ms": 1500,
+      "minimum_results": 3,
+      "clahe_enabled": false,
+      "clahe_clip_limit": null,
+      "clahe_grid": null,
+      "yuv_range": "limited_bt601",
+      "log_enabled": true
+    },
+    "sha256": {
+      "app/src/main/assets/app_config.json": "510baaa3ad8d470f6ea4a9cbda56b2f2c43ef4360694ec1184fb0ef73ede086e",
+      "app/src/main/assets/calibration/static_quality_config.json": "d57e466ef72474b5993ead336baad9ca7af23e61cce60c1a2850a35110255212",
+      "app/src/main/assets/calibration/static_quality_config_lock.json": "2ee28710fca6945aa4cb4a9e46d379607546bf5df6790de9f554c72a59ee53f6",
+      "app/src/main/assets/calibration/operational_config.json": "fcfcc674d7bc863e31594bfa2ba7e5b2062fe9c946d4fa9cb366b96850034d18",
+      "app/src/main/assets/calibration/operational_config_lock.json": "f45b1bb88fab2a520b3e46a0f769881056938a212f452324cea4d8eb9939420a"
+    },
+    "operational_lock_sha256": "f45b1bb88fab2a520b3e46a0f769881056938a212f452324cea4d8eb9939420a"
+  },
+  "model": {
+    "candidate": "dynamic_range",
+    "model_sha256": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676",
+    "size_bytes": 1107648,
+    "asset_sha256": {
+      "model.tflite": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676",
+      "class_names.json": "70c0322a6a8baba0090611bf5b8ef3cae1ba797b3ce0324e3cfac8d2d518f522",
+      "tensor_contract.json": "7f2c8c5bc99744f7ad4d3c412ae4ab00bfe5a707d6d7b8b5396e85b3506d15b2",
+      "model_identity.json": "6838debca3dfcf05b729d6cede4b5d84a8e2b8526e09ca467c5ad28382a87181",
+      "selection_lock.json": "289a06420d7ed262b4a0a371924f03b9f0e7d8efdb254163586da65bc291099c"
+    }
+  },
+  "critical_source_sha256": {
+    "app/build.gradle.kts": "51b57b16c244eb610a683cc033dfc3af73bb05e9648c231afc5ce64c212b672e",
+    "app/src/main/AndroidManifest.xml": "8e4ab4740df7351a579ccec6fde4b26adba27b7f81a91f8a74d00920d8d4d356",
+    "app/src/main/java/id/ac/ub/rupiah/config/AppConfig.kt": "0e46b1212b8d4f416914acd00fecbd8d512b870fe4df6b048d57aeaaa66e18cd",
+    "app/src/main/java/id/ac/ub/rupiah/camera/CameraController.kt": "b85efcdcef9e6f624cf04bc8da894ef6965b7255d2c22b5fd0632f269c31a22c",
+    "app/src/main/java/id/ac/ub/rupiah/image/RoiGeometry.kt": "b51f3f124392da0a10095a18c7478df362a5f5e36cd96ac87544e5cab6dc5781",
+    "app/src/main/java/id/ac/ub/rupiah/image/QualityGate.kt": "ce75d6b0acda9680fba074a00f4924af0b0ff3ca3bacddd2a84b906493cdc76a",
+    "app/src/main/java/id/ac/ub/rupiah/image/FramePreprocessor.kt": "c6d969842207bd8f81f4350499e56fb2b438f75bffacab164eda014c89168556",
+    "app/src/main/java/id/ac/ub/rupiah/inference/ModelRunner.kt": "28509c89cf83a841132280e77bf942f879339059056e1beb15dd97dab51ef21b",
+    "app/src/main/java/id/ac/ub/rupiah/prediction/TemporalDecision.kt": "0762770824729b094f7e02572c8809d5eca9e95bedcba14901376d252b7cf68e",
+    "app/src/main/java/id/ac/ub/rupiah/session/RecognitionSession.kt": "1d04d498f185a92887e31db39c12ccc6cac5ce91896ad9f25b57e2880a400ae9",
+    "app/src/main/java/id/ac/ub/rupiah/speech/SpeechOutput.kt": "5ee407787f0be0494fe1b51fa3f6922b4160ce58f2101325833fc77f738cf645",
+    "app/src/main/java/id/ac/ub/rupiah/logging/EventLog.kt": "691c4b116e0c2e3a91c0945644ed7fc2def60bbd534fa44e0dbebe170536fdec",
+    "app/src/main/java/id/ac/ub/rupiah/testing/TestTelemetry.kt": "db8a5f93d4940332547ca35bbe79c12b7d50150c2afde5feecbf5ce7a1e66160",
+    "app/src/main/java/id/ac/ub/rupiah/ui/MainActivity.kt": "333a7cd802b8018e7bc392d9e21443cf1b8ff0a3113a95d3bdd535752469c9fe",
+    "app/src/main/java/id/ac/ub/rupiah/ui/RoiOverlay.kt": "e181ff48cbd632fdb5d0ac21fab93bdecd01905f37338c8889eae7db82114f87",
+    "app/src/main/res/layout/activity_main.xml": "9ca8973df50fd9fa96ae359f8dd0b47488004caae97311319966463f0e194cc4"
+  },
+  "implementation_snapshot": {
+    "path": "docs/implementation_snapshot.json",
+    "sha256": "0d0ac8c79888ea2aa7b6a5fa59f1f37bd99ac419ba21fadcf9623c9fe0f40713"
+  },
+  "apk_artifacts": [
+    {
+      "name": "app-arm64-v8a-debug.apk",
+      "path": "/home/aracel/Downloads/Skripsi/implementasi_android/app/build/outputs/apk/debug/app-arm64-v8a-debug.apk",
+      "size_bytes": 8829551,
+      "sha256": "ca468dadd7e468090c7b58ffdefcf25b2b7f2dfd73c3e406f377d9bea7f8f105",
+      "embedded_assets_match_source": true,
+      "embedded_asset_sha256": {
+        "assets/app_config.json": "510baaa3ad8d470f6ea4a9cbda56b2f2c43ef4360694ec1184fb0ef73ede086e",
+        "assets/calibration/static_quality_config.json": "d57e466ef72474b5993ead336baad9ca7af23e61cce60c1a2850a35110255212",
+        "assets/calibration/static_quality_config_lock.json": "2ee28710fca6945aa4cb4a9e46d379607546bf5df6790de9f554c72a59ee53f6",
+        "assets/calibration/operational_config.json": "fcfcc674d7bc863e31594bfa2ba7e5b2062fe9c946d4fa9cb366b96850034d18",
+        "assets/calibration/operational_config_lock.json": "f45b1bb88fab2a520b3e46a0f769881056938a212f452324cea4d8eb9939420a",
+        "assets/model/model.tflite": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676",
+        "assets/model/class_names.json": "70c0322a6a8baba0090611bf5b8ef3cae1ba797b3ce0324e3cfac8d2d518f522",
+        "assets/model/tensor_contract.json": "7f2c8c5bc99744f7ad4d3c412ae4ab00bfe5a707d6d7b8b5396e85b3506d15b2",
+        "assets/model/model_identity.json": "6838debca3dfcf05b729d6cede4b5d84a8e2b8526e09ca467c5ad28382a87181",
+        "assets/model/selection_lock.json": "289a06420d7ed262b4a0a371924f03b9f0e7d8efdb254163586da65bc291099c",
+        "assets/model/asset_integrity.json": "6e28c77879be8c285ad927166a80a8fbd818a41c8af31b2b94c74cfb75b8c85b"
+      }
+    }
+  ],
+  "verification": {
+    "operational_configuration_matches_5_7_lock": true,
+    "postinference_logic_unchanged_since_calibration": true,
+    "model_assets_match_integrity_manifest": true,
+    "apk_critical_assets_match_project_source": true,
+    "system_testing_performed_by_this_script": false
+  }
+}

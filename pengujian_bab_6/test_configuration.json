@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "status": "draft_pending_instrumented_apk_lock",
+  "test_revision": "bab6-test-001",
+  "application": {
+    "application_id": "id.ac.ub.rupiah",
+    "apk_variant": "arm64-v8a-debug",
+    "apk_sha256": "PENDING_AFTER_INSTRUMENTED_BUILD",
+    "operational_revision": "calib-operational-001",
+    "model_candidate": "dynamic_range",
+    "model_sha256": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676"
+  },
+  "devices": [
+    {
+      "device_id": "poco_x5_pro_5g",
+      "manufacturer": "Xiaomi",
+      "model": "22101320G",
+      "device_codename": "redwood",
+      "android": "14",
+      "sdk": 34,
+      "abi": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "armeabi"
+      ],
+      "role": "perangkat acuan utama"
+    },
+    {
+      "device_id": "redmi_4x",
+      "manufacturer": "Xiaomi",
+      "model": "Redmi 4X",
+      "device_codename": "santoni",
+      "android": "7.1.2",
+      "sdk": 25,
+      "abi": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "armeabi"
+      ],
+      "role": "perangkat verifikasi tambahan"
+    }
+  ],
+  "measurement_instrument": {
+    "illuminance_device": "Infinix HOT 70",
+    "variant": "6 GB RAM / 128 GB storage",
+    "os": "Android 16 / XOS 16",
+    "sensor": "ambient light sensor",
+    "lux_meter_application": "PENDING_APP_NAME_AND_VERSION"
+  },
+  "tts": {
+    "engine": "Google Speech Services",
+    "language": "id-ID",
+    "voice_selection": "variasi suara pertama",
+    "offline_required": true,
+    "runtime_voice_name": "RECORDED_FROM_tts_ready_EVENT",
+    "speech_rate": 1.0,
+    "latency_test_touch_exploration": false
+  },
+  "operational_protocol": {
+    "camera": "back",
+    "flash": false,
+    "variation_side": "front (sisi bergambar pahlawan)",
+    "latency_side": "front (ditetapkan untuk konsistensi sebelum pengujian)",
+    "distance_cm": [
+      10,
+      20,
+      30
+    ],
+    "distance_tolerance_cm": 1,
+    "lighting_lux": {
+      "dim": [
+        10,
+        50
+      ],
+      "normal": [
+        300,
+        500
+      ],
+      "bright": [
+        800,
+        1000
+      ]
+    },
+    "roi_empty_min_ms": 1500,
+    "max_decision_ms": 5000,
+    "emission_year_as_analysis_factor": false
+  },
+  "planned_measured_executions": {
+    "functional": 120,
+    "offline_audio": 60,
+    "operational": 380,
+    "latency_e2e": 140,
+    "total": 700
+  },
+  "additional_warmup_executions": {
+    "latency": 6,
+    "description": "3 keputusan awal per perangkat, tidak masuk analisis"
+  }
+}
