@@ -128,3 +128,11 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 /hasil_roi_annotation/06_lighting_threshold/lighting_threshold_candidates.csv
+
+# ============================================================
+# Calibration Output
+# ============================================================
+
+/kalibrasi_roi_pencahayaan_blur_output/
+/kalibrasi_sequence_output/
+
