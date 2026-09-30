@@ -1,6 +1,6 @@
 {
   "status": "final_android_artifacts_locked",
-  "locked_at_utc": "2026-09-29T20:47:18.977281+00:00",
+  "locked_at_utc": "2026-09-30T21:10:47.170308+00:00",
   "thesis_stage": "5.11",
   "operational_revision": "calib-operational-001",
   "application": {
@@ -13,7 +13,7 @@
     "jvm_target": "17"
   },
   "git": {
-    "commit": "856ef76e55b4f046cf391c7a53eed92fb8c2f4ec",
+    "commit": "872dae0216c672c291367d3699d5fc9c53565907",
     "working_tree_clean": false
   },
   "configuration": {
@@ -68,66 +68,27 @@
     "app/src/main/java/id/ac/ub/rupiah/camera/CameraController.kt": "b85efcdcef9e6f624cf04bc8da894ef6965b7255d2c22b5fd0632f269c31a22c",
     "app/src/main/java/id/ac/ub/rupiah/image/RoiGeometry.kt": "b51f3f124392da0a10095a18c7478df362a5f5e36cd96ac87544e5cab6dc5781",
     "app/src/main/java/id/ac/ub/rupiah/image/QualityGate.kt": "ce75d6b0acda9680fba074a00f4924af0b0ff3ca3bacddd2a84b906493cdc76a",
-    "app/src/main/java/id/ac/ub/rupiah/image/FramePreprocessor.kt": "c6d969842207bd8f81f4350499e56fb2b438f75bffacab164eda014c89168556",
-    "app/src/main/java/id/ac/ub/rupiah/inference/ModelRunner.kt": "2d08b2f1f045948269d408259f4187fc2a11fe9411f87133ab009b09c3a6e2e6",
+    "app/src/main/java/id/ac/ub/rupiah/image/FramePreprocessor.kt": "025efa78536bf3f9b43fe92d2ffcfb404816ed1841a6081b11d9f4d7e4c56038",
+    "app/src/main/java/id/ac/ub/rupiah/inference/ModelRunner.kt": "28509c89cf83a841132280e77bf942f879339059056e1beb15dd97dab51ef21b",
     "app/src/main/java/id/ac/ub/rupiah/prediction/TemporalDecision.kt": "0762770824729b094f7e02572c8809d5eca9e95bedcba14901376d252b7cf68e",
     "app/src/main/java/id/ac/ub/rupiah/session/RecognitionSession.kt": "1d04d498f185a92887e31db39c12ccc6cac5ce91896ad9f25b57e2880a400ae9",
-    "app/src/main/java/id/ac/ub/rupiah/speech/SpeechOutput.kt": "3772053c15befd120332b961daceef29ae7fcb5c2f56e7074f652e46a6fc2116",
-    "app/src/main/java/id/ac/ub/rupiah/logging/EventLog.kt": "40b2155bff70af140feed2ba843d13d77cfc9a9092325c3ee432983440001833",
-    "app/src/main/java/id/ac/ub/rupiah/ui/MainActivity.kt": "1af9f1a0aa5421ffaa652ac05b5ac20f5860386b53b9fa495556a630c88e0efe",
+    "app/src/main/java/id/ac/ub/rupiah/speech/SpeechOutput.kt": "1db7cb479d6f75b020a5fbf5d7ccbfb52250af673ce8854dc826b8181284bf02",
+    "app/src/main/java/id/ac/ub/rupiah/logging/EventLog.kt": "4f949eea354ad4125eb9d30a8d83706645aead3921a5052f0e251a1a7cf0aed4",
+    "app/src/main/java/id/ac/ub/rupiah/testing/TestTelemetry.kt": "d077ac90bb1d5e7bba2250428e994a61cc073afa0a6866396ccc92299c6e7683",
+    "app/src/main/java/id/ac/ub/rupiah/ui/MainActivity.kt": "677156201215481929fe0d38e6c976158e6ca212c1fcefed7ed607571ec971e2",
     "app/src/main/java/id/ac/ub/rupiah/ui/RoiOverlay.kt": "e181ff48cbd632fdb5d0ac21fab93bdecd01905f37338c8889eae7db82114f87",
     "app/src/main/res/layout/activity_main.xml": "9ca8973df50fd9fa96ae359f8dd0b47488004caae97311319966463f0e194cc4"
   },
   "implementation_snapshot": {
     "path": "docs/implementation_snapshot.json",
-    "sha256": "dda663de2e57c96ef699116d9dd2dca921d33bc6dd5e202408cf691150bf34b0"
+    "sha256": "ce3c0f561c37b411fbce9825a230b5598a11cc22742789c313fe0d59e47742b4"
   },
   "apk_artifacts": [
     {
       "name": "app-arm64-v8a-debug.apk",
       "path": "/home/aracel/Downloads/Skripsi/implementasi_android/app/build/outputs/apk/debug/app-arm64-v8a-debug.apk",
-      "size_bytes": 8822553,
-      "sha256": "f22608adf1c306b0c174eff4e4d5bb9ae8b0aafbf01e411edffa7c350e27af9f",
-      "embedded_assets_match_source": true,
-      "embedded_asset_sha256": {
-        "assets/app_config.json": "510baaa3ad8d470f6ea4a9cbda56b2f2c43ef4360694ec1184fb0ef73ede086e",
-        "assets/calibration/static_quality_config.json": "d57e466ef72474b5993ead336baad9ca7af23e61cce60c1a2850a35110255212",
-        "assets/calibration/static_quality_config_lock.json": "2ee28710fca6945aa4cb4a9e46d379607546bf5df6790de9f554c72a59ee53f6",
-        "assets/calibration/operational_config.json": "fcfcc674d7bc863e31594bfa2ba7e5b2062fe9c946d4fa9cb366b96850034d18",
-        "assets/calibration/operational_config_lock.json": "f45b1bb88fab2a520b3e46a0f769881056938a212f452324cea4d8eb9939420a",
-        "assets/model/model.tflite": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676",
-        "assets/model/class_names.json": "70c0322a6a8baba0090611bf5b8ef3cae1ba797b3ce0324e3cfac8d2d518f522",
-        "assets/model/tensor_contract.json": "7f2c8c5bc99744f7ad4d3c412ae4ab00bfe5a707d6d7b8b5396e85b3506d15b2",
-        "assets/model/model_identity.json": "6838debca3dfcf05b729d6cede4b5d84a8e2b8526e09ca467c5ad28382a87181",
-        "assets/model/selection_lock.json": "289a06420d7ed262b4a0a371924f03b9f0e7d8efdb254163586da65bc291099c",
-        "assets/model/asset_integrity.json": "6e28c77879be8c285ad927166a80a8fbd818a41c8af31b2b94c74cfb75b8c85b"
-      }
-    },
-    {
-      "name": "app-armeabi-v7a-debug.apk",
-      "path": "/home/aracel/Downloads/Skripsi/implementasi_android/app/build/outputs/apk/debug/app-armeabi-v7a-debug.apk",
-      "size_bytes": 7639693,
-      "sha256": "29638299ae4487dd7c9209b5d6e153e4f7e62aabcd119a1c5ed53b9f47bc3f00",
-      "embedded_assets_match_source": true,
-      "embedded_asset_sha256": {
-        "assets/app_config.json": "510baaa3ad8d470f6ea4a9cbda56b2f2c43ef4360694ec1184fb0ef73ede086e",
-        "assets/calibration/static_quality_config.json": "d57e466ef72474b5993ead336baad9ca7af23e61cce60c1a2850a35110255212",
-        "assets/calibration/static_quality_config_lock.json": "2ee28710fca6945aa4cb4a9e46d379607546bf5df6790de9f554c72a59ee53f6",
-        "assets/calibration/operational_config.json": "fcfcc674d7bc863e31594bfa2ba7e5b2062fe9c946d4fa9cb366b96850034d18",
-        "assets/calibration/operational_config_lock.json": "f45b1bb88fab2a520b3e46a0f769881056938a212f452324cea4d8eb9939420a",
-        "assets/model/model.tflite": "fa373b8832a860302ce2b58bd712fc85ad4bf252bdfa9edf2fc1a276934a8676",
-        "assets/model/class_names.json": "70c0322a6a8baba0090611bf5b8ef3cae1ba797b3ce0324e3cfac8d2d518f522",
-        "assets/model/tensor_contract.json": "7f2c8c5bc99744f7ad4d3c412ae4ab00bfe5a707d6d7b8b5396e85b3506d15b2",
-        "assets/model/model_identity.json": "6838debca3dfcf05b729d6cede4b5d84a8e2b8526e09ca467c5ad28382a87181",
-        "assets/model/selection_lock.json": "289a06420d7ed262b4a0a371924f03b9f0e7d8efdb254163586da65bc291099c",
-        "assets/model/asset_integrity.json": "6e28c77879be8c285ad927166a80a8fbd818a41c8af31b2b94c74cfb75b8c85b"
-      }
-    },
-    {
-      "name": "app-universal-debug.apk",
-      "path": "/home/aracel/Downloads/Skripsi/implementasi_android/app/build/outputs/apk/debug/app-universal-debug.apk",
-      "size_bytes": 11244677,
-      "sha256": "17d209b9c91e1c379fe5164295f8dbbd4a4f0c3ce1db1e88e0bf110663f36c82",
+      "size_bytes": 8845931,
+      "sha256": "a963f740970565306e604e22dddcff6fc49701a186cc94fcc6fa2e611cfa5731",
       "embedded_assets_match_source": true,
       "embedded_asset_sha256": {
         "assets/app_config.json": "510baaa3ad8d470f6ea4a9cbda56b2f2c43ef4360694ec1184fb0ef73ede086e",

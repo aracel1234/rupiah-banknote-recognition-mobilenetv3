@@ -18,6 +18,7 @@ import id.ac.ub.rupiah.config.AppConfig
 import id.ac.ub.rupiah.session.RecognitionSession
 import id.ac.ub.rupiah.speech.SpeechOutput
 import id.ac.ub.rupiah.logging.EventLog
+import id.ac.ub.rupiah.testing.TestTelemetry
 import java.text.NumberFormat
 import java.util.Locale
 
@@ -77,6 +78,8 @@ class MainActivity : ComponentActivity() {
             stopped("Konfigurasi aplikasi tidak valid.")
         }
 
+        handleBab6Intent(intent)
+
         switchCamera.isEnabled = false
         describe(toggle, "Pengenalan belum aktif. Mulai pengenalan.")
         describe(switchCamera, "Ganti Kamera. Tersedia setelah pengenalan dimulai.")
@@ -108,6 +111,12 @@ class MainActivity : ComponentActivity() {
                 maybeStart()
             }
         }
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        handleBab6Intent(intent)
     }
 
     override fun onStart() {
@@ -280,6 +289,111 @@ class MainActivity : ComponentActivity() {
                 output.say(message)
             }
         )
+    }
+
+    private fun handleBab6Intent(intent: Intent?) {
+        val eventLog = log ?: return
+        val action = intent?.getStringExtra("bab6_action") ?: return
+
+        when (action.lowercase(Locale.ROOT)) {
+            "begin" -> {
+                val id = intent.getStringExtra("test_id")?.trim().orEmpty()
+                val group = intent.getStringExtra("test_group")
+                val expected = intent.getStringExtra("expected_label")
+                val accepted = TestTelemetry.begin(id, group, expected)
+
+                eventLog.event(
+                    if (accepted) "trial_begin" else "trial_control_error",
+                    "action" to "begin",
+                    "requested_test_id" to id,
+                    "test_group" to group,
+                    "expected_label" to expected,
+                    "accepted" to accepted
+                )
+            }
+
+            "arm" -> {
+                val requestedId = intent.getStringExtra("test_id")
+                val armedNs = if (TestTelemetry.matches(requestedId)) {
+                    TestTelemetry.arm()
+                } else {
+                    null
+                }
+                eventLog.event(
+                    if (armedNs != null) "trial_armed" else "trial_control_error",
+                    "action" to "arm",
+                    "object_placed_ns" to armedNs,
+                    "accepted" to (armedNs != null)
+                )
+            }
+
+            "end" -> {
+                val requestedId = intent.getStringExtra("test_id")
+                val snapshot = TestTelemetry.snapshot()
+                if (!snapshot.active || !TestTelemetry.matches(requestedId)) {
+                    eventLog.event(
+                        "trial_control_error",
+                        "action" to "end",
+                        "accepted" to false,
+                        "message" to "no_active_trial"
+                    )
+                    return
+                }
+
+                eventLog.event(
+                    "trial_end",
+                    "result_code" to intent.getStringExtra("result_code"),
+                    "rejection_reason" to intent.getStringExtra("rejection_reason"),
+                    "error_message" to intent.getStringExtra("error_message"),
+                    "valid_trial" to intent.getBooleanExtra("valid_trial", true),
+                    "invalid_reason" to intent.getStringExtra("invalid_reason"),
+                    "t0_ns" to snapshot.t0Ns,
+                    "t1_ns" to snapshot.t1Ns,
+                    "t2_ns" to snapshot.t2Ns,
+                    "stable_label" to snapshot.stableLabel,
+                    "nominal_utterance_id" to snapshot.nominalUtteranceId,
+                    "last_status" to snapshot.lastStatus,
+                    "last_scores" to snapshot.lastScores,
+                    "last_rejection_reason" to snapshot.lastRejectionReason,
+                    "analyzed_frames" to snapshot.frameCount,
+                    "status_counts" to snapshot.statusCounts.entries.joinToString(";") {
+                        "${it.key}=${it.value}"
+                    },
+                    "decision_ms" to snapshot.decisionMs,
+                    "tts_ms" to snapshot.ttsMs,
+                    "end_to_end_ms" to snapshot.endToEndMs
+                )
+
+                TestTelemetry.clear()
+            }
+
+            "cancel" -> {
+                val requestedId = intent.getStringExtra("test_id")
+                val snapshot = TestTelemetry.snapshot()
+                if (!snapshot.active || !TestTelemetry.matches(requestedId)) {
+                    eventLog.event(
+                        "trial_control_error",
+                        "action" to "cancel",
+                        "accepted" to false,
+                        "message" to "test_id_mismatch_or_no_active_trial"
+                    )
+                    return
+                }
+                eventLog.event(
+                    "trial_cancelled",
+                    "test_id_before_clear" to snapshot.testId,
+                    "reason" to intent.getStringExtra("reason")
+                )
+                TestTelemetry.clear()
+            }
+
+            else -> eventLog.event(
+                "trial_control_error",
+                "action" to action,
+                "accepted" to false,
+                "message" to "unknown_action"
+            )
+        }
     }
 
     private fun stopSession() {

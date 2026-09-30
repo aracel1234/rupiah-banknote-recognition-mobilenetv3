@@ -5,6 +5,7 @@ import org.json.JSONArray
 import org.json.JSONObject
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.Interpreter
+import id.ac.ub.rupiah.testing.TestTelemetry
 import java.io.FileInputStream
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
@@ -302,6 +303,9 @@ class ModelRunner(
 
     fun run(): FloatArray {
         input.rewind()
+
+        // Passive Bab 6 timestamp: run() is reached only after the quality gate passed.
+        TestTelemetry.markInferenceStart()
 
         interpreter.run(
             input,

@@ -8,6 +8,7 @@ import android.speech.tts.UtteranceProgressListener
 import android.view.View
 import android.view.accessibility.AccessibilityManager
 import id.ac.ub.rupiah.logging.EventLog
+import id.ac.ub.rupiah.testing.TestTelemetry
 import java.util.Locale
 
 /** Main thread only. Screen reader owns speech while touch exploration is active. */
@@ -98,7 +99,13 @@ class SpeechOutput(
                         }
                     }
                 }
-                override fun onStart(id: String?) = record("tts_start", id)
+
+                override fun onStart(id: String?) {
+                    // t2 diambil langsung ketika callback diterima, sebelum dipost ke main thread.
+                    TestTelemetry.markTtsStart(id)
+                    record("tts_start", id)
+                }
+
                 override fun onDone(id: String?) = record("tts_done", id)
                 override fun onStop(id: String?, interrupted: Boolean) = record("tts_stop", id)
                 @Deprecated("Platform callback")
@@ -106,7 +113,14 @@ class SpeechOutput(
                 override fun onError(id: String?, errorCode: Int) = record("tts_error", id)
             })
             isReady = true
-            log.event("tts_ready", "voice" to voice.name, "network_required" to false)
+            log.event(
+                "tts_ready",
+                "engine" to tts.defaultEngine,
+                "voice" to voice.name,
+                "locale" to voice.locale.toLanguageTag(),
+                "network_required" to false,
+                "speech_rate" to 1.0
+            )
             val queued = pending
             pending = null
             ready(null)
@@ -137,11 +151,18 @@ class SpeechOutput(
             "100000" -> "Seratus ribu rupiah"
             else -> return false
         }
-        return say(text, interrupt = false)
+        return sayInternal(text, interrupt = false, nominalLabel = label)
     }
 
     /** True means a request was accepted, not that the user heard it. */
-    fun say(text: String, interrupt: Boolean = true): Boolean {
+    fun say(text: String, interrupt: Boolean = true): Boolean =
+        sayInternal(text, interrupt, nominalLabel = null)
+
+    private fun sayInternal(
+        text: String,
+        interrupt: Boolean,
+        nominalLabel: String?
+    ): Boolean {
         if (closed) return false
         selectRoute() // Guard against a service change before listener delivery.
         if (!isReady) {
@@ -157,15 +178,34 @@ class SpeechOutput(
             // delivery and ordering remain controlled by the accessibility service.
             @Suppress("DEPRECATION")
             announcementHost.announceForAccessibility(text)
-            log.event("a11y_output_requested", "utterance_id" to id,
-                "text" to text, "route" to route)
+            log.event(
+                "a11y_output_requested",
+                "utterance_id" to id,
+                "text" to text,
+                "route" to route,
+                "nominal_label" to nominalLabel
+            )
             return true
         }
         return try {
-            val accepted = engine?.speak(text,
+            val accepted = engine?.speak(
+                text,
                 if (interrupt) TextToSpeech.QUEUE_FLUSH else TextToSpeech.QUEUE_ADD,
-                null, id) == TextToSpeech.SUCCESS
-            log.event("tts_request", "utterance_id" to id, "text" to text, "accepted" to accepted)
+                null,
+                id
+            ) == TextToSpeech.SUCCESS
+
+            if (accepted && nominalLabel != null) {
+                TestTelemetry.markNominalRequest(id, nominalLabel)
+            }
+
+            log.event(
+                "tts_request",
+                "utterance_id" to id,
+                "text" to text,
+                "nominal_label" to nominalLabel,
+                "accepted" to accepted
+            )
             accepted
         } catch (_: Exception) { false }
     }

@@ -37,6 +37,7 @@ CRITICAL_SOURCE_FILES = [
     "app/src/main/java/id/ac/ub/rupiah/session/RecognitionSession.kt",
     "app/src/main/java/id/ac/ub/rupiah/speech/SpeechOutput.kt",
     "app/src/main/java/id/ac/ub/rupiah/logging/EventLog.kt",
+    "app/src/main/java/id/ac/ub/rupiah/testing/TestTelemetry.kt",
     "app/src/main/java/id/ac/ub/rupiah/ui/MainActivity.kt",
     "app/src/main/java/id/ac/ub/rupiah/ui/RoiOverlay.kt",
     "app/src/main/res/layout/activity_main.xml",

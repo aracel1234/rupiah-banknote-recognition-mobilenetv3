@@ -2,6 +2,7 @@ package id.ac.ub.rupiah.image
 
 import androidx.camera.core.ImageProxy
 import id.ac.ub.rupiah.config.AppConfig
+import id.ac.ub.rupiah.testing.TestTelemetry
 import java.nio.ByteBuffer
 import kotlin.math.floor
 
@@ -15,6 +16,8 @@ class FramePreprocessor(private val config: AppConfig) {
         image: ImageProxy,
         input: ByteBuffer
     ): QualityGate.Result {
+        TestTelemetry.markObservationStart(config.windowMs)
+
         val roi = YuvRoi(image, config)
         val count = roi.width * roi.height
 
@@ -35,7 +38,14 @@ class FramePreprocessor(private val config: AppConfig) {
             roi.height
         )
 
-        if (quality.reason != null) return quality
+        if (quality.reason != null) {
+            TestTelemetry.markDecisionReset(quality.reason)
+            return quality
+        }
+
+        // t0: bingkai pertama pada rangkaian keputusan yang lolos QualityGate.
+        // Timestamp diambil sebelum YUV->RGB dan resize agar sesuai definisi Bab 3.
+        TestTelemetry.markQualityPassed()
 
         for (y in 0 until roi.height) {
             for (x in 0 until roi.width) {
