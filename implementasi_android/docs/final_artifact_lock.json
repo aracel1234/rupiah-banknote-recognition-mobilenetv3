@@ -1,6 +1,6 @@
 {
   "status": "final_android_artifacts_locked",
-  "locked_at_utc": "2026-09-30T21:10:47.170308+00:00",
+  "locked_at_utc": "2026-09-30T21:46:02.389895+00:00",
   "thesis_stage": "5.11",
   "operational_revision": "calib-operational-001",
   "application": {
@@ -13,7 +13,7 @@
     "jvm_target": "17"
   },
   "git": {
-    "commit": "872dae0216c672c291367d3699d5fc9c53565907",
+    "commit": "df91f797f0ca8cabff2f5059a69fc91b97c61617",
     "working_tree_clean": false
   },
   "configuration": {
@@ -81,7 +81,7 @@
   },
   "implementation_snapshot": {
     "path": "docs/implementation_snapshot.json",
-    "sha256": "ce3c0f561c37b411fbce9825a230b5598a11cc22742789c313fe0d59e47742b4"
+    "sha256": "70b851fd0882ffc9ac4880141a71eb44cd643ebcdfb3d6d96b2fbf3b61aa0f19"
   },
   "apk_artifacts": [
     {

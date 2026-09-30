@@ -132,8 +132,22 @@ def git_info(project: Path) -> dict:
             return p.stdout.strip()
         except Exception:
             return None
+
     head = run("rev-parse", "HEAD")
-    status = run("status", "--porcelain")
+
+    # File keluaran finalisasi berubah setiap kali skrip dijalankan karena
+    # memuat timestamp dan hash artefak baru. Berkas tersebut bukan source
+    # implementasi, sehingga dikecualikan dari pemeriksaan kebersihan source.
+    exclude_paths = [f":(exclude){path}" for path in sorted(GENERATED_PATHS)]
+    status = run(
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--",
+        ".",
+        *exclude_paths,
+    )
+
     return {
         "commit": head,
         "working_tree_clean": None if status is None else status == "",
