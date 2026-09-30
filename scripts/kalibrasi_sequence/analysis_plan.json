@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "purpose": "Predeclared analysis plan for thesis Subchapter 5.7.3 sequence calibration",
+  "candidate_analysis_fps": [3, 5],
+  "fps_selection": {
+    "pipeline_population": "quality_pass frames only, because t_pipeline includes preprocessing + model inference + output read on the inference path",
+    "metric": "p95_pipeline_ms per device pooled across all 40 sequences",
+    "formula": "f_max = floor(1000 / p95_pipeline_ms)",
+    "rule": "select the highest candidate FPS that does not exceed f_max on either target device"
+  },
+  "confidence_thresholds": [0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95],
+  "temporal_windows_ms": [1000, 1500, 2000],
+  "minimum_results": 3,
+  "smoothing": "mean of complete eight-class score vectors",
+  "replay_sampling": {
+    "policy": "android_throttle_greedy",
+    "description": "For FPS below the 5 FPS collection stream, retain the first logged observation then the first subsequent logged observation whose elapsed time is at least ceil(1000/FPS) ms from the previously retained observation. This mirrors RecognitionSession's interval gate as closely as possible using the recorded stream."
+  },
+  "target_episode": {
+    "definition": "Merge contiguous analysis_role=target stages when expected_label is the same. Nominal sequences therefore form one target episode spanning baseline/action/recover; transition sequences form object_a and object_b episodes.",
+    "decision_time_start": "first quality-pass replayed observation inside the target episode",
+    "outcome_priority": ["wrong", "correct", "reject"],
+    "wrong": "at least one announced nominal in the episode differs from expected_label",
+    "correct": "at least one expected nominal is announced and no wrong nominal is announced",
+    "reject": "no nominal announcement is produced before the target episode ends"
+  },
+  "sequence_success": {
+    "stable_motion_distance_orientation": "the merged nominal target episode outcome is correct",
+    "nonmoney": "no nominal announcement occurs during analysis_role=nonmoney",
+    "transition": "both nominal target episodes are correct; for a labelled nonmoney/empty middle stage, no nominal may be announced there; an unlabeled direct-transition middle stage is diagnostic only"
+  },
+  "mssr": {
+    "name": "balanced_macro_scenario_success_rate",
+    "scenario_groups": ["stable", "motion", "distance", "orientation", "nonmoney", "transition"],
+    "calculation": "mean sequence success rate across the six scenario groups; POCO and Redmi are equally represented in every group",
+    "bootstrap": {
+      "iterations": 2000,
+      "seed": 42,
+      "paired": true,
+      "strata": ["device", "scenario_group"],
+      "unit": "sequence"
+    }
+  },
+  "quality_gate": {
+    "rule": "retain candidate if MSSR >= best_MSSR - SE(best_MSSR) and correct-acceptance rate is > 0 for every nominal class",
+    "tie_at_best": "if multiple candidates share the maximum MSSR, use the largest bootstrap SE among the tied best candidates so the one-SE gate is conservative",
+    "interpretation": "selection rule, not a statistical equivalence test"
+  },
+  "final_lexicographic_selection": [
+    "minimize nominal wrong-announcement count (WAR)",
+    "minimize nominal rejection count (RR_nominal)",
+    "minimize P95 decision time among correct target episodes",
+    "minimize median decision time among correct target episodes",
+    "prefer shorter temporal window if all previous criteria tie",
+    "prefer higher confidence threshold if all previous criteria tie"
+  ],
+  "nonmoney_handling": "Nonmoney correct rejection contributes to sequence success; nonmoney false nominal announcements are reported separately and influence MSSR through nonmoney sequence success.",
+  "frame_level_youden": "Computed as descriptive/initial confidence evidence on nominal target observations; final configuration is still chosen from the full threshold x temporal-window replay.",
+  "important": "This plan is intended to be frozen before candidate-result inspection. Do not alter selection priorities after seeing the result table."
+}
