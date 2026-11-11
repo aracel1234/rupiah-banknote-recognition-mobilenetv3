@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "Please cite the thesis when using the research, and identify the repository commit when using the software."
+type: software
+title: "Rupiah Banknote Recognition Using MobileNetV3-Small on Android"
+authors:
+  - family-names: Aprilyanto
+    given-names: Aracel Nestova
+    affiliation: "Faculty of Computer Science, Universitas Brawijaya"
+repository-code: "https://github.com/aracel1234/rupiah-banknote-recognition-mobilenetv3"
+url: "https://github.com/aracel1234/rupiah-banknote-recognition-mobilenetv3"
+license: Apache-2.0
+keywords:
+  - Rupiah
+  - MobileNetV3-Small
+  - TensorFlow Lite
+  - Android
+  - accessibility
+preferred-citation:
+  type: thesis
+  title: "Implementasi dan Evaluasi MobileNetV3-Small untuk Pengenalan Nominal Uang Kertas Rupiah pada Android"
+  authors:
+    - family-names: Aprilyanto
+      given-names: Aracel Nestova
+  year: 2026
+  institution:
+    name: Universitas Brawijaya
+  department: "Program Studi Teknik Informatika, Fakultas Ilmu Komputer"
+  thesis-type: "Undergraduate thesis (Skripsi)"
+  languages:
+    - id

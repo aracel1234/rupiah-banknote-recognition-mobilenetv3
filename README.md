@@ -1,4 +1,4 @@
-# Indonesian Rupiah Banknote Denomination Recognition Using MobileNetV3-Small on Android
+# Implementation and Evaluation of MobileNetV3-Small for Rupiah Banknote Denomination Recognition on Android
 
 > **Undergraduate Thesis Project — Informatics Engineering, Universitas Brawijaya**  
 > Development of an Android-based Indonesian Rupiah banknote denomination recognition application using **MobileNetV3-Small** for visually impaired users.
@@ -8,6 +8,45 @@
 ![TensorFlow Lite](https://img.shields.io/badge/TensorFlow%20Lite-FP32%20%7C%20FP16%20%7C%20Dynamic%20Range%20%7C%20INT8-orange)
 ![Android](https://img.shields.io/badge/Android-CameraX%20%2B%20TFLite-green)
 ![Status](https://img.shields.io/badge/Status-Research%20Project-informational)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
+
+## License and reuse
+
+Copyright 2026 Aracel Nestova Aprilyanto.
+
+The author's original source code, documentation, and trained-model contributions
+in this repository are licensed under the **Apache License, Version 2.0**;
+see [LICENSE](LICENSE) and [NOTICE](NOTICE). This includes the author's
+contributions to the selected `model.tflite` described in
+[MODEL_CARD.md](MODEL_CARD.md). Direct use, modification, and redistribution
+in other applications, including commercial applications, are permitted under
+those terms. This is an open-source project, not an academic-use-only grant.
+
+Third-party dependencies, pretrained assets, datasets, annotations, and sample
+images retain their respective licenses and notices. They are not relicensed
+by the author's grant. See [DATASET_SOURCES.md](DATASET_SOURCES.md) and
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+For attribution and academic citation, see [CREDITS.md](CREDITS.md) and
+[CITATION.cff](CITATION.cff). Academic citation is appreciated and is separate
+from the license's redistribution requirements.
+
+## Getting started and contributing
+
+The user-facing Android project is [`implementasi_android/`](implementasi_android/).
+Open that directory in Android Studio, or follow its
+[build instructions](implementasi_android/README.md). Its selected model uses
+**Dynamic Range Quantization**, with float32 input/output and a size of
+**1,107,648 bytes (1.0563 MiB)**. The current operational configuration uses
+3 analysis FPS, a confidence threshold of 0.65, a 1,500 ms temporal window,
+a minimum of 3 eligible inference results, and CLAHE disabled.
+
+Accessibility feedback, real-device testing, documentation, and code
+contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md).
+The [InfiArtt discussion in issue #1](https://github.com/aracel1234/rupiah-banknote-recognition-mobilenetv3/issues/1)
+is the starting point for the proposed community collaboration. Technical
+evaluation has been performed; direct usability trials with blind users
+remain a next step.
 
 ## About the Project
 
@@ -87,6 +126,11 @@ The research dataset was built from multiple public sources and transformed into
 
 - **10 Indonesian Rupiah banknote datasets** obtained from Roboflow Universe in COCO annotation format.
 - **1 non-banknote candidate dataset source** based on Microsoft COCO 2017 obtained through Kaggle.
+
+Creator attribution, exact research versions, recorded licenses, processing
+changes, and the distinction between COCO annotations and image rights are
+documented in [DATASET_SOURCES.md](DATASET_SOURCES.md). The original acquisition
+record remains in [`source_registry.csv`](persiapan_data/01_audit/source_registry.csv).
 
 The complete raw datasets are not included in this repository due to their large size and because each third-party dataset remains subject to its original source and license.
 
@@ -433,27 +477,16 @@ The physical Android devices specified for technical evaluation are:
 
 ## Repository Structure
 
-General repository structure:
-
-```text
-.
-├── persiapan_data/
-│   ├── raw_dataset/
-│   ├── 02_extracted/
-│   └── ...
-│
-├── pengembangan_model/
-│   └── ...
-│
-├── scripts/
-│   ├── ...
-│   └── pengembangan_model/
-│       └── android-benchmark/
-│
-├── .gitignore
-├── README.md
-└── tree.json
-```
+| Location | Purpose |
+|---|---|
+| `implementasi_android/` | User-facing Android recognizer and integration documentation |
+| `persiapan_data/` | Dataset acquisition records, preparation metadata, and representative samples |
+| `pengembangan_model/` | Training, model conversion, selection, and evaluation artifacts |
+| `scripts/` | Research scripts, including the separate Android benchmark project |
+| `kalibrasi_roi_pencahayaan_blur/`, `kalibrasi_sequence/` | Calibration applications and supporting records |
+| `pengujian_bab_6/` | Technical test protocol and metadata |
+| `LICENSE`, `NOTICE`, `CREDITS.md`, `CITATION.cff` | Reuse terms, attribution, and citation |
+| `DATASET_SOURCES.md`, `THIRD_PARTY_NOTICES.md`, `MODEL_CARD.md`, `CONTRIBUTING.md` | Source provenance, component notices, model integration, and contributions |
 
 > Large datasets and selected large research artifacts are intentionally excluded from GitHub. The repository contains representative samples, source code, metadata, configuration files, and relevant artifacts required to understand the research pipeline.
 
@@ -528,9 +561,18 @@ Informatics Engineering
 Faculty of Computer Science  
 Universitas Brawijaya
 
-Undergraduate thesis:
+Undergraduate thesis (2026):
 
-> **Development of an Indonesian Rupiah Banknote Denomination Recognition Application Based on MobileNetV3-Small on Android Devices for Visually Impaired Users**
+> **Implementasi dan Evaluasi MobileNetV3-Small untuk Pengenalan Nominal Uang Kertas Rupiah pada Android**
+
+English title from the thesis abstract:
+
+> **Implementation and Evaluation of MobileNetV3-Small for Rupiah Banknote Denomination Recognition on Android**
+
+No thesis DOI or public thesis URL was identified in the supplied final
+manuscript. [CITATION.cff](CITATION.cff) therefore records the verified title,
+author, institution, and year without inventing a persistent identifier. The
+repository URL identifies the software, not a published thesis record.
 
 Supervisors:
 
@@ -541,6 +583,8 @@ Supervisors:
 
 ## Academic Notice
 
-This repository was developed as part of an academic research project. Third-party datasets remain subject to the licenses and terms of their original sources.
-
-If you use the code, methodology, or research outputs from this project for academic purposes, please provide appropriate attribution to the research and the corresponding dataset sources.
+This repository originated in academic research and is open to wider reuse
+under the license scope stated above. Please cite the research when using its
+methods or results in academic work, and identify the software commit when
+reporting an implementation. Preserve the applicable copyright, license, and
+dataset attribution notices when distributing material from the project.
