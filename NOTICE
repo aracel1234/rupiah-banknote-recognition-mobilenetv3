@@ -1,0 +1,23 @@
+Rupiah Banknote Recognition - MobileNetV3-Small on Android
+Copyright 2026 Aracel Nestova Aprilyanto
+
+Original research, model development, and initial implementation:
+Aracel Nestova Aprilyanto, Informatics Engineering,
+Faculty of Computer Science, Universitas Brawijaya.
+
+Undergraduate thesis (2026):
+Implementasi dan Evaluasi MobileNetV3-Small untuk Pengenalan Nominal
+Uang Kertas Rupiah pada Android
+
+Project source:
+https://github.com/aracel1234/rupiah-banknote-recognition-mobilenetv3
+
+The author's original code, documentation, and trained model contributions
+are made available under the Apache License, Version 2.0. See LICENSE
+and the scope statement in README.md.
+
+Third-party datasets, images, annotations, pretrained assets, and dependencies
+retain their own copyright notices and licenses. See DATASET_SOURCES.md
+and THIRD_PARTY_NOTICES.md.
+
+This notice provides attribution information and does not modify LICENSE.
